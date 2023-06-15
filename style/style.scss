@@ -190,7 +190,7 @@ td {
   height: 67px;
   // height: 100%;
   // background-color: red;
-  background-image: url("../img/Stanley's\ Portfolio\ Logo_STANLEY-part.png");
+  background-image: url("../img/Logo_STANLEY-part.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -198,7 +198,7 @@ td {
   // cursor: pointer;
   // content: url("img/Stanley's Portfolio Logo_STANLEY.png");
   &:hover {
-    background-image: url("../img/Stanley's\ Portfolio\ Logo_STANLEY.png");
+    background-image: url("../img/Logo_STANLEY.png");
     // background-size: cover;
     // background-size: 200px;
     // background-repeat: no-repeat;
@@ -234,7 +234,7 @@ main {
 .primary-frame {
   position: relative;
   display: flex;
-  top: 100px;
+  top: 120px;
   justify-content: center;
   margin: 10px 20px;
   background-color: rgba(255, 255, 255, 0.4);
