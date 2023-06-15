@@ -1,0 +1,449 @@
+@import "../bootstrap-5.0.2/scss/bootstrap-grid.scss";
+$primaryColor: #00a49a;
+$primaryColor-dark: #00867d;
+$primaryColor-light: #2bbcb3;
+$primaryColor-lighter: #55ddd4;
+$primaryColor-lightest: #affffa;
+$greyColor: #303333;
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+}
+
+li {
+  list-style: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  vertical-align: baseline;
+}
+// /* remember to define focus styles! */
+// :focus {
+//   outline: 0;
+// }
+// body {
+//   line-height: 1;
+//   color: black;
+//   background: white;
+// }
+// ol,
+// ul {
+//   list-style: none;
+// }
+
+// /* tables still need 'cellspacing="0"' in the markup */
+// table {
+//   border-collapse: separate;
+//   border-spacing: 0;
+// }
+// caption,
+// th,
+// td {
+//   text-align: left;
+//   font-weight: normal;
+// }
+// blockquote:before,
+// blockquote:after,
+// q:before,
+// q:after {
+//   content: "";
+// }
+// blockquote,
+// q {
+//   quotes: "" "";
+// }
+
+//background
+
+.background-img {
+  background-image: url("../img/background.jpg");
+  height: 768px;
+  background-size: cover;
+  background-position: center center;
+}
+
+//navbar
+.navbar {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba($color: $primaryColor, $alpha: 0.05);
+  backdrop-filter: blur(3px);
+  border: 1px;
+  padding: 0;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 99;
+  .navbar-list {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+  }
+  .list-items {
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    text-decoration: none;
+
+    color: $primaryColor;
+    transition: all 0.2s ease;
+    &:hover,
+    &:active {
+      color: white;
+      background-color: $primaryColor;
+      border-radius: 5px;
+      font-weight: 700;
+      box-shadow: $primaryColor-lightest 0px 0px 8px;
+    }
+  }
+}
+
+.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  z-index: -99;
+  transition: 1s;
+}
+
+.navbar:hover::before {
+  left: 100%;
+}
+
+.logo {
+  width: 200px;
+  height: 67px;
+  // height: 100%;
+  // background-color: red;
+  background-image: url("../img/Stanley's\ Portfolio\ Logo_STANLEY-part.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s ease;
+  // cursor: pointer;
+  // content: url("img/Stanley's Portfolio Logo_STANLEY.png");
+  &:hover {
+    background-image: url("../img/Stanley's\ Portfolio\ Logo_STANLEY.png");
+    // background-size: cover;
+    // background-size: 200px;
+    // background-repeat: no-repeat;
+  }
+}
+
+.logo-item {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-component {
+  position: absolute;
+  width: 10vw;
+  opacity: 0.1;
+}
+
+.header-content {
+}
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.frame-cont {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.primary-frame {
+  position: relative;
+  display: flex;
+  top: 100px;
+  justify-content: center;
+  margin: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  border-radius: 10px 80px 10px 80px;
+  box-shadow: rgba(#00a49a, 0.2) 0 0 24px;
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: $primaryColor-lightest;
+}
+//logo component
+.S-1 {
+  top: 290px;
+  left: 7%;
+}
+
+.S-2 {
+  top: 290px;
+  left: 7%;
+}
+
+.T-1 {
+  top: 320px;
+  left: 20%;
+}
+
+.T-2 {
+  top: 320px;
+  left: 20%;
+}
+
+.A-1 {
+  top: 290px;
+  left: 33%;
+}
+
+.A-2 {
+  top: 290px;
+  left: 33%;
+}
+
+.N-1 {
+  top: 310px;
+  left: 46%;
+}
+
+.N-2 {
+  top: 310px;
+  left: 46%;
+}
+
+.L-1 {
+  top: 330px;
+  left: 59%;
+}
+
+.L-2 {
+  top: 330px;
+  left: 59%;
+}
+
+.E-1 {
+  top: 285px;
+  left: 72%;
+}
+
+.E-2 {
+  top: 285px;
+  left: 72%;
+}
+
+.Y-1 {
+  top: 315px;
+  left: 85%;
+}
+
+.Y-2 {
+  top: 315px;
+  left: 85%;
+}
+
+//Utilities(重複率很高的雜項)
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-float {
+  position: float;
+}
+
+.z-index--99 {
+  z-index: -99;
+}
+
+.font-weight-100 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+}
+
+.font-weight-300 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+}
+
+.font-weight-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: $greyColor;
+  // line-height: 5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: $greyColor;
+  // line-height: 3.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  // line-height: 2.5rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+  // line-height: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  // line-height: inherit;
+}
+
+.color-primaryColor {
+  color: $primaryColor;
+}
+.color-greyColor {
+  color: $greyColor;
+}
+
+.btn-primary {
+  display: inline-block;
+  color: white;
+  background-image: linear-gradient(
+    to bottom,
+    $primaryColor,
+    $primaryColor-dark
+  );
+  border: none;
+  border-radius: 50px;
+  padding: 8px 20px;
+  width: 50%;
+  margin: 1rem 0;
+  transition: box-shadow 0.2s ease;
+  &:hover {
+    background-image: linear-gradient(
+      to bottom,
+      $primaryColor-light,
+      $primaryColor
+    );
+    box-shadow: $primaryColor-light 0px 0px 8px;
+  }
+  &:active {
+    background-image: linear-gradient(
+      to bottom,
+      darken($primaryColor, 3%),
+      darken($primaryColor, 3%)
+    );
+  }
+}
