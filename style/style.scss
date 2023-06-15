@@ -123,7 +123,7 @@ td {
 
 .background-img {
   background-image: url("../img/background.jpg");
-  height: 768px;
+  height: 789px;
   background-size: cover;
   background-position: center center;
 }
@@ -188,20 +188,13 @@ td {
 .logo {
   width: 200px;
   height: 67px;
-  // height: 100%;
-  // background-color: red;
   background-image: url("../img/Logo_STANLEY-part.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transition: background 0.2s ease;
-  // cursor: pointer;
-  // content: url("img/Stanley's Portfolio Logo_STANLEY.png");
   &:hover {
     background-image: url("../img/Logo_STANLEY.png");
-    // background-size: cover;
-    // background-size: 200px;
-    // background-repeat: no-repeat;
   }
 }
 
@@ -221,11 +214,10 @@ td {
 }
 main {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
 }
 
-.frame-cont {
+.frame-container {
   position: absolute;
   top: 0;
   left: 50%;
@@ -236,17 +228,16 @@ main {
   display: flex;
   top: 120px;
   justify-content: center;
-  margin: 10px 20px;
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(2px);
   border-radius: 10px 80px 10px 80px;
-  box-shadow: rgba(#00a49a, 0.2) 0 0 24px;
+  box-shadow: rgba(#00a49a, 0.2) 0 0 16px;
 }
 
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: $primaryColor-lightest;
+  background-color: white;
 }
 //logo component
 .S-1 {
@@ -390,18 +381,8 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
-  color: $greyColor;
-  // line-height: 3.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-  // line-height: 2.5rem;
-}
-
-h4 {
   font-size: 1.5rem;
+  color: $greyColor;
   // line-height: 1rem;
 }
 
@@ -430,6 +411,7 @@ p {
   padding: 8px 20px;
   width: 50%;
   margin: 1rem 0;
+  font-weight: 400;
   transition: box-shadow 0.2s ease;
   &:hover {
     background-image: linear-gradient(
@@ -437,6 +419,7 @@ p {
       $primaryColor-light,
       $primaryColor
     );
+    font-weight: 700;
     box-shadow: $primaryColor-light 0px 0px 8px;
   }
   &:active {
