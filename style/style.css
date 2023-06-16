@@ -4140,6 +4140,32 @@ td {
   vertical-align: baseline;
 }
 
+h1 {
+  font-size: 3.5rem;
+  color: #303333;
+  /* line-height: 5rem; */
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #303333;
+  /* line-height: 1rem; */
+}
+
+h3 {
+  font-size: 0.5rem;
+  color: #303333;
+}
+
+p {
+  font-size: 1rem;
+}
+
+hr {
+  border: #00a49a solid 2px;
+  margin-bottom: 20px;
+}
+
 .background-img {
   background-image: url("../img/background.jpg");
   height: 789px;
@@ -4352,6 +4378,95 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.ai_circle {
+  fill: none;
+  stroke: #ff9a01;
+  stroke-width: 16px;
+  stroke-dasharray: 472 472;
+  stroke-dashoffset: 420;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: anim 2s ease forwards;
+          animation: anim 2s ease forwards;
+}
+
+.html5_circle {
+  fill: none;
+  stroke: #dc4c25;
+  stroke-width: 16px;
+  stroke-dasharray: 332 472;
+  stroke-dashoffset: 280;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: anim 2s ease forwards;
+          animation: anim 2s ease forwards;
+}
+
+.figma_circle {
+  fill: none;
+  stroke: #00d27c;
+  stroke-width: 16px;
+  stroke-dasharray: 402 472;
+  stroke-dashoffset: 350;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: anim 2s ease forwards;
+          animation: anim 2s ease forwards;
+}
+
+.ps_circle {
+  fill: none;
+  stroke: #31a8ff;
+  stroke-width: 16px;
+  stroke-dasharray: 432 472;
+  stroke-dashoffset: 380;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: anim 2s ease forwards;
+          animation: anim 2s ease forwards;
+}
+
+.css3_circle {
+  fill: none;
+  stroke: #1472b7;
+  stroke-width: 16px;
+  stroke-dasharray: 272 472;
+  stroke-dashoffset: 220;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: anim 2s ease forwards;
+          animation: anim 2s ease forwards;
+}
+
+.ppt_circle {
+  fill: none;
+  stroke: #d04424;
+  stroke-width: 16px;
+  stroke-dasharray: 472 472;
+  stroke-dashoffset: 420;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: anim 2s ease forwards;
+          animation: anim 2s ease forwards;
+}
+
+@-webkit-keyframes anim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes anim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+svg {
+  position: absolute;
+  top: -21.5px;
+  left: -21.5px;
 }
 
 .edAndExp {
