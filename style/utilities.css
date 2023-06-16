@@ -1,0 +1,163 @@
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-float {
+  position: float;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.z-index--99 {
+  z-index: -99;
+}
+
+.font-weight-100 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+}
+
+.font-weight-300 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+}
+
+.font-weight-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+.pd-8 {
+  padding: 8px;
+}
+
+.pdl-8 {
+  padding-left: 8px;
+}
+
+.pdt-8 {
+  padding-top: 8px;
+}
+
+.pdb-8 {
+  padding-bottom: 8px;
+}
+
+.pd-16 {
+  padding: 16px;
+}
+
+.pdl-16 {
+  padding-left: 16px;
+}
+
+.pdt-16 {
+  padding-top: 16px;
+}
+
+.pdb-16 {
+  padding-bottom: 16px;
+}
+
+.pd-24 {
+  padding: 24px;
+}
+
+.pdl-24 {
+  padding-left: 24px;
+}
+
+.pdt-24 {
+  padding-top: 24px;
+}
+
+.pdb-24 {
+  padding-bottom: 24px;
+}
+
+.pd-32 {
+  padding: 32px;
+}
+
+.pdl-32 {
+  padding-left: 32px;
+}
+
+.pdt-32 {
+  padding-top: 32px;
+}
+
+.pdb-32 {
+  padding-bottom: 32px;
+}
+
+.pdl-64 {
+  padding-left: 64px;
+}
+
+.pdt-64 {
+  padding-top: 64px;
+}
+
+.pdb-64 {
+  padding-bottom: 64px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  color: $greyColor;
+  // line-height: 5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: $greyColor;
+  // line-height: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  // line-height: inherit;
+}
+
+hr {
+  border: #00a49a solid 2px;
+  width: 20px;
+}
