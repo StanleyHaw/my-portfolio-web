@@ -1,18 +1,22 @@
 @import "../bootstrap-5.0.2/scss/bootstrap-grid.scss";
 @import "/style/utilities.css";
 
-$primaryColor-dark: #00867d;
-$primaryColor: #00a49a;
-$primaryColor-light: #2bbcb3;
-$primaryColor-lighter: #55ddd4;
-$primaryColor-lightest: #affffa;
-$backgroundPrimaryColor: #ebf4f4;
-$greyColor: #303333;
+$primaryColor-dark: #6dacb6;
+$primaryColor: #94c8d3;
+$primaryColor-light: #a8d3db;
+$primaryColor-lighter: #c4e1e6;
+$primaryColor-lightest: #daedf1;
+$backgroundPrimaryColor: #ebf0f1;
+$greyColor: #373a3b;
 * {
   box-sizing: border-box;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 1rem;
   line-height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 li {
@@ -110,8 +114,16 @@ p {
 }
 
 hr {
-  border: #00a49a solid 2px;
+  border: $primaryColor solid 2px;
   margin-bottom: 20px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#about_me {
+  // display: none;
 }
 
 // /* remember to define focus styles! */
@@ -161,7 +173,6 @@ hr {
 
 //navbar
 .navbar {
-  background-color: red;
   position: fixed;
   top: 0;
   left: 0;
@@ -184,13 +195,25 @@ hr {
 
     color: $primaryColor;
     transition: all 0.2s ease;
-    &:hover,
-    &:active {
+    &:hover {
       color: white;
       background-color: $primaryColor;
       border-radius: 5px;
       font-weight: 700;
       box-shadow: $primaryColor-lightest 0px 0px 8px;
+      a {
+        text-shadow: $greyColor 0px 0px 1px;
+      }
+    }
+    &:active {
+      color: white;
+      background-color: $primaryColor-dark;
+      border-radius: 5px;
+      font-weight: 900;
+      box-shadow: $primaryColor-light 0px 0px 8px;
+      a {
+        text-shadow: $greyColor 0px 0px 1px;
+      }
     }
   }
 }
@@ -226,6 +249,7 @@ hr {
   transition: background 0.2s ease;
   &:hover {
     background-image: url("../img/Logo_STANLEY.png");
+    filter: drop-shadow(0 0 5px rgba($primaryColor-lighter, 0.4));
   }
 }
 
@@ -243,6 +267,7 @@ hr {
 
 .header-content {
 }
+
 main {
   position: relative;
   width: 100%;
@@ -260,33 +285,21 @@ main {
   top: 120px;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   border-radius: 10px 80px 10px 80px;
   box-shadow: rgba(#00a49a, 0.2) 0 0 16px;
 }
 
-.primary-frame::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -200%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 1),
-    transparent,
-    rgba(255, 255, 255, 0.6),
-    transparent
-  );
-  z-index: -99;
-  transition: 1.5s;
+.nextpage-1 {
+  top: -20px;
+  left: 50.5%;
+  z-index: 100;
 }
 
-.primary-frame:hover::before {
-  left: 200%;
+polygon {
+  background-color: $primaryColor-dark;
 }
+
 .section {
   width: auto;
   height: 789px;
@@ -330,62 +343,62 @@ main {
 }
 
 .img-ai {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url("../img/PORTFOLIO_ai_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 12px;
 }
 
 .img-html5 {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url("../img/PORTFOLIO_html5_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 12px;
 }
 
 .img-figma {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url("../img/PORTFOLIO_figma_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 12px;
 }
 
 .img-ps {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url("../img/PORTFOLIO_ps_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 12px;
 }
 
 .img-css3 {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url("../img/PORTFOLIO_css3_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 12px;
 }
 
 .img-ppt {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   background-image: url("../img/PORTFOLIO_ppt_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 12px 12px;
 }
 
 .ai_circle {
   fill: none;
-  stroke: #ff9a01;
+  stroke: $primaryColor;
   stroke-width: 16px;
   stroke-dasharray: 472 472;
   stroke-dashoffset: 420;
@@ -396,7 +409,7 @@ main {
 
 .html5_circle {
   fill: none;
-  stroke: #dc4c25;
+  stroke: $primaryColor;
   stroke-width: 16px;
   stroke-dasharray: 332 472;
   stroke-dashoffset: 280;
@@ -407,7 +420,7 @@ main {
 
 .figma_circle {
   fill: none;
-  stroke: #00d27c;
+  stroke: $primaryColor;
   stroke-width: 16px;
   stroke-dasharray: 402 472;
   stroke-dashoffset: 350;
@@ -418,7 +431,7 @@ main {
 
 .ps_circle {
   fill: none;
-  stroke: #31a8ff;
+  stroke: $primaryColor;
   stroke-width: 16px;
   stroke-dasharray: 432 472;
   stroke-dashoffset: 380;
@@ -429,7 +442,7 @@ main {
 
 .css3_circle {
   fill: none;
-  stroke: #1472b7;
+  stroke: $primaryColor;
   stroke-width: 16px;
   stroke-dasharray: 272 472;
   stroke-dashoffset: 220;
@@ -440,7 +453,7 @@ main {
 
 .ppt_circle {
   fill: none;
-  stroke: #d04424;
+  stroke: $primaryColor;
   stroke-width: 16px;
   stroke-dasharray: 472 472;
   stroke-dashoffset: 420;
@@ -505,73 +518,30 @@ svg {
   }
 }
 
-//logo component
-.S-1 {
-  top: 290px;
-  left: 7%;
+// @media (min-height: 0px) and (max-height: 789px) {
+//   .about-me {
+//     border: $primaryColor solid 1.5px;
+//     border-radius: 5px;
+//   }
+// }
+
+// @media (min-height: 790px) and (max-height: 1578px) {
+//   .about-me {
+//     border: none;
+//   }
+//   .works {
+//     border: $primaryColor solid 1.5px;
+//     border-radius: 5px;
+//   }
+// }
+.anim {
+  opacity: 0;
+  transform: translateX(-80%);
+  transition: all 0.5s ease-out;
+  transition-delay: 0.1s;
 }
 
-.S-2 {
-  top: 290px;
-  left: 7%;
-}
-
-.T-1 {
-  top: 320px;
-  left: 20%;
-}
-
-.T-2 {
-  top: 320px;
-  left: 20%;
-}
-
-.A-1 {
-  top: 290px;
-  left: 33%;
-}
-
-.A-2 {
-  top: 290px;
-  left: 33%;
-}
-
-.N-1 {
-  top: 310px;
-  left: 46%;
-}
-
-.N-2 {
-  top: 310px;
-  left: 46%;
-}
-
-.L-1 {
-  top: 330px;
-  left: 59%;
-}
-
-.L-2 {
-  top: 330px;
-  left: 59%;
-}
-
-.E-1 {
-  top: 285px;
-  left: 72%;
-}
-
-.E-2 {
-  top: 285px;
-  left: 72%;
-}
-
-.Y-1 {
-  top: 315px;
-  left: 85%;
-}
-
-.Y-2 {
-  top: 315px;
-  left: 85%;
+.scroll-anim {
+  opacity: 1;
+  transform: translateX(0);
 }

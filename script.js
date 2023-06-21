@@ -41,3 +41,24 @@ function add3d(element, e) {
   // 加入樣式
   element.style.transform = `translateX(${invert ? d_x : -d_x}px)`;
 }
+
+const the_anim = document.querySelectorAll(".anim");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("scroll-anim");
+      } else {
+        entry.target.classList.remove("scroll-anim");
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+//
+for (let i = 0; i < the_anim.length; i++) {
+  const elements = the_anim[i];
+
+  observer.observe(elements);
+}

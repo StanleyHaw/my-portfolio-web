@@ -27,9 +27,11 @@
               <a href="#" class="logo-item"> </a>
             </div>
             <ul class="navbar-list font-weight-400">
-              <li><a href="" class="list-items">關於我</a></li>
-              <li><a href="" class="list-items">作品集</a></li>
-              <li><a href="" class="list-items">聯絡我</a></li>
+              <li>
+                <a href="#About_me" class="list-items about-me">關於我</a>
+              </li>
+              <li><a href="" class="list-items works">作品集</a></li>
+              <li><a href="" class="list-items contact-me">聯絡我</a></li>
             </ul>
           </div>
         </div>
@@ -37,92 +39,6 @@
     </header>
     <main>
       <div class="background-img z-index--99"></div>
-      <div class="position-float z-index--99">
-        <img
-          src="./img/Stanley_S-1.png"
-          alt=""
-          class="S-1 logo-component pos-3d"
-          data-layer="3"
-        />
-        <img
-          src="./img/Stanley_S-2.png"
-          alt=""
-          class="S-2 logo-component pos-3d"
-          data-layer="8"
-        />
-        <img
-          src="./img/Stanley_T-1.png"
-          alt=""
-          class="T-1 logo-component pos-3d"
-          data-layer="4"
-        />
-        <img
-          src="./img/Stanley_T-2.png"
-          alt=""
-          class="T-2 logo-component pos-3d"
-          data-layer="5"
-        />
-        <img
-          src="./img/Stanley_A-1.png"
-          alt=""
-          class="A-1 logo-component pos-3d"
-          data-layer="2"
-        />
-        <img
-          src="./img/Stanley_A-2.png"
-          alt=""
-          class="A-2 logo-component pos-3d"
-          data-layer="14"
-        />
-        <img
-          src="./img/Stanley_N-1.png"
-          alt=""
-          class="N-1 logo-component pos-3d"
-          data-layer="6"
-        />
-        <img
-          src="./img/Stanley_N-2.png"
-          alt=""
-          class="N-2 logo-component pos-3d"
-          data-layer="2"
-        />
-        <img
-          src="./img/Stanley_L-1.png"
-          alt=""
-          class="L-1 logo-component pos-3d"
-          data-layer="12"
-        />
-        <img
-          src="./img/Stanley_L-2.png"
-          alt=""
-          class="L-1 logo-component pos-3d"
-          data-layer="7"
-        />
-        <img
-          src="./img/Stanley_E-1.png"
-          alt=""
-          class="E-1 logo-component pos-3d"
-          data-layer="13"
-        />
-        <img
-          src="./img/Stanley_E-2.png"
-          alt=""
-          class="E-2 logo-component pos-3d"
-          data-layer="5"
-        />
-        <img
-          src="./img/Stanley_Y-1.png"
-          alt=""
-          class="Y-2 logo-component pos-3d"
-          data-layer="23"
-        />
-        <img
-          src="./img/Stanley_Y-2.png"
-          alt=""
-          class="Y-2 logo-component pos-3d"
-          data-layer="12"
-        />
-      </div>
       <div class="container frame-container">
         <div class="row primary-frame">
           <div class="col-md-5 offset-md-1 d-flex align-items-center">
@@ -135,12 +51,18 @@
                 >
               </h1>
               <p class="font-weight-300">
-                我是一位有著五年平面設計師經驗的視覺設計師，熱愛創造視覺美學，也曾自學HTML和CSS，並正致力於學習JavaScript技術。<br />
-                我的設計技能包括使用Adobe
-                Illustrator、Photoshop、figma和各種設計專案經驗，從品牌形象、宣傳海報、Facebook圖像廣告、名片設計等。<br />
+                我是一位有著五年平面設計經驗的視覺設計師，熱愛創造視覺美學，也曾自學figma(UIUX)、HTML和CSS，並正致力於學習JavaScript技術。<br />
+                我的專業技能包括使用Adobe
+                Illustrator、Photoshop的各式專案經驗，從品牌形象、宣傳海報、Facebook圖像廣告、名片設計等。<br />
                 我注重與客戶和團隊之間的溝通，並能在緊湊的時間表下交付高品質的成果。
               </p>
-              <button type="button" class="btn-primary">關於我</button>
+              <button
+                type="button"
+                class="btn-primary"
+                onclick="location.href='#About_me'"
+              >
+                關於我
+              </button>
             </div>
           </div>
           <div class="col-md-5 offset-md-1" style="z-index: 10">
@@ -155,14 +77,21 @@
           </div>
         </div>
       </div>
-      <section class="section result-container">
+      <div class="position-relative">
+        <div class="nextpage-1 position-absolute">
+          <svg class="triangle" viewBox="0 0 100 100">
+            <polygon points="50 50, 0 0, 100 0" />
+          </svg>
+        </div>
+      </div>
+      <section class="section result-container pdt-24" id="About_me">
         <div class="container">
           <div class="d-flex justify-content-space-between">
-            <div class="toolsAndSkills pd-24">
+            <div class="toolsAndSkills pd-24 anim">
               <h2 class="font-weight-500">專業技能</h2>
               <h3>TOOLs and SKILLs</h3>
               <hr />
-              <div class="d-flex">
+              <div class="d-flex justify-content-space-between">
                 <div class="skill skill-ai">
                   <div class="skill-circle-outer">
                     <div class="skill-circle-inner">
@@ -297,7 +226,7 @@
                 </div>
               </div>
             </div>
-            <div class="edAndExp d-flex position-relative pd-24">
+            <div class="edAndExp d-flex position-relative pd-24 anim">
               <div class="education pdb-64" style="width: 100%">
                 <h2 class="font-weight-500">教育程度</h2>
                 <h3>EDUCATION</h3>
@@ -363,6 +292,7 @@
           </div>
         </div>
       </section>
+      <section class="section works-container" id="section2"></section>
     </main>
     <footer></footer>
   </body>
