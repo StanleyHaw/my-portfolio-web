@@ -42,23 +42,13 @@ function add3d(element, e) {
   element.style.transform = `translateX(${invert ? d_x : -d_x}px)`;
 }
 
-const the_anim = document.querySelectorAll(".anim");
+window.addEventListener("scroll", function () {
+  var navbar = document.querySelector(".navbar");
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("scroll-anim");
-      } else {
-        entry.target.classList.remove("scroll-anim");
-      }
-    });
-  },
-  { threshold: 0.5 }
-);
-//
-for (let i = 0; i < the_anim.length; i++) {
-  const elements = the_anim[i];
-
-  observer.observe(elements);
-}
+  if (scrollPosition >= 789) {
+    navbar.style.top = "0px"; // 滚动位置大于等于 789px，显示导航栏
+  } else {
+    navbar.style.top = "-100px"; // 滚动位置小于 789px，隐藏导航栏
+  }
+});

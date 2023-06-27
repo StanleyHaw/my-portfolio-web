@@ -4,7 +4,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import "/style/utilities.css";
 .container,
 .container-fluid,
 .container-xxl,
@@ -4144,206 +4143,192 @@ td {
   vertical-align: baseline;
 }
 
-h1 {
-  font-size: 3.5rem;
-  color: #373a3b;
-  /* line-height: 5rem; */
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 
-h2 {
-  font-size: 1.5rem;
-  color: #373a3b;
-  /* line-height: 1rem; */
-}
-
-h3 {
-  font-size: 0.5rem;
-  color: #373a3b;
-}
-
-p {
-  font-size: 1rem;
-}
-
-hr {
-  border: #94c8d3 solid 2px;
-  margin-bottom: 20px;
-}
-
-button {
+.logo {
+  width: 136.5px;
+  height: 40px;
+  background-image: url("../img/logoPart_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s ease;
   cursor: pointer;
 }
-
-.background-img {
-  background-image: url("../img/background.jpg");
-  height: 789px;
-  background-size: cover;
-  background-position: center center;
+.logo:hover {
+  background-image: url("../img/logoFull_STANLEY.png");
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
 }
 
 .navbar {
   position: fixed;
-  top: 0;
+  width: 90%;
+  margin-top: 8px;
+  margin-left: 5%;
+  margin-right: 5%;
+  top: -100px;
   left: 0;
-  right: 0;
-  background-color: rgba(148, 200, 211, 0.05);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  border: 1px;
-  padding: 0;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
-  z-index: 99;
+  background-color: rgba(30, 35, 52, 0.8);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 .navbar .navbar-list {
   display: flex;
-  margin: 0;
-  padding: 10px;
+  position: relative;
 }
 .navbar .list-items {
-  padding: 0.75rem 1.5rem;
+  position: relative;
+  padding: 8px 24px;
   display: inline-block;
-  text-decoration: none;
-  color: #94c8d3;
-  transition: all 0.2s ease;
+  margin: 20px 12px;
+  transition: all 0.1s ease-out;
+  color: #fffcfb;
+  cursor: pointer;
 }
 .navbar .list-items:hover {
-  color: white;
-  background-color: #94c8d3;
-  border-radius: 5px;
-  font-weight: 700;
-  box-shadow: #daedf1 0px 0px 8px;
+  color: #ffc10e;
+  font-weight: 400;
 }
-.navbar .list-items:hover a {
-  text-shadow: #373a3b 0px 0px 1px;
-}
-.navbar .list-items:active {
-  color: white;
-  background-color: #6dacb6;
-  border-radius: 5px;
-  font-weight: 900;
-  box-shadow: #a8d3db 0px 0px 8px;
-}
-.navbar .list-items:active a {
-  text-shadow: #373a3b 0px 0px 1px;
-}
-
-.navbar::before {
+.navbar .list-items::after {
   content: "";
   position: absolute;
-  top: 0;
-  left: -100%;
+  left: 0;
+  bottom: -6px;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.6), transparent);
-  z-index: -99;
-  transition: 1s;
+  height: 2px;
+  background: #ffc10e;
+  border-radius: 5px;
+  transform: scaleX(0);
+  transition: transform 0.1s ease-out;
+}
+.navbar .list-items:hover::after {
+  transform: scaleX(1);
 }
 
-.navbar:hover::before {
-  left: 100%;
+.background {
+  position: relative;
+  background-color: #fffcfb;
+  height: 789px;
 }
 
-.logo {
-  width: 200px;
-  height: 67px;
-  background-image: url("../img/Logo_STANLEY-part.png");
+.background-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 670px;
+  width: 670px;
+  background-color: #fdf8ef;
+  border-radius: 50%;
+}
+
+.logo-about-me {
+  top: 32px;
+  left: 56px;
+  width: 300px;
+  height: 100px;
+  background-image: url("../img/logoPart_STANLEY.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
   transition: background 0.2s ease;
 }
-.logo:hover {
-  background-image: url("../img/Logo_STANLEY.png");
-  filter: drop-shadow(0 0 5px rgba(196, 225, 230, 0.4));
+.logo-about-me:hover {
+  background-image: url("../img/logoFull_STANLEY.png");
+  filter: drop-shadow(0 0 5px rgba(250, 211, 25, 0.5));
 }
 
-.logo-item {
-  display: block;
-  width: 100%;
-  height: 100%;
+.intro-about-me {
+  padding: 64px 80px;
+  bottom: 0px;
 }
 
-.logo-component {
-  position: absolute;
-  width: 10vw;
-  opacity: 0.1;
+.to-about-me {
+  padding: 64px 80px;
+  bottom: 0px;
+  right: 0px;
 }
 
-main {
-  position: relative;
-  width: 100%;
+.word-about-me {
+  right: 200px;
+  top: 640px;
+  padding-right: 32px;
 }
 
-.frame-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.primary-frame {
-  position: relative;
-  display: flex;
-  top: 120px;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.4);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
-  border-radius: 10px 80px 10px 80px;
-  box-shadow: rgba(0, 164, 154, 0.2) 0 0 16px;
-}
-
-.nextpage-1 {
-  top: -20px;
-  left: 50.5%;
-  z-index: 100;
-}
-
-polygon {
-  background-color: #6dacb6;
-}
-
-.section {
-  width: auto;
-  height: 789px;
+.about-me-1 {
   padding-top: 64px;
   padding-bottom: 64px;
-  background-color: #ebf0f1;
+  background-color: white;
+}
+
+.title {
+  padding: 1rem;
+  border-bottom: #ffc10e solid 6px;
+}
+
+.avatar-2 {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+}
+
+.about-me-2,
+.abilities {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: #fdf8ef;
+}
+
+.introdution,
+.education,
+.experience {
+  width: 100%;
+}
+
+.result {
+  width: 80%;
 }
 
 .toolsAndSkills {
-  width: 65%;
+  width: 100%;
 }
 
 .skill {
   position: flex;
-  width: 192px;
-  height: 192px;
-  margin: 28px;
+  width: 160px;
+  height: 160px;
+  margin: 16px;
 }
 
 .skill-circle-outer {
-  width: 192px;
-  height: 192px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  background-color: #ebf0f1;
+  background-color: white;
   box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1), -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
 }
 
 .skill-circle-inner {
   position: relative;
-  width: 144px;
-  height: 144px;
-  top: 24px;
-  left: 24px;
+  width: 140px;
+  height: 140px;
+  top: 10px;
+  left: 10px;
   border-radius: 50%;
-  background-color: #ebf0f1;
+  background-color: #fdf8ef;
   box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.2), inset -2px -2px 4px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgb(255, 255, 255), 0.5px 0.5px 0px rgba(0, 0, 0, 0.01), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
 }
 
 .img-ai {
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   background-image: url("../img/PORTFOLIO_ai_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -4351,8 +4336,8 @@ polygon {
 }
 
 .img-html5 {
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   background-image: url("../img/PORTFOLIO_html5_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -4360,8 +4345,8 @@ polygon {
 }
 
 .img-figma {
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   background-image: url("../img/PORTFOLIO_figma_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -4369,8 +4354,8 @@ polygon {
 }
 
 .img-ps {
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   background-image: url("../img/PORTFOLIO_ps_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -4378,8 +4363,8 @@ polygon {
 }
 
 .img-css3 {
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   background-image: url("../img/PORTFOLIO_css3_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -4387,93 +4372,93 @@ polygon {
 }
 
 .img-ppt {
-  width: 120px;
-  height: 120px;
+  width: 118px;
+  height: 118px;
   background-image: url("../img/PORTFOLIO_ppt_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 12px 12px;
 }
 
-.ai_circle {
-  fill: none;
-  stroke: #94c8d3;
-  stroke-width: 16px;
-  stroke-dasharray: 472 472;
-  stroke-dashoffset: 420;
-  transform-origin: center;
-  transform: rotate(-90deg);
-  -webkit-animation: anim 2s ease forwards;
-          animation: anim 2s ease forwards;
-}
-
-.html5_circle {
-  fill: none;
-  stroke: #94c8d3;
-  stroke-width: 16px;
-  stroke-dasharray: 332 472;
-  stroke-dashoffset: 280;
-  transform-origin: center;
-  transform: rotate(-90deg);
-  -webkit-animation: anim 2s ease forwards;
-          animation: anim 2s ease forwards;
-}
-
 .figma_circle {
   fill: none;
-  stroke: #94c8d3;
-  stroke-width: 16px;
+  stroke: #ffc10e;
+  stroke-width: 8px;
   stroke-dasharray: 402 472;
   stroke-dashoffset: 350;
   transform-origin: center;
   transform: rotate(-90deg);
-  -webkit-animation: anim 2s ease forwards;
-          animation: anim 2s ease forwards;
+  -webkit-animation: valueAnim 2s ease forwards;
+          animation: valueAnim 2s ease forwards;
+}
+
+.ai_circle {
+  fill: none;
+  stroke: #ffc10e;
+  stroke-width: 8px;
+  stroke-dasharray: 452 472;
+  stroke-dashoffset: 400;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: valueAnim 2s ease forwards;
+          animation: valueAnim 2s ease forwards;
 }
 
 .ps_circle {
   fill: none;
-  stroke: #94c8d3;
-  stroke-width: 16px;
+  stroke: #ffc10e;
+  stroke-width: 8px;
   stroke-dasharray: 432 472;
   stroke-dashoffset: 380;
   transform-origin: center;
   transform: rotate(-90deg);
-  -webkit-animation: anim 2s ease forwards;
-          animation: anim 2s ease forwards;
-}
-
-.css3_circle {
-  fill: none;
-  stroke: #94c8d3;
-  stroke-width: 16px;
-  stroke-dasharray: 272 472;
-  stroke-dashoffset: 220;
-  transform-origin: center;
-  transform: rotate(-90deg);
-  -webkit-animation: anim 2s ease forwards;
-          animation: anim 2s ease forwards;
+  -webkit-animation: valueAnim 2s ease forwards;
+          animation: valueAnim 2s ease forwards;
 }
 
 .ppt_circle {
   fill: none;
-  stroke: #94c8d3;
-  stroke-width: 16px;
-  stroke-dasharray: 472 472;
-  stroke-dashoffset: 420;
+  stroke: #ffc10e;
+  stroke-width: 8px;
+  stroke-dasharray: 452 472;
+  stroke-dashoffset: 400;
   transform-origin: center;
   transform: rotate(-90deg);
-  -webkit-animation: anim 2s ease forwards;
-          animation: anim 2s ease forwards;
+  -webkit-animation: valueAnim 2s ease forwards;
+          animation: valueAnim 2s ease forwards;
 }
 
-@-webkit-keyframes anim {
+.html5_circle {
+  fill: none;
+  stroke: #ffc10e;
+  stroke-width: 8px;
+  stroke-dasharray: 332 472;
+  stroke-dashoffset: 280;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: valueAnim 2s ease forwards;
+          animation: valueAnim 2s ease forwards;
+}
+
+.css3_circle {
+  fill: none;
+  stroke: #ffc10e;
+  stroke-width: 8px;
+  stroke-dasharray: 272 472;
+  stroke-dashoffset: 220;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  -webkit-animation: valueAnim 2s ease forwards;
+          animation: valueAnim 2s ease forwards;
+}
+
+@-webkit-keyframes valueAnim {
   100% {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes anim {
+@keyframes valueAnim {
   100% {
     stroke-dashoffset: 0;
   }
@@ -4484,47 +4469,214 @@ svg {
   left: -21.5px;
 }
 
-.edAndExp {
-  width: 30%;
+.works {
+  position: relative;
 }
 
-.color-primaryColor {
-  color: #94c8d3;
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.color-greyColor {
-  color: #373a3b;
+.nowrap {
+  flex-wrap: nowrap;
 }
 
-.btn-primary {
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-float {
+  position: float;
+}
+
+.inline-block {
   display: inline-block;
-  color: white;
-  background-image: linear-gradient(to bottom, #94c8d3, #6dacb6);
-  border: none;
-  border-radius: 50px;
-  padding: 8px 20px;
-  width: 50%;
-  margin: 1rem 0;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.z-index--99 {
+  z-index: -99;
+}
+
+.font-weight-100 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+}
+
+.font-weight-300 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-family: "Noto Sans TC", sans-serif;
   font-weight: 400;
-  transition: box-shadow 0.2s ease;
 }
-.btn-primary:hover {
-  background-image: linear-gradient(to bottom, #a8d3db, #94c8d3);
+
+.font-weight-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-family: "Noto Sans TC", sans-serif;
   font-weight: 700;
-  box-shadow: #a8d3db 0px 0px 8px;
-}
-.btn-primary:active {
-  background-image: linear-gradient(to bottom, #89c2cf, #89c2cf);
 }
 
-.anim {
-  opacity: 0;
-  transform: translateX(-80%);
-  transition: all 0.5s ease-out;
-  transition-delay: 0.1s;
+.font-weight-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
 }
 
-.scroll-anim {
-  opacity: 1;
-  transform: translateX(0);
-}/*# sourceMappingURL=style.css.map */
+.pd-8 {
+  padding: 8px;
+}
+
+.pdl-8 {
+  padding-left: 8px;
+}
+
+.pdt-8 {
+  padding-top: 8px;
+}
+
+.pdb-8 {
+  padding-bottom: 8px;
+}
+
+.pd-16 {
+  padding: 16px;
+}
+
+.pdl-16 {
+  padding-left: 16px;
+}
+
+.pdt-16 {
+  padding-top: 16px;
+}
+
+.pdb-16 {
+  padding-bottom: 16px;
+}
+
+.pd-24 {
+  padding: 24px;
+}
+
+.pdl-24 {
+  padding-left: 24px;
+}
+
+.pdt-24 {
+  padding-top: 24px;
+}
+
+.pdb-24 {
+  padding-bottom: 24px;
+}
+
+.pd-32 {
+  padding: 32px;
+}
+
+.pdl-32 {
+  padding-left: 32px;
+}
+
+.pdt-32 {
+  padding-top: 32px;
+}
+
+.pdb-32 {
+  padding-bottom: 32px;
+}
+
+.pdl-64 {
+  padding-left: 64px;
+}
+
+.pdt-64 {
+  padding-top: 64px;
+}
+
+.pdb-64 {
+  padding-bottom: 64px;
+}
+
+.pdl-96 {
+  padding-left: 96px;
+}
+
+.pdt-96 {
+  padding-top: 96px;
+}
+
+.pdb-96 {
+  padding-bottom: 96px;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 0.5rem;
+  font-weight: 100;
+}
+
+hr {
+  border: #ffc10e solid 1px;
+  margin-bottom: 20px;
+}
+
+span {
+  line-height: 1.8rem;
+}/*# sourceMappingURL=all.css.map */

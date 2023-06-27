@@ -1,0 +1,647 @@
+@import "../bootstrap-5.0.2/scss/bootstrap-grid.scss";
+
+$primaryBGColor: #fffcfb;
+$secondaryBGColor: #fdf8ef;
+$secondaryColor900: #1a1f31;
+$secondaryColor800: #1e2334;
+$primaryColor500: #ffc10e;
+$primaryColor400: #fad319;
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  vertical-align: baseline;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.logo {
+  width: 136.5px;
+  height: 40px;
+  background-image: url("../img/logoPart_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background-image: url("../img/logoFull_STANLEY.png");
+    filter: drop-shadow(0 0 5px rgba(white, 0.5));
+  }
+}
+
+.navbar {
+  position: fixed;
+  width: 90%;
+  margin-top: 8px;
+  margin-left: 5%;
+  margin-right: 5%;
+  top: -100px;
+  left: 0;
+  //   background-color: rgba($color: $primaryBGColor, $alpha: 0.8);
+  background-color: rgba($color: $secondaryColor800, $alpha: 0.8);
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  .navbar-list {
+    display: flex;
+    position: relative;
+  }
+
+  .list-items {
+    position: relative;
+    padding: 8px 24px;
+    display: inline-block;
+    margin: 20px 12px;
+    transition: all 0.1s ease-out;
+    // color: $secondaryColor800;
+    color: $primaryBGColor;
+    cursor: pointer;
+
+    &:hover {
+      color: $primaryColor500;
+      font-weight: 400;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background: $primaryColor500;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: transform 0.1s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.background {
+  position: relative;
+  background-color: $primaryBGColor;
+  height: 789px;
+}
+
+.background-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 670px;
+  width: 670px;
+  background-color: $secondaryBGColor;
+  border-radius: 50%;
+}
+
+.logo-about-me {
+  top: 32px;
+  left: 56px;
+  width: 300px;
+  height: 100px;
+  background-image: url("../img/logoPart_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s ease;
+  &:hover {
+    background-image: url("../img/logoFull_STANLEY.png");
+    filter: drop-shadow(0 0 5px rgba($primaryColor400, 0.5));
+  }
+}
+
+.intro-about-me {
+  padding: 64px 80px;
+  bottom: 0px;
+}
+
+.to-about-me {
+  padding: 64px 80px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.word-about-me {
+  right: 200px;
+  top: 640px;
+  padding-right: 32px;
+}
+
+// .btn-about-me {
+//   right: 100px;
+//   top: 645px;
+//   width: 64px;
+//   height: 64px;
+//   background-color: $primaryColor500;
+//   border-radius: 50%;
+//   transition: all 0.2s ease-in-out;
+//   &:hover {
+//     background-color: $primaryColor400;
+//   }
+// }
+
+.about-me-1 {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: white;
+}
+
+.title {
+  padding: 1rem;
+  border-bottom: $primaryColor500 solid 6px;
+}
+
+.avatar-2 {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+}
+
+.about-me-2,
+.abilities {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: $secondaryBGColor;
+}
+
+.introdution,
+.education,
+.experience {
+  width: 100%;
+}
+
+.result {
+  width: 80%;
+}
+
+.toolsAndSkills {
+  width: 100%;
+}
+
+.skill {
+  position: flex;
+  width: 160px;
+  height: 160px;
+  margin: 16px;
+}
+
+.skill-circle-outer {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
+    -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
+}
+
+.skill-circle-inner {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  top: 10px;
+  left: 10px;
+  border-radius: 50%;
+  background-color: $secondaryBGColor;
+  box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.01), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+
+.img-ai {
+  width: 118px;
+  height: 118px;
+  background-image: url("../img/PORTFOLIO_ai_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.img-html5 {
+  width: 118px;
+  height: 118px;
+  background-image: url("../img/PORTFOLIO_html5_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.img-figma {
+  width: 118px;
+  height: 118px;
+  background-image: url("../img/PORTFOLIO_figma_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.img-ps {
+  width: 118px;
+  height: 118px;
+  background-image: url("../img/PORTFOLIO_ps_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.img-css3 {
+  width: 118px;
+  height: 118px;
+  background-image: url("../img/PORTFOLIO_css3_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.img-ppt {
+  width: 118px;
+  height: 118px;
+  background-image: url("../img/PORTFOLIO_ppt_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 12px 12px;
+}
+
+.figma_circle {
+  fill: none;
+  stroke: $primaryColor500;
+  stroke-width: 8px;
+  stroke-dasharray: 402 472;
+  stroke-dashoffset: 350;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: valueAnim 2s ease forwards;
+}
+
+.ai_circle {
+  fill: none;
+  stroke: $primaryColor500;
+  stroke-width: 8px;
+  stroke-dasharray: 452 472;
+  stroke-dashoffset: 400;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: valueAnim 2s ease forwards;
+}
+
+.ps_circle {
+  fill: none;
+  stroke: $primaryColor500;
+  stroke-width: 8px;
+  stroke-dasharray: 432 472;
+  stroke-dashoffset: 380;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: valueAnim 2s ease forwards;
+}
+
+.ppt_circle {
+  fill: none;
+  stroke: $primaryColor500;
+  stroke-width: 8px;
+  stroke-dasharray: 452 472;
+  stroke-dashoffset: 400;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: valueAnim 2s ease forwards;
+}
+
+.html5_circle {
+  fill: none;
+  stroke: $primaryColor500;
+  stroke-width: 8px;
+  stroke-dasharray: 332 472;
+  stroke-dashoffset: 280;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: valueAnim 2s ease forwards;
+}
+
+.css3_circle {
+  fill: none;
+  stroke: $primaryColor500;
+  stroke-width: 8px;
+  stroke-dasharray: 272 472;
+  stroke-dashoffset: 220;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: valueAnim 2s ease forwards;
+}
+
+@keyframes valueAnim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+svg {
+  position: absolute;
+  top: -21.5px;
+  left: -21.5px;
+}
+
+.works {
+  position: relative;
+}
+
+// Utilities
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-float {
+  position: float;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.z-index--99 {
+  z-index: -99;
+}
+
+.font-weight-100 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+}
+
+.font-weight-300 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+}
+
+.font-weight-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+.pd-8 {
+  padding: 8px;
+}
+
+.pdl-8 {
+  padding-left: 8px;
+}
+
+.pdt-8 {
+  padding-top: 8px;
+}
+
+.pdb-8 {
+  padding-bottom: 8px;
+}
+
+.pd-16 {
+  padding: 16px;
+}
+
+.pdl-16 {
+  padding-left: 16px;
+}
+
+.pdt-16 {
+  padding-top: 16px;
+}
+
+.pdb-16 {
+  padding-bottom: 16px;
+}
+
+.pd-24 {
+  padding: 24px;
+}
+
+.pdl-24 {
+  padding-left: 24px;
+}
+
+.pdt-24 {
+  padding-top: 24px;
+}
+
+.pdb-24 {
+  padding-bottom: 24px;
+}
+
+.pd-32 {
+  padding: 32px;
+}
+
+.pdl-32 {
+  padding-left: 32px;
+}
+
+.pdt-32 {
+  padding-top: 32px;
+}
+
+.pdb-32 {
+  padding-bottom: 32px;
+}
+
+.pdl-64 {
+  padding-left: 64px;
+}
+
+.pdt-64 {
+  padding-top: 64px;
+}
+
+.pdb-64 {
+  padding-bottom: 64px;
+}
+
+.pdl-96 {
+  padding-left: 96px;
+}
+
+.pdt-96 {
+  padding-top: 96px;
+}
+
+.pdb-96 {
+  padding-bottom: 96px;
+}
+
+header,
+main,
+footer {
+  //   position: relative;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 0.5rem;
+  font-weight: 100;
+}
+
+hr {
+  border: $primaryColor500 solid 1px;
+  margin-bottom: 20px;
+}
+
+span {
+  line-height: 1.8rem;
+}
