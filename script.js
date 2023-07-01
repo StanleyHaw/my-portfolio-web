@@ -1,3 +1,13 @@
+// const translate = document.querySelectorAll(".translate");
+
+// window.addEventListener("scroll", () => {
+//   let scroll = window.pageYOffset;
+
+//   translate.forEach((element) => {
+//     let speed = element.dataset.speed;
+//     element.style.transform = `translateY(${scroll * speed}px)`;
+//   });
+// });
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("mousemove", (e) => {
     //傳入滑鼠位置
@@ -52,3 +62,21 @@ window.addEventListener("scroll", function () {
     navbar.style.top = "-100px"; // 滚动位置小于 789px，隐藏导航栏
   }
 });
+
+window.addEventListener("scroll", reveal);
+
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowheight = window.innerHeight;
+    var revealtop = reveals[i].getBoundingClientRect().top;
+    var revealpoint = 150;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}

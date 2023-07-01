@@ -4,6 +4,7 @@ $primaryBGColor: #fffcfb;
 $secondaryBGColor: #fdf8ef;
 $secondaryColor900: #1a1f31;
 $secondaryColor800: #1e2334;
+$primaryColor700: #a98109;
 $primaryColor500: #ffc10e;
 $primaryColor400: #fad319;
 
@@ -113,16 +114,15 @@ td {
 
 .navbar {
   position: fixed;
-  width: 90%;
-  margin-top: 8px;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 100%;
+  border-bottom: $primaryBGColor 1px solid;
+  // margin-top: 8px;
   top: -100px;
   left: 0;
-  //   background-color: rgba($color: $primaryBGColor, $alpha: 0.8);
-  background-color: rgba($color: $secondaryColor800, $alpha: 0.8);
+  // background-color: rgba($color: $primaryBGColor, $alpha: 0.8);
+  background-color: rgba($color: #000000, $alpha: 0.8);
   backdrop-filter: blur(5px);
-  border-radius: 10px;
+  // border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 
@@ -143,6 +143,7 @@ td {
 
     &:hover {
       color: $primaryColor500;
+      // color: $primaryColor700;
       font-weight: 400;
     }
 
@@ -154,6 +155,7 @@ td {
       width: 100%;
       height: 2px;
       background: $primaryColor500;
+      // background: $primaryColor700;
       border-radius: 5px;
       transform: scaleX(0);
       transition: transform 0.1s ease-out;
@@ -166,20 +168,39 @@ td {
 }
 
 .background {
+  background-image: url("../img/background.jpg");
+  height: 789px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.cover {
   position: relative;
-  background-color: $primaryBGColor;
   height: 789px;
 }
 
-.background-circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 670px;
-  width: 670px;
-  background-color: $secondaryBGColor;
-  border-radius: 50%;
+.cover1 {
+  background-image: url("../img/cover1.png");
+  width: 23%;
+  background-size: cover;
+}
+
+.cover2 {
+  background-image: url("../img/cover2.png");
+  width: 23%;
+  background-size: cover;
+}
+
+.cover3 {
+  background-image: url("../img/cover3.png");
+  width: 25%;
+  background-size: cover;
+}
+
+.cover4 {
+  background-image: url("../img/cover4.png");
+  width: 23%;
+  background-size: cover;
 }
 
 .logo-about-me {
@@ -200,7 +221,8 @@ td {
 
 .intro-about-me {
   padding: 64px 80px;
-  bottom: 0px;
+  bottom: 180px;
+  color: $primaryBGColor;
 }
 
 .to-about-me {
@@ -227,6 +249,20 @@ td {
 //     background-color: $primaryColor400;
 //   }
 // }
+.fa-circle-arrow-down {
+  transition: all 0.3s ease;
+  &:hover {
+    filter: drop-shadow(0 0 5px rgba($primaryColor400, 0.8));
+  }
+}
+
+.about-me-bg {
+  background-image: url("../img/about-me-bg.jpg");
+  max-width: 1440px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
 
 .about-me-1 {
   padding-top: 64px;
@@ -234,21 +270,17 @@ td {
   background-color: white;
 }
 
-.title {
-  padding: 1rem;
-  border-bottom: $primaryColor500 solid 6px;
-}
-
 .avatar-2 {
-  background-color: red;
-  width: 400px;
-  height: 400px;
+  background-image: url("../img/avatar-2.jpg");
+  background-size: contain;
+  width: 480px;
+  height: 420px;
 }
 
 .about-me-2,
 .abilities {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: $secondaryBGColor;
 }
 
@@ -278,8 +310,10 @@ td {
   height: 160px;
   border-radius: 50%;
   background-color: white;
-  box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
-    -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
+  box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    inset -2px -2px 4px -1px rgba(255, 255, 255, 0.7),
+    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.01), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
 }
 
 .skill-circle-inner {
@@ -290,10 +324,8 @@ td {
   left: 10px;
   border-radius: 50%;
   background-color: $secondaryBGColor;
-  box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.2),
-    inset -2px -2px 4px -1px rgba(255, 255, 255, 0.7),
-    -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-    0.5px 0.5px 0px rgba(0, 0, 0, 0.01), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
+    -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
 }
 
 .img-ai {
@@ -416,16 +448,18 @@ td {
   animation: valueAnim 2s ease forwards;
 }
 
-@keyframes valueAnim {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-
 svg {
   position: absolute;
   top: -21.5px;
   left: -21.5px;
+}
+
+.works-bg {
+  background-image: url("../img/works-bg.jpg");
+  max-width: 1440px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
 }
 
 .works {
@@ -612,11 +646,6 @@ h2 {
 }
 
 h3 {
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-h4 {
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -645,3 +674,41 @@ hr {
 span {
   line-height: 1.8rem;
 }
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@keyframes valueAnim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.bg-filter {
+  background-color: rgba($color: black, $alpha: 0.8);
+  position: absolute;
+  width: 100%;
+  height: 248px;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  padding: 1rem;
+  color: white;
+  border-bottom: $primaryColor500 solid 3px;
+}
+
+// .test {
+//   height: 1080px;
+//   width: 100vw;
+// }

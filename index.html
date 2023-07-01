@@ -24,23 +24,27 @@
   <body>
     <header>
       <div class="background position-relative" id="home">
-        <div class="background-circle"></div>
         <div class="position-relative">
           <img
             src="./img/avatar-1.png"
             alt="Avatar"
             class="pos-3d"
-            data-layer="30"
+            data-layer="25"
             data-invert="1"
             style="
-              width: 584px;
+              height: 789px;
               position: absolute;
-              top: 36px;
+              top: 0;
               left: 35%;
               transform: translateX(-50%);
-              filter: drop-shadow(40px 0px 50px rgba(0, 0, 0, 0.2));
             "
           />
+        </div>
+        <div class="d-flex">
+          <div class="cover cover1 pos-3d" data-layer="10"></div>
+          <div class="cover cover2 pos-3d" data-layer="18"></div>
+          <div class="cover cover3 pos-3d" data-layer="5"></div>
+          <div class="cover cover4 pos-3d" data-layer="30"></div>
         </div>
         <div class="logo-about-me position-absolute"></div>
         <div class="intro-about-me position-absolute">
@@ -68,298 +72,313 @@
       </div>
     </header>
     <main>
-      <section class="works pdt-96" id="about_me">
-        <div class="container d-flex justify-content-space-around">
-          <h1 class="title pdt-24">關於我</h1>
-        </div>
-      </section>
-      <section class="about-me-1">
-        <div class="d-flex align-items-center justify-content-space-around">
-          <div class="offset-md-1 avatar-2"></div>
-          <div class="col-md-5">
-            <p>
-              <span
-                >我是一位有著五年平面設計經驗的視覺設計師，熱愛創造視覺美學，也曾自學figma(UIUX)、HTML和CSS，並正致力於學習JavaScript技術。</span
-              ><br /><br />
-              <span
-                >我所擁有的專業職能包括使用Adobe
-                Illustrator、Photoshop等設計軟體，獨立完成各式專案的經驗，內容包含品牌形象、宣傳海報、Facebook圖像廣告、名片設計等。我注重與客戶和團隊之間的溝通，並能在緊湊的時間表下交付高品質的成果。</span
-              >
-            </p>
+      <section class="about-me" id="about_me">
+        <div class="about-me-bg pdt-96 pdb-24">
+          <div class="bg-filter"></div>
+          <div class="container d-flex justify-content-space-around">
+            <h2 class="title pdt-24 reveal" align="center">
+              關於我<br />
+              <p>ABOUT ME</p>
+            </h2>
           </div>
         </div>
-      </section>
-      <section
-        class="about-me-2 d-flex nowrap justify-content-space-around"
-        id="Works"
-      >
-        <div class="container d-flex justify-content-space-around">
-          <div class="col-md-3 d-flex position-relative pd-24">
-            <div class="introdution">
-              <h3 class="">基本資料</h3>
-              <h5>INTRODUTION</h5>
-              <hr />
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-user" style="color: #ffc10e"></i>
-                <p class="pdl-8 font-weight-500">姓名 Name</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>何幸徽</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-face-smile" style="color: #ffc10e"></i>
-                <p class="pdl-8 font-weight-500">暱稱 Nickname</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>Stanley</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-mars" style="color: #ffc10e"></i>
-                <p class="pdl-8 font-weight-500">性別 Gender</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>男性</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <i
-                  class="fa-regular fa-calendar-days"
-                  style="color: #ffc10e"
-                ></i>
-                <p class="pdl-8 font-weight-500">生日 Date of Birth</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>1994 / 12 / 14</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-phone" style="color: #ffc10e"></i>
-                <p class="pdl-8 font-weight-500">聯絡電話 Contact Number</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>0970 739 327</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-envelope" style="color: #ffc10e"></i>
-                <p class="pdl-8 font-weight-500">電子信箱 E-mail</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>stanleyhaw94@gmail.com</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <i class="fa-solid fa-location-dot" style="color: #ffc10e"></i>
-                <p class="pdl-8 font-weight-500">通訊地址 Current Address</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>新北市三重區仁愛街125巷81號6樓</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex position-relative pd-24">
-            <div class="education">
-              <h3 class="font-weight-500">教育程度</h3>
-              <h5>EDUCATION</h5>
-              <hr />
-              <div class="d-flex align-items-center">
-                <img
-                  src="./img/tatung_U_logo.png"
-                  style="width: 24px; height: auto"
-                />
-                <p class="pdl-8 font-weight-500">大同大學</p>
-              </div>
-              <ul class="font-weight-300 pdl-64">
-                <li>工業設計學系</li>
-                <li>2013/9 - 2017/6 畢業</li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md-3 d-flex position-relative pd-24">
-            <div class="experience">
-              <h3 class="font-weight-500">工作經歷</h3>
-              <h5>EXPERIRENCE</h5>
-              <hr />
-              <div class="d-flex align-items-center">
-                <img
-                  src="./img/Watermelon_logo.png"
-                  style="width: 24px; height: auto"
-                />
-                <p class="pdl-8 font-weight-500">西瓜籽辦公用品有限公司</p>
-              </div>
-              <ul class="font-weight-300 pdl-64 pdb-16">
-                <li>
-                  平面設計師<br />
-                  行銷企劃<br />
-                  電商平台管理與維護<br />
-                </li>
-                <li>2017/9 - 2020/9</li>
-              </ul>
-              <div class="d-flex align-items-center">
-                <img
-                  src="./img/gemini_sport_logo.png"
-                  style="width: 24px; height: auto"
-                />
-                <p class="pdl-8 font-weight-500">雙子運動管理顧問有限公司</p>
-              </div>
-              <ul class="font-weight-300 pdl-64">
-                <li>
-                  平面設計師<br />
-                  活動攝影<br />
-                  講習活動工作人員
-                </li>
-                <li>2021/1 - 2023/1</li>
-              </ul>
+        <div class="about-me-1">
+          <div class="d-flex align-items-center justify-content-space-around">
+            <div class="avatar-2 reveal"></div>
+            <div class="col-md-4 reveal">
+              <p>
+                <span
+                  >我是一位有著五年平面設計經驗的視覺設計師，熱愛創造視覺美學，也曾自學figma(UIUX)、HTML和CSS，並正致力於學習JavaScript技術。</span
+                ><br /><br />
+                <span
+                  >我所擁有的專業職能包括使用Adobe
+                  Illustrator、Photoshop等設計軟體，獨立完成各式專案的經驗，內容包含品牌形象、宣傳海報、Facebook圖像廣告、名片設計等。我注重與客戶和團隊之間的溝通，並能在緊湊的時間表下交付高品質的成果。</span
+                >
+              </p>
             </div>
           </div>
         </div>
-      </section>
-      <section class="abilities pdt-24">
-        <div class="container d-flex justify-content-space-around">
-          <div class="d-flex justify-content-space-between translate-anim">
-            <div class="toolsAndSkills pd-24">
-              <h3 class="font-weight-500">專業技能</h3>
-              <h5>MY SKILL</h5>
-              <hr />
-              <div class="d-flex justify-content-space-between">
-                <div class="skill skill-figma">
-                  <div class="skill-circle-outer">
-                    <div class="skill-circle-inner">
-                      <div class="img-figma">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          width="176px"
-                          height="176px"
-                        >
-                          <circle
-                            class="figma_circle"
-                            cx="84.5"
-                            cy="91.5"
-                            r="75"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+        <div class="about-me-2 d-flex nowrap justify-content-space-around">
+          <div class="container d-flex justify-content-space-around">
+            <div class="col-md-3 d-flex position-relative pd-24 reveal">
+              <div class="introdution">
+                <h3 class="">基本資料</h3>
+                <h5>INTRODUTION</h5>
+                <hr />
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-user" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">姓名 Name</p>
                 </div>
-                <div class="skill skill-ai">
-                  <div class="skill-circle-outer">
-                    <div class="skill-circle-inner">
-                      <div class="img-ai">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          width="176px"
-                          height="176px"
-                        >
-                          <circle
-                            class="ai_circle"
-                            cx="84.5"
-                            cy="91.5"
-                            r="75"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>何幸徽</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-face-smile" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">暱稱 Nickname</p>
                 </div>
-                <div class="skill skill-ps">
-                  <div class="skill-circle-outer">
-                    <div class="skill-circle-inner">
-                      <div class="img-ps">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          width="176px"
-                          height="176px"
-                        >
-                          <circle
-                            class="ps_circle"
-                            cx="84.5"
-                            cy="91.5"
-                            r="75"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>Stanley</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-mars" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">性別 Gender</p>
                 </div>
-                <div class="skill skill-ppt">
-                  <div class="skill-circle-outer">
-                    <div class="skill-circle-inner">
-                      <div class="img-ppt">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          width="176px"
-                          height="176px"
-                        >
-                          <circle
-                            class="ppt_circle"
-                            cx="84.5"
-                            cy="91.5"
-                            r="75"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>男性</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa-regular fa-calendar-days"
+                    style="color: #ffc10e"
+                  ></i>
+                  <p class="pdl-8 font-weight-500">生日 Date of Birth</p>
                 </div>
-                <div class="skill skill-html5">
-                  <div class="skill-circle-outer">
-                    <div class="skill-circle-inner">
-                      <div class="img-html5">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          width="176px"
-                          height="176px"
-                        >
-                          <circle
-                            class="html5_circle"
-                            cx="84.5"
-                            cy="91.5"
-                            r="75"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>1994 / 12 / 14</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-phone" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">聯絡電話 Contact Number</p>
                 </div>
-                <div class="skill skill-css3">
-                  <div class="skill-circle-outer">
-                    <div class="skill-circle-inner">
-                      <div class="img-css3">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          version="1.1"
-                          width="176px"
-                          height="176px"
-                        >
-                          <circle
-                            class="css3_circle"
-                            cx="84.5"
-                            cy="91.5"
-                            r="75"
-                            stroke-linecap="round"
-                          />
-                        </svg>
-                      </div>
-                    </div>
-                  </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>0970 739 327</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-envelope" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">電子信箱 E-mail</p>
                 </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>stanleyhaw94@gmail.com</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #ffc10e"
+                  ></i>
+                  <p class="pdl-8 font-weight-500">通訊地址 Current Address</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>新北市三重區仁愛街125巷81號6樓</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex position-relative pd-24 reveal">
+              <div class="education">
+                <h3 class="font-weight-500">教育程度</h3>
+                <h5>EDUCATION</h5>
+                <hr />
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/tatung_U_logo.png"
+                    style="width: 24px; height: auto"
+                  />
+                  <p class="pdl-8 font-weight-500">大同大學</p>
+                </div>
+                <ul class="font-weight-300 pdl-64">
+                  <li>工業設計學系</li>
+                  <li>2013/9 - 2017/6 畢業</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex position-relative pd-24 reveal">
+              <div class="experience">
+                <h3 class="font-weight-500">工作經歷</h3>
+                <h5>EXPERIRENCE</h5>
+                <hr />
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/Watermelon_logo.png"
+                    style="width: 24px; height: auto"
+                  />
+                  <p class="pdl-8 font-weight-500">西瓜籽辦公用品有限公司</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>
+                    平面設計師<br />
+                    行銷企劃<br />
+                    電商平台管理與維護<br />
+                  </li>
+                  <li>2017/9 - 2020/9</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/gemini_sport_logo.png"
+                    style="width: 24px; height: auto"
+                  />
+                  <p class="pdl-8 font-weight-500">雙子運動管理顧問有限公司</p>
+                </div>
+                <ul class="font-weight-300 pdl-64">
+                  <li>
+                    平面設計師<br />
+                    活動攝影<br />
+                    講習活動工作人員
+                  </li>
+                  <li>2021/1 - 2023/1</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="works pdt-24" id="works">
-        <div class="container d-flex justify-content-space-around">
-          <h1 class="title">作品集</h1>
+        <div class="abilities pdb-96">
+          <div class="container d-flex justify-content-space-around">
+            <div class="d-flex justify-content-space-between">
+              <div class="toolsAndSkills reveal">
+                <h3 class="font-weight-500">專業技能</h3>
+                <h5>MY SKILLS</h5>
+                <hr />
+                <div class="d-flex justify-content-space-between">
+                  <div class="skill skill-figma">
+                    <div class="skill-circle-outer">
+                      <div class="skill-circle-inner">
+                        <div class="img-figma">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="176px"
+                            height="176px"
+                          >
+                            <circle
+                              class="figma_circle"
+                              cx="84.5"
+                              cy="91.5"
+                              r="75"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill skill-ai">
+                    <div class="skill-circle-outer">
+                      <div class="skill-circle-inner">
+                        <div class="img-ai">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="176px"
+                            height="176px"
+                          >
+                            <circle
+                              class="ai_circle"
+                              cx="84.5"
+                              cy="91.5"
+                              r="75"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill skill-ps">
+                    <div class="skill-circle-outer">
+                      <div class="skill-circle-inner">
+                        <div class="img-ps">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="176px"
+                            height="176px"
+                          >
+                            <circle
+                              class="ps_circle"
+                              cx="84.5"
+                              cy="91.5"
+                              r="75"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill skill-ppt">
+                    <div class="skill-circle-outer">
+                      <div class="skill-circle-inner">
+                        <div class="img-ppt">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="176px"
+                            height="176px"
+                          >
+                            <circle
+                              class="ppt_circle"
+                              cx="84.5"
+                              cy="91.5"
+                              r="75"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill skill-html5">
+                    <div class="skill-circle-outer">
+                      <div class="skill-circle-inner">
+                        <div class="img-html5">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="176px"
+                            height="176px"
+                          >
+                            <circle
+                              class="html5_circle"
+                              cx="84.5"
+                              cy="91.5"
+                              r="75"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="skill skill-css3">
+                    <div class="skill-circle-outer">
+                      <div class="skill-circle-inner">
+                        <div class="img-css3">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            version="1.1"
+                            width="176px"
+                            height="176px"
+                          >
+                            <circle
+                              class="css3_circle"
+                              cx="84.5"
+                              cy="91.5"
+                              r="75"
+                              stroke-linecap="round"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <section class="works" id="works">
+        <div class="works-bg pdt-96 pdb-24">
+          <div class="bg-filter"></div>
+          <div class="container d-flex justify-content-space-around">
+            <h2 class="title pdt-24 reveal" align="center">
+              作品集
+              <br />
+              <p>WORKS</p>
+            </h2>
+          </div>
+        </div>
+        <div class="reveal"></div>
+      </section>
+      <section class="test"></section>
     </main>
     <footer></footer>
     <nav class="navbar-wrapper">
