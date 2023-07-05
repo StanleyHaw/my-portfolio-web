@@ -115,17 +115,24 @@ td {
   }
 }
 
+.logo-phone {
+  width: 136.5px;
+  height: 40px;
+  margin: 10px;
+  background-image: url("../img/logoFull_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
   border-bottom: $primaryBGColor 1px solid;
-  // margin-top: 8px;
-  top: -100px;
   left: 0;
-  // background-color: rgba($color: $primaryBGColor, $alpha: 0.8);
   background-color: rgba($color: #000000, $alpha: 0.8);
   backdrop-filter: blur(5px);
-  // border-radius: 10px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 
@@ -140,13 +147,11 @@ td {
     display: inline-block;
     margin: 20px 12px;
     transition: all 0.1s ease-out;
-    // color: $secondaryColor800;
     color: $primaryBGColor;
     cursor: pointer;
 
     &:hover {
       color: $primaryColor500;
-      // color: $primaryColor700;
       font-weight: 400;
     }
 
@@ -158,7 +163,6 @@ td {
       width: 100%;
       height: 2px;
       background: $primaryColor500;
-      // background: $primaryColor700;
       border-radius: 5px;
       transform: scaleX(0);
       transition: transform 0.1s ease-out;
@@ -170,48 +174,52 @@ td {
   }
 }
 
-.background {
-  background-image: url("../img/background.jpg");
-  height: 789px;
-  background-size: cover;
-  background-position: center center;
+.navbar-btn-phone {
+  font-size: 20px;
+  color: $secondaryBGColor;
+  float: right;
+  line-height: 30px;
+  margin-right: 20px;
+  margin-bottom: 4px;
+  cursor: pointer;
 }
 
-.cover {
+#navbar-check-phone {
+  display: none;
+}
+
+.navbar-list-phone {
+  position: fixed;
+  width: 50%;
+  height: -100px;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  top: 61px;
+  right: -50%;
+  text-align: center;
+  transition: all 0.3s ease;
+  li {
+    display: block;
+    padding: 16px;
+    border-bottom: $secondaryBGColor 1px solid;
+    a {
+      font-size: 16px;
+      color: $secondaryBGColor;
+      &:active {
+        color: $primaryColor500;
+      }
+    }
+  }
+}
+
+#navbar-check-phone:checked ~ ul {
+  right: 0;
+}
+
+.header-background {
   position: relative;
-  height: 789px;
-}
-
-.cover1 {
-  background-image: url("../img/cover1.png");
-  width: 23%;
-  background-size: cover;
-}
-
-.cover2 {
-  background-image: url("../img/cover2.png");
-  width: 23%;
-  background-size: cover;
-}
-
-.cover3 {
-  background-image: url("../img/cover3.png");
-  width: 25%;
-  background-size: cover;
-}
-
-.cover4 {
-  background-image: url("../img/cover4.png");
-  width: 23%;
-  background-size: cover;
 }
 
 .logo-about-me {
-  top: 32px;
-  left: 56px;
-  width: 300px;
-  height: 100px;
-  background-image: url("../img/logoPart_STANLEY.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -223,8 +231,6 @@ td {
 }
 
 .intro-about-me {
-  padding: 64px 80px;
-  bottom: 180px;
   color: $primaryBGColor;
 }
 
@@ -240,47 +246,34 @@ td {
   padding-right: 32px;
 }
 
-// .btn-about-me {
-//   right: 100px;
-//   top: 645px;
-//   width: 64px;
-//   height: 64px;
-//   background-color: $primaryColor500;
-//   border-radius: 50%;
-//   transition: all 0.2s ease-in-out;
-//   &:hover {
-//     background-color: $primaryColor400;
-//   }
-// }
 .fa-circle-arrow-down {
+  color: #ffc10e;
+  font-size: 64px;
+  transform: rotate(-90deg);
   transition: all 0.3s ease;
   &:hover {
+    transform: rotate(0deg);
     filter: drop-shadow(0 0 5px rgba($primaryColor400, 0.8));
+  }
+
+  &:active {
+    transform: scale(0.9);
   }
 }
 
 .about-me-bg {
   background-image: url("../img/about-me-bg.jpg");
-  max-width: 1440px;
+  max-width: 1920px;
   background-size: cover;
   background-position: center center;
   position: relative;
 }
 
-.about-me-1 {
-  padding-top: 64px;
-  padding-bottom: 64px;
-  background-color: white;
-}
-
 .avatar-2 {
   background-image: url("../img/avatar-2.jpg");
   background-size: contain;
-  width: 480px;
-  height: 420px;
 }
 
-.about-me-2,
 .abilities {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -422,8 +415,8 @@ td {
   fill: none;
   stroke: $primaryColor500;
   stroke-width: 8px;
-  stroke-dasharray: 452 472;
-  stroke-dashoffset: 400;
+  stroke-dasharray: 412 472;
+  stroke-dashoffset: 360;
   transform-origin: center;
   transform: rotate(-90deg);
   animation: valueAnim 2s ease forwards;
@@ -459,7 +452,7 @@ svg {
 
 .works-bg {
   background-image: url("../img/works-bg.jpg");
-  max-width: 1440px;
+  max-width: 1920px;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -469,13 +462,12 @@ svg {
   position: relative;
 }
 
-.graphic-D {
+.works-btn {
   display: inline-block;
-  margin: 48px auto;
+  margin: 36px auto;
   position: relative;
-  min-width: 45%;
-  height: 160px;
-  background-image: url("../img/bg_graphic-D.jpg");
+  min-width: 80%;
+  height: 220px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -487,151 +479,64 @@ svg {
 
   &:hover {
     color: $secondaryBGColor;
-    background-image: url("../img/filter-D.jpg");
   }
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 42px;
+    bottom: 62px;
     width: 100%;
     height: 2px;
     background: $secondaryBGColor;
     border-radius: 5px;
     transform: scaleX(0);
-    transition: transform 0.1s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   &:hover::after {
     transform: scaleX(0.1);
+  }
+}
+
+.graphic-D {
+  background-image: url("../img/bg_graphic-D.jpg");
+
+  &:hover {
+    background-image: url("../img/filter-1.jpg");
   }
 }
 
 .poster-D {
-  display: inline-block;
-  margin: 48px auto;
-  position: relative;
-  min-width: 45%;
-  height: 160px;
   background-image: url("../img/bg_poster-D.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
-  color: $secondaryColor900;
-  box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
-    -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
-  transition: all 0.3s ease;
 
   &:hover {
     color: $secondaryBGColor;
-    background-image: url("../img/filter-D.jpg");
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 42px;
-    width: 100%;
-    height: 2px;
-    background: $secondaryBGColor;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: transform 0.1s ease-out;
-  }
-
-  &:hover::after {
-    transform: scaleX(0.1);
+    background-image: url("../img/filter-2.jpg");
   }
 }
 
 .logo-D {
-  display: inline-block;
-  margin: 48px auto;
-  position: relative;
-  min-width: 45%;
-  height: 160px;
   background-image: url("../img/bg_logo-D.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
-  color: $secondaryColor900;
-  box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
-    -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
-  transition: all 0.3s ease;
 
   &:hover {
-    color: $secondaryBGColor;
-    background-image: url("../img/filter-D.jpg");
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 42px;
-    width: 100%;
-    height: 2px;
-    background: $secondaryBGColor;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: transform 0.1s ease-out;
-  }
-
-  &:hover::after {
-    transform: scaleX(0.1);
+    background-image: url("../img/filter-3.jpg");
   }
 }
 
 .others-D {
-  display: inline-block;
-  margin: 48px auto;
-  position: relative;
-  min-width: 45%;
-  height: 160px;
   background-image: url("../img/bg_others-D.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 10px;
-  color: $secondaryColor900;
-  box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
-    -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
-  transition: all 0.3s ease;
-
   &:hover {
-    color: $secondaryBGColor;
-    background-image: url("../img/filter-D.jpg");
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 42px;
-    width: 100%;
-    height: 2px;
-    background: $secondaryBGColor;
-    border-radius: 5px;
-    transform: scaleX(0);
-    transition: transform 0.1s ease-out;
-  }
-
-  &:hover::after {
-    transform: scaleX(0.1);
+    background-image: url("../img/filter-3.jpg");
   }
 }
 
 .works-words {
   position: absolute;
-  top: 48px;
+  top: 84px;
   width: 100%;
   justify-content: center;
   align-items: center;
-  filter: drop-shadow(0 0 0.25rem $primaryColor700);
 }
 
 // Utilities
@@ -801,52 +706,6 @@ svg {
   padding-bottom: 96px;
 }
 
-header,
-main,
-footer {
-  //   position: relative;
-}
-
-h1 {
-  font-size: 4rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 500;
-}
-
-h3 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-
-p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-a {
-  font-size: 1rem;
-  font-weight: 100;
-  text-decoration: none;
-}
-
-h5 {
-  font-size: 0.5rem;
-  font-weight: 100;
-}
-
-hr {
-  border: $primaryColor500 solid 1px;
-  margin-bottom: 20px;
-}
-
-span {
-  line-height: 1.8rem;
-}
-
 .reveal {
   position: relative;
   transform: translateY(50px);
@@ -869,7 +728,6 @@ span {
   background-color: rgba($color: black, $alpha: 0.8);
   position: absolute;
   width: 100%;
-  height: 248px;
   top: 0;
   left: 0;
 }
@@ -880,7 +738,753 @@ span {
   border-bottom: $primaryColor500 solid 3px;
 }
 
-// .test {
-//   height: 1080px;
-//   width: 100vw;
-// }
+//media RWD
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .navbar {
+    top: -100px;
+  }
+
+  .header-background {
+    background-image: url("../img/background.jpg");
+    height: 1080px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .avatar-1 {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transform: translateX(-50%);
+    height: 1080px;
+  }
+
+  .avatar-1-pad {
+    display: none;
+  }
+
+  .avatar-1-phone {
+    display: none;
+  }
+
+  .logo-about-me {
+    top: 32px;
+    left: 56px;
+    width: 300px;
+    height: 100px;
+    background-image: url("../img/logoPart_STANLEY.png");
+  }
+  .cover {
+    position: relative;
+    height: 1080px;
+  }
+
+  .cover-flex {
+    display: flex;
+  }
+
+  .cover1 {
+    background-image: url("../img/cover1.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .cover2 {
+    background-image: url("../img/cover2.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .cover3 {
+    background-image: url("../img/cover3.png");
+    width: 25%;
+    background-size: cover;
+  }
+
+  .cover4 {
+    background-image: url("../img/cover4.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .intro-about-me {
+    padding: 64px 80px;
+    bottom: 360px;
+  }
+
+  .to-about-me {
+    padding: 24px 32px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .avatar-2 {
+    width: 640px;
+    height: 560px;
+  }
+
+  .about-me-1 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: white;
+  }
+
+  .about-me-1-phone {
+    display: none;
+  }
+
+  .about-me-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $secondaryBGColor;
+  }
+
+  .about-me-2-column {
+    display: none;
+  }
+
+  .bg-filter {
+    height: 248px;
+  }
+
+  .skill-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .works-btn {
+    margin: 36px auto;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  h5 {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+
+  hr {
+    border: $primaryColor500 solid 1px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .navbar {
+    top: -100px;
+  }
+
+  .header-background {
+    background-image: url("../img/background.jpg");
+    height: 789px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .avatar-1 {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transform: translateX(-50%);
+    height: 789px;
+  }
+
+  .avatar-1-pad {
+    display: none;
+  }
+
+  .avatar-1-phone {
+    display: none;
+  }
+
+  .logo-about-me {
+    top: 32px;
+    left: 56px;
+    width: 300px;
+    height: 100px;
+    background-image: url("../img/logoPart_STANLEY.png");
+  }
+  .cover-flex {
+    display: flex;
+  }
+
+  .cover {
+    position: relative;
+    height: 789px;
+  }
+
+  .cover1 {
+    background-image: url("../img/cover1.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .cover2 {
+    background-image: url("../img/cover2.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .cover3 {
+    background-image: url("../img/cover3.png");
+    width: 25%;
+    background-size: cover;
+  }
+
+  .cover4 {
+    background-image: url("../img/cover4.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .intro-about-me {
+    padding: 64px 80px;
+    bottom: 200px;
+  }
+
+  .to-about-me {
+    padding: 24px 32px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .avatar-2 {
+    width: 480px;
+    height: 420px;
+  }
+
+  .about-me-1 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: white;
+  }
+
+  .about-me-1-phone {
+    display: none;
+  }
+
+  .about-me-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $secondaryBGColor;
+  }
+
+  .about-me-2-column {
+    display: none;
+  }
+
+  .bg-filter {
+    height: 248px;
+  }
+
+  .skill-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .works-btn {
+    margin: 36px auto;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  h5 {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+
+  hr {
+    border: $primaryColor500 solid 1px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 821px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .navbar {
+    top: -100px;
+  }
+
+  .header-background {
+    background-image: url("../img/background.jpg");
+    height: 720px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .avatar-1 {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transform: translateX(-50%);
+    height: 720px;
+  }
+
+  .avatar-1-pad {
+    display: none;
+  }
+
+  .avatar-1-phone {
+    display: none;
+  }
+
+  .logo-about-me {
+    top: 32px;
+    left: 56px;
+    width: 300px;
+    height: 100px;
+    background-image: url("../img/logoPart_STANLEY.png");
+  }
+  .cover {
+    position: relative;
+    height: 720px;
+  }
+
+  .cover-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cover1 {
+    background-image: url("../img/cover1.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .cover2 {
+    background-image: url("../img/cover2.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .cover3 {
+    background-image: url("../img/cover3.png");
+    width: 25%;
+    background-size: cover;
+  }
+
+  .cover4 {
+    background-image: url("../img/cover4.png");
+    width: 23%;
+    background-size: cover;
+  }
+
+  .intro-about-me {
+    padding: 64px 80px;
+    bottom: 180px;
+  }
+
+  .to-about-me {
+    padding: 24px 32px;
+    bottom: 0px;
+    right: 0px;
+  }
+
+  .avatar-2 {
+    width: 480px;
+    height: 420px;
+  }
+
+  .about-me-1 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: white;
+  }
+
+  .about-me-1-phone {
+    display: none;
+  }
+
+  .about-me-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $secondaryBGColor;
+  }
+
+  .about-me-2-column {
+    display: none;
+  }
+
+  .bg-filter {
+    height: 248px;
+  }
+
+  .skill-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+  .works-btn {
+    margin: 12px auto;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  h5 {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+
+  hr {
+    border: $primaryColor500 solid 1px;
+    margin-bottom: 20px;
+  }
+
+  span {
+    line-height: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 431px) {
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-phone {
+    display: block;
+  }
+
+  .navbar {
+    top: 0;
+  }
+
+  .header-background {
+    background-image: url("../img/background.jpg");
+    height: 1180px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .avatar-1 {
+    display: none;
+  }
+
+  .avatar-1-pad {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1180px;
+  }
+
+  .avatar-1-phone {
+    display: none;
+  }
+
+  .logo-about-me {
+    display: none;
+  }
+  .cover-flex {
+    display: none;
+  }
+
+  .intro-about-me {
+    padding: 12px 24px;
+    top: 520px;
+    color: $primaryBGColor;
+  }
+
+  .to-about-me {
+    padding: 24px 32px;
+    top: -280px;
+    right: 0px;
+  }
+
+  .word-about-me {
+    right: 200px;
+    top: 640px;
+    padding-right: 32px;
+  }
+
+  .avatar-2 {
+    width: 320px;
+    height: 280px;
+  }
+
+  .about-me-1 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: white;
+  }
+
+  .about-me-1-phone {
+    display: none;
+  }
+
+  .about-me-2 {
+    display: none;
+  }
+
+  .about-me-2-column {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $secondaryBGColor;
+  }
+
+  .bg-filter {
+    height: 208px;
+  }
+
+  .skill-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+
+  h5 {
+    font-size: 0.25rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-phone {
+    display: block;
+  }
+
+  .navbar {
+    top: 0;
+  }
+
+  .header-background {
+    background-image: url("../img/background-phone.png");
+    height: 932px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .avatar-1 {
+    display: none;
+  }
+
+  .avatar-1-pad {
+    display: none;
+  }
+
+  .avatar-1-phone {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 932px;
+  }
+
+  .logo-about-me {
+    display: none;
+  }
+  .cover-flex {
+    display: none;
+  }
+
+  .intro-about-me {
+    padding: 24px 24px;
+    top: 700px;
+    left: 85px;
+    color: $primaryBGColor;
+    transform: scale(2);
+  }
+
+  .to-about-me {
+    display: none;
+  }
+
+  .word-about-me {
+    display: none;
+  }
+
+  .btn-about-me {
+    display: none;
+  }
+
+  .avatar-2 {
+    width: 320px;
+    height: 280px;
+  }
+
+  .about-me-1 {
+    display: none;
+  }
+
+  .about-me-1-phone {
+    padding: 32px;
+    background-color: white;
+  }
+
+  .about-me-2 {
+    display: none;
+  }
+
+  .about-me-2-column {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $secondaryBGColor;
+  }
+
+  .bg-filter {
+    height: 208px;
+  }
+
+  .skill-cont {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 0.5rem;
+  }
+
+  h5 {
+    font-size: 0.25rem;
+  }
+}

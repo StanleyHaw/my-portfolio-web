@@ -56,7 +56,7 @@ window.addEventListener("scroll", function () {
   var navbar = document.querySelector(".navbar");
   var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollPosition >= 789) {
+  if (scrollPosition >= 1) {
     navbar.style.top = "0px"; // 滚动位置大于等于 789px，显示导航栏
   } else {
     navbar.style.top = "-100px"; // 滚动位置小于 789px，隐藏导航栏

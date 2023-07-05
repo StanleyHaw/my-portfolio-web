@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stanley's Portfolio</title>
+    <link href="img/S-logo.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="./style/all.css" />
     <link
       rel="stylesheet"
@@ -23,24 +24,23 @@
   </head>
   <body>
     <header>
-      <div class="background position-relative" id="home">
+      <div class="header-background" id="home">
         <div class="position-relative">
           <img
             src="./img/avatar-1.png"
             alt="Avatar"
-            class="pos-3d"
+            class="avatar-1 pos-3d"
             data-layer="25"
             data-invert="1"
-            style="
-              height: 789px;
-              position: absolute;
-              top: 0;
-              left: 35%;
-              transform: translateX(-50%);
-            "
+          />
+          <img src="./img/avatar-1.png" alt="Avatar" class="avatar-1-pad" />
+          <img
+            src="./img/avatar-1-phone.png"
+            alt="Avatar"
+            class="avatar-1-phone"
           />
         </div>
-        <div class="d-flex">
+        <div class="cover-flex">
           <div class="cover cover1 pos-3d" data-layer="10"></div>
           <div class="cover cover2 pos-3d" data-layer="18"></div>
           <div class="cover cover3 pos-3d" data-layer="5"></div>
@@ -51,7 +51,7 @@
           <h3>您好！</h3>
           <h1>
             我是
-            <span class="font-weight-700 color-primaryColor-dark">幸徽。</span>
+            <span class="font-weight-700">幸徽。</span>
           </h1>
         </div>
         <div class="to-about-me position-absolute d-flex align-items-center">
@@ -60,19 +60,15 @@
             <p>ABOUT ME</p>
           </div>
           <div class="btn-about-me">
-            <a href="#about_me"
-              ><i
-                class="fa-solid fa-circle-arrow-down"
-                style="color: #ffc10e; font-size: 64px"
-              >
-              </i
+            <a href="#about-me"
+              ><i class="fa-solid fa-circle-arrow-down"> </i
             ></a>
           </div>
         </div>
       </div>
     </header>
     <main>
-      <section class="about-me" id="about_me">
+      <section class="about-me" id="about-me">
         <div class="about-me-bg pdt-96 pdb-24">
           <div class="bg-filter"></div>
           <div class="container d-flex justify-content-space-around">
@@ -98,7 +94,23 @@
             </div>
           </div>
         </div>
-        <div class="about-me-2 d-flex nowrap justify-content-space-around">
+        <div class="about-me-1-phone">
+          <div class="d-flex align-items-center justify-content-space-around">
+            <div class="avatar-2 reveal pdb-24"></div>
+            <div class="pdt-24 reveal">
+              <p>
+                <span
+                  >我是一位有著五年平面設計經驗的視覺設計師，熱愛創造視覺美學，也曾自學figma(UIUX)、HTML和CSS，並正致力於學習JavaScript技術。</span
+                ><br /><br />
+                <span
+                  >我所擁有的專業職能包括使用Adobe
+                  Illustrator、Photoshop等設計軟體，獨立完成各式專案的經驗，內容包含品牌形象、宣傳海報、Facebook圖像廣告、名片設計等。我注重與客戶和團隊之間的溝通，並能在緊湊的時間表下交付高品質的成果。</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="about-me-2">
           <div class="container d-flex justify-content-space-around">
             <div class="col-md-3 d-flex position-relative pd-24 reveal">
               <div class="introdution">
@@ -219,6 +231,127 @@
             </div>
           </div>
         </div>
+        <div class="about-me-2-column">
+          <div class="container">
+            <div class="d-flex position-relative pd-24 reveal">
+              <div class="introdution">
+                <h3 class="">基本資料</h3>
+                <h5>INTRODUTION</h5>
+                <hr />
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-user" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">姓名 Name</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>何幸徽</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-face-smile" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">暱稱 Nickname</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>Stanley</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-mars" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">性別 Gender</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>男性</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa-regular fa-calendar-days"
+                    style="color: #ffc10e"
+                  ></i>
+                  <p class="pdl-8 font-weight-500">生日 Date of Birth</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>1994 / 12 / 14</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-phone" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">聯絡電話 Contact Number</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>0970 739 327</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i class="fa-solid fa-envelope" style="color: #ffc10e"></i>
+                  <p class="pdl-8 font-weight-500">電子信箱 E-mail</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>stanleyhaw94@gmail.com</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #ffc10e"
+                  ></i>
+                  <p class="pdl-8 font-weight-500">通訊地址 Current Address</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>新北市三重區仁愛街125巷81號6樓</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex position-relative pd-24 reveal">
+              <div class="education">
+                <h3 class="font-weight-500">教育程度</h3>
+                <h5>EDUCATION</h5>
+                <hr />
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/tatung_U_logo.png"
+                    style="width: 24px; height: auto"
+                  />
+                  <p class="pdl-8 font-weight-500">大同大學</p>
+                </div>
+                <ul class="font-weight-300 pdl-64">
+                  <li>工業設計學系</li>
+                  <li>2013/9 - 2017/6 畢業</li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex position-relative pd-24 reveal">
+              <div class="experience">
+                <h3 class="font-weight-500">工作經歷</h3>
+                <h5>EXPERIRENCE</h5>
+                <hr />
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/Watermelon_logo.png"
+                    style="width: 24px; height: auto"
+                  />
+                  <p class="pdl-8 font-weight-500">西瓜籽辦公用品有限公司</p>
+                </div>
+                <ul class="font-weight-300 pdl-64 pdb-16">
+                  <li>
+                    平面設計師<br />
+                    行銷企劃<br />
+                    電商平台管理與維護<br />
+                  </li>
+                  <li>2017/9 - 2020/9</li>
+                </ul>
+                <div class="d-flex align-items-center">
+                  <img
+                    src="./img/gemini_sport_logo.png"
+                    style="width: 24px; height: auto"
+                  />
+                  <p class="pdl-8 font-weight-500">雙子運動管理顧問有限公司</p>
+                </div>
+                <ul class="font-weight-300 pdl-64">
+                  <li>
+                    平面設計師<br />
+                    活動攝影<br />
+                    講習活動工作人員
+                  </li>
+                  <li>2021/1 - 2023/1</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="abilities pdb-96">
           <div class="container d-flex justify-content-space-around">
             <div class="d-flex justify-content-space-between">
@@ -226,7 +359,7 @@
                 <h3 class="font-weight-500">專業技能</h3>
                 <h5>MY SKILLS</h5>
                 <hr />
-                <div class="d-flex justify-content-space-between">
+                <div class="skill-cont">
                   <div class="skill skill-figma">
                     <div class="skill-circle-outer">
                       <div class="skill-circle-inner">
@@ -376,58 +509,83 @@
             </h2>
           </div>
         </div>
-      </section>
-      <section class="works-1">
-        <div
-          class="pdt-64 position-relative d-flex justify-content-space-around"
-        >
-          <a href="./graphic-design.html" class="graphic-D">
-            <span class="works-words" align="center">
-              <h3>商業平面設計</h3>
-              <p>GRAPHIC DESIGN</p></span
-            >
-          </a>
-          <a href="#" class="poster-D">
-            <span class="works-words" align="center">
-              <h3>海報設計</h3>
-              <p>POSTER DESIGN</p></span
-            >
-          </a>
-          <a href="#" class="logo-D">
-            <span class="works-words" align="center">
-              <h3>品牌設計</h3>
-              <p>LOGO DESIGN</p></span
-            >
-          </a>
-          <a href="#" class="others-D">
-            <span class="works-words" align="center">
-              <h3>其他設計作品</h3>
-              <p>OTHERS</p></span
-            >
-          </a>
+        <div class="works-1">
+          <div
+            class="container pdt-48 position-relative d-flex justify-content-space-around"
+          >
+            <a href="./graphic-design.html" class="graphic-D works-btn reveal">
+              <span class="works-words" align="center">
+                <h3>商業平面設計</h3>
+                <p>GRAPHIC DESIGN</p></span
+              >
+            </a>
+            <a href="./poster-design.html" class="poster-D works-btn reveal">
+              <span class="works-words" align="center">
+                <h3>海報設計</h3>
+                <p>POSTER DESIGN</p></span
+              >
+            </a>
+
+            <a href="#" class="others-D works-btn reveal">
+              <span class="works-words" align="center">
+                <h3>其他設計作品</h3>
+                <p>OTHERS</p></span
+              >
+            </a>
+          </div>
         </div>
       </section>
+      <section class="contact-us" id="contact-us"></section>
     </main>
     <footer>
-      <div style="height: 800px"></div>
+      <div style="height: 800px; background-color: rgba(0, 0, 0, 0.2)"></div>
     </footer>
-    <nav class="navbar-wrapper">
+    <nav class="navbar-wrapper navbar-pc">
       <div class="navbar">
         <div class="container">
           <div class="d-flex justify-content-space-between align-items-center">
-            <div class="logo">
-              <a href="#home"> </a>
-            </div>
+            <a href="#home"><div class="logo"></div></a>
             <ul class="navbar-list font-weight-400">
               <li>
-                <a href="#about_me" class="list-items about-me">關於我</a>
+                <a href="#about-me" class="list-items about-me">關於我</a>
               </li>
               <li><a href="#works" class="list-items works">作品集</a></li>
               <li>
-                <a href="#contact_me" class="list-items contact-me">聯絡我</a>
+                <a href="#contact-me" class="list-items contact-me">聯絡我</a>
               </li>
             </ul>
           </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar-phone">
+      <div class="navbar">
+        <div class="d-flex justify-content-space-between align-items-center">
+          <a href="./index.html"><div class="logo-phone"></div></a>
+          <input type="checkbox" id="navbar-check-phone" />
+          <label for="navbar-check-phone">
+            <i class="fas fa-bars navbar-btn-phone"></i
+          ></label>
+
+          <ul class="navbar-list-phone font-weight-400">
+            <li>
+              <a href="./index.html#about-me" class="list-items-phone about-me"
+                >關於我</a
+              >
+            </li>
+            <li>
+              <a href="./index.html#works" class="list-items-phone works"
+                >作品集</a
+              >
+            </li>
+            <li>
+              <a
+                href="./index.html#contact-me"
+                class="list-items-phone contact-me"
+                >聯絡我</a
+              >
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
