@@ -1315,8 +1315,12 @@ svg {
   }
   .skill-cont {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+  }
+  .skill {
+    transform: scale(0.7);
+    margin: -6px;
   }
   h1 {
     font-size: 2rem;
