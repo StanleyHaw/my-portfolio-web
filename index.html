@@ -23,6 +23,10 @@
       src="https://kit.fontawesome.com/548e1038d8.js"
       crossorigin="anonymous"
     ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <header>
@@ -538,12 +542,88 @@
           </div>
         </div>
       </section>
-      <section class="contact-us" id="contact-us"></section>
+      <section class="contact-me" id="contact-me">
+        <div class="contact-me-bg pdt-96 pdb-24">
+          <div class="bg-filter"></div>
+          <div class="container d-flex justify-content-space-around">
+            <h2 class="title pdt-24 reveal" align="center">
+              聯絡我<br />
+              <p>CONTACT ME</p>
+            </h2>
+          </div>
+        </div>
+        <div class="contact-me-1">
+          <div class="container">
+            <div class="contact-form reveal">
+              <form method="post" onkeydown="return event.key != 'Enter';">
+                <div class="input-box input-name-wrapper">
+                  <div class="name-text">
+                    <input
+                      class="input-text"
+                      type="text"
+                      id="name"
+                      name="name"
+                      required
+                    />
+                    <span>姓名（稱謂）<strong>*</strong></span>
+                  </div>
+                  <div>
+                    <input type="radio" id="mr" name="gender" required />
+                    <label for="mr">先生</label>
+                    <input
+                      type="radio"
+                      id="ms"
+                      name="gender"
+                      required="required"
+                    />
+                    <label for="ms">小姐</label>
+                  </div>
+                </div>
+                <div class="input-box">
+                  <input
+                    class="input-text"
+                    type="name"
+                    id="company"
+                    name="company"
+                    required
+                  />
+                  <span>公司名稱<strong>*</strong></span>
+                </div>
+                <div class="input-box">
+                  <input
+                    class="input-text"
+                    type="text"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                  <span>電子郵件<strong>*</strong></span>
+                </div>
+                <div class="input-box">
+                  <textarea
+                    class="input-text"
+                    id="message"
+                    name="message"
+                    required
+                  ></textarea>
+                  <span>留言<strong>*</strong></span>
+                </div>
+                <div>
+                  <div class="submit-btn" onclick="SendMail()"><p>送出</p></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
-      <div style="height: 800px; background-color: rgba(0, 0, 0, 0.2)"></div>
+      <div class="footer">
+        <p>©2023 Designed By Stanley Haw</p>
+      </div>
     </footer>
-    <nav class="navbar-wrapper navbar-pc">
+
+    <nav class="navbar-wrapper navbar-pc z-index-99">
       <div class="navbar">
         <div class="container">
           <div class="d-flex justify-content-space-between align-items-center">
@@ -561,7 +641,7 @@
         </div>
       </div>
     </nav>
-    <nav class="navbar-phone">
+    <nav class="navbar-phone z-index-99">
       <div class="navbar">
         <div class="d-flex justify-content-space-between align-items-center">
           <a href="./index.html"><div class="logo-phone"></div></a>
@@ -594,4 +674,10 @@
     </nav>
   </body>
   <script src="./script.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("teZOQBC4JjIANFoUp");
+    })();
+  </script>
 </html>

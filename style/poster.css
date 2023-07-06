@@ -314,6 +314,15 @@ td {
   transform: scaleX(1);
 }
 
+.footer {
+  background-color: #ffc10e;
+  color: #fffcfb;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .d-flex {
   display: flex;
   flex-wrap: wrap;

@@ -337,6 +337,15 @@ td {
   }
 }
 
+.footer {
+  background-color: $primaryColor500;
+  color: $primaryBGColor;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 // Utilities
 .d-flex {
   display: flex;
