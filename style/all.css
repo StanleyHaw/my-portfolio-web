@@ -4847,7 +4847,7 @@ svg {
   }
   .intro-about-me {
     padding: 64px 80px;
-    bottom: 360px;
+    bottom: 340px;
   }
   .to-about-me {
     padding: 24px 32px;
@@ -4918,7 +4918,7 @@ svg {
     margin-bottom: 20px;
   }
   span {
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
 }
 @media screen and (max-width: 1440px) and (min-width: 1281px) {
@@ -4986,7 +4986,7 @@ svg {
   }
   .intro-about-me {
     padding: 64px 80px;
-    bottom: 200px;
+    bottom: 180px;
   }
   .to-about-me {
     padding: 24px 32px;
@@ -5126,7 +5126,7 @@ svg {
   }
   .intro-about-me {
     padding: 64px 80px;
-    bottom: 180px;
+    bottom: 150px;
   }
   .to-about-me {
     padding: 24px 32px;
@@ -5334,7 +5334,7 @@ svg {
   }
   .intro-about-me {
     padding: 24px 24px;
-    top: 700px;
+    top: 670px;
     left: 85px;
     color: #fffcfb;
     transform: scale(2);
