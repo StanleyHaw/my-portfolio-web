@@ -61,20 +61,48 @@
           </h1>
           <h3>是名 視覺設計師。</h3>
         </div>
-        <div class="to-about-me position-absolute d-flex align-items-center">
-          <div class="word-about-me">
-            <h3>關於我</h3>
-            <p>ABOUT ME</p>
+        <div class="to-works position-absolute d-flex align-items-center">
+          <div class="word-to-works">
+            <h3>作品集</h3>
+            <p>PORTFOLIO</p>
           </div>
-          <div class="btn-about-me">
-            <a href="#about-me"
-              ><i class="fa-solid fa-circle-arrow-down"> </i
-            ></a>
+          <div class="btn-works">
+            <a href="#works"><i class="fa-solid fa-circle-arrow-down"> </i></a>
           </div>
         </div>
       </div>
     </header>
     <main>
+      <section class="works" id="works">
+        <div class="works-bg pdt-96 pdb-24">
+          <div class="bg-filter"></div>
+          <div class="container d-flex justify-content-space-around">
+            <h2 class="title pdt-24 reveal" align="center">
+              作品集
+              <br />
+              <p>PORTFOLIO</p>
+            </h2>
+          </div>
+        </div>
+        <div class="works-1">
+          <div
+            class="container pdt-48 position-relative d-flex justify-content-space-around"
+          >
+            <a href="./graphic-design.html" class="graphic-D works-btn reveal">
+              <span class="works-words" align="center">
+                <h3>商業平面設計</h3>
+                <p>GRAPHIC DESIGN</p></span
+              >
+            </a>
+            <a href="./poster-design.html" class="poster-D works-btn reveal">
+              <span class="works-words" align="center">
+                <h3>海報設計</h3>
+                <p>POSTER DESIGN</p></span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
       <section class="about-me" id="about-me">
         <div class="about-me-bg pdt-96 pdb-24">
           <div class="bg-filter"></div>
@@ -505,43 +533,6 @@
           </div>
         </div>
       </section>
-      <section class="works" id="works">
-        <div class="works-bg pdt-96 pdb-24">
-          <div class="bg-filter"></div>
-          <div class="container d-flex justify-content-space-around">
-            <h2 class="title pdt-24 reveal" align="center">
-              作品集
-              <br />
-              <p>WORKS</p>
-            </h2>
-          </div>
-        </div>
-        <div class="works-1">
-          <div
-            class="container pdt-48 position-relative d-flex justify-content-space-around"
-          >
-            <a href="./graphic-design.html" class="graphic-D works-btn reveal">
-              <span class="works-words" align="center">
-                <h3>商業平面設計</h3>
-                <p>GRAPHIC DESIGN</p></span
-              >
-            </a>
-            <a href="./poster-design.html" class="poster-D works-btn reveal">
-              <span class="works-words" align="center">
-                <h3>海報設計</h3>
-                <p>POSTER DESIGN</p></span
-              >
-            </a>
-
-            <a href="#" class="others-D works-btn reveal">
-              <span class="works-words" align="center">
-                <h3>其他設計作品</h3>
-                <p>OTHERS</p></span
-              >
-            </a>
-          </div>
-        </div>
-      </section>
       <section class="contact-me" id="contact-me">
         <div class="contact-me-bg pdt-96 pdb-24">
           <div class="bg-filter"></div>
@@ -565,7 +556,7 @@
                       name="name"
                       required
                     />
-                    <span>姓名（稱謂）<strong>*</strong></span>
+                    <span>姓名（稱謂）</span>
                   </div>
                   <div>
                     <input type="radio" id="mr" name="gender" required />
@@ -587,7 +578,7 @@
                     name="company"
                     required
                   />
-                  <span>公司名稱<strong>*</strong></span>
+                  <span>公司名稱</span>
                 </div>
                 <div class="input-box">
                   <input
@@ -597,7 +588,7 @@
                     name="email"
                     required
                   />
-                  <span>電子郵件<strong>*</strong></span>
+                  <span>電子郵件</span>
                 </div>
                 <div class="input-box">
                   <textarea
@@ -606,7 +597,7 @@
                     name="message"
                     required
                   ></textarea>
-                  <span>留言<strong>*</strong></span>
+                  <span>留言</span>
                 </div>
                 <div>
                   <div class="submit-btn" onclick="SendMail()"><p>送出</p></div>
@@ -629,10 +620,10 @@
           <div class="d-flex justify-content-space-between align-items-center">
             <a href="#home"><div class="logo"></div></a>
             <ul class="navbar-list font-weight-400">
+              <li><a href="#works" class="list-items works">作品集</a></li>
               <li>
                 <a href="#about-me" class="list-items about-me">關於我</a>
               </li>
-              <li><a href="#works" class="list-items works">作品集</a></li>
               <li>
                 <a href="#contact-me" class="list-items contact-me">聯絡我</a>
               </li>
@@ -652,13 +643,13 @@
 
           <ul class="navbar-list-phone font-weight-400">
             <li>
-              <a href="./index.html#about-me" class="list-items-phone about-me"
-                >關於我</a
+              <a href="./index.html#works" class="list-items-phone works"
+                >作品集</a
               >
             </li>
             <li>
-              <a href="./index.html#works" class="list-items-phone works"
-                >作品集</a
+              <a href="./index.html#about-me" class="list-items-phone about-me"
+                >關於我</a
               >
             </li>
             <li>

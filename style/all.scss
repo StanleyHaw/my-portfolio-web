@@ -234,13 +234,13 @@ td {
   color: $primaryBGColor;
 }
 
-.to-about-me {
+.to-works {
   padding: 64px 80px;
   bottom: 0px;
   right: 0px;
 }
 
-.word-about-me {
+.word-to-works {
   right: 200px;
   top: 640px;
   padding-right: 32px;
@@ -469,8 +469,8 @@ svg {
   display: inline-block;
   margin: 36px auto;
   position: relative;
-  min-width: 80%;
-  height: 220px;
+  min-width: 90%;
+  height: 320px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -532,14 +532,6 @@ svg {
   &:hover {
     background-image: url("../img/filter-3.jpg");
   }
-}
-
-.works-words {
-  position: absolute;
-  top: 84px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
 }
 
 .contact-me-bg {
@@ -920,7 +912,7 @@ strong {
     bottom: 340px;
   }
 
-  .to-about-me {
+  .to-works {
     padding: 24px 32px;
     bottom: 0px;
     right: 0px;
@@ -965,6 +957,15 @@ strong {
   }
   .works-btn {
     margin: 36px auto;
+    height: 320px;
+  }
+
+  .works-words {
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-form {
@@ -1098,7 +1099,7 @@ textarea {
     bottom: 180px;
   }
 
-  .to-about-me {
+  .to-works {
     padding: 24px 32px;
     bottom: 0px;
     right: 0px;
@@ -1143,6 +1144,15 @@ textarea {
   }
   .works-btn {
     margin: 36px auto;
+    height: 220px;
+  }
+
+  .works-words {
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-form {
@@ -1277,7 +1287,7 @@ textarea {
     bottom: 150px;
   }
 
-  .to-about-me {
+  .to-works {
     padding: 24px 32px;
     bottom: 0px;
     right: 0px;
@@ -1323,6 +1333,15 @@ textarea {
 
   .works-btn {
     margin: 12px auto;
+    height: 220px;
+  }
+
+  .works-words {
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-form {
@@ -1424,13 +1443,13 @@ textarea {
     color: $primaryBGColor;
   }
 
-  .to-about-me {
+  .to-works {
     padding: 24px 32px;
     top: -280px;
     right: 0px;
   }
 
-  .word-about-me {
+  .word-to-works {
     right: 200px;
     top: 640px;
     padding-right: 32px;
@@ -1472,6 +1491,19 @@ textarea {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+  }
+
+  .works-btn {
+    margin: 60px auto;
+    height: 220px;
+  }
+
+  .works-words {
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-form {
@@ -1555,15 +1587,15 @@ textarea {
     transform: scale(2);
   }
 
-  .to-about-me {
+  .to-works {
     display: none;
   }
 
-  .word-about-me {
+  .word-to-works {
     display: none;
   }
 
-  .btn-about-me {
+  .btn-works {
     display: none;
   }
 
@@ -1602,11 +1634,24 @@ textarea {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    .skill {
+      width: 140px;
+      height: 140px;
+      margin: 10px;
+    }
   }
 
-  .skill {
-    transform: scale(0.7);
-    margin: -6px;
+  .works-btn {
+    margin: 12px auto;
+    height: 320px;
+  }
+
+  .works-words {
+    position: absolute;
+    top: 140px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-form {
