@@ -1,0 +1,612 @@
+@import "../style/bootstrap/bootstrap-grid.min.css";
+
+$primaryBGColor: #fffcfb;
+$secondaryBGColor: #fdf8ef;
+$secondaryColor900: #1a1f31;
+$secondaryColor800: #1e2334;
+$primary2Color700: #1c9b89;
+$primary2Color500: #67c6b8;
+$primary2Color400: #a4e3db;
+$primaryColor700: #a98109;
+$primaryColor500: #ffc10e;
+$primaryColor400: #fad319;
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  vertical-align: baseline;
+}
+
+.title-bg {
+  background-image: url("../img/bg_others-D.jpg");
+  max-width: 1920px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.logo {
+  width: 136.5px;
+  height: 40px;
+  background-image: url("../img/logoPart_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background-image: url("../img/logoFull_STANLEY.png");
+    filter: drop-shadow(0 0 5px rgba(white, 0.5));
+  }
+}
+
+.logo-phone {
+  width: 136.5px;
+  height: 40px;
+  margin: 10px;
+  background-image: url("../img/logoFull_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  border-bottom: $primaryBGColor 1px solid;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  .navbar-list {
+    display: flex;
+    position: relative;
+  }
+
+  .list-items {
+    position: relative;
+    padding: 8px 24px;
+    display: inline-block;
+    margin: 20px 12px;
+    transition: all 0.1s ease-out;
+    color: $primaryBGColor;
+    cursor: pointer;
+
+    &:hover {
+      color: $primaryColor500;
+      font-weight: 400;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background: $primaryColor500;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: transform 0.1s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.navbar-btn-phone {
+  font-size: 20px;
+  color: $secondaryBGColor;
+  float: right;
+  line-height: 30px;
+  margin-right: 20px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+#navbar-check-phone {
+  display: none;
+}
+
+.navbar-list-phone {
+  position: fixed;
+  width: 50%;
+  height: 168px;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  top: 61px;
+  right: -50%;
+  text-align: center;
+  transition: all 0.3s ease;
+  li {
+    display: block;
+    padding: 16px;
+    border-bottom: $secondaryBGColor 1px solid;
+    a {
+      font-size: 16px;
+      color: $secondaryBGColor;
+      &:active {
+        color: $primaryColor500;
+      }
+    }
+  }
+}
+
+#navbar-check-phone:checked ~ ul {
+  right: 0;
+}
+
+.logo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .logo-group {
+    img {
+      max-width: 240px;
+      max-height: 240px;
+    }
+
+    .logo-color {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+
+      .logo-color-info {
+        font-size: 1rem;
+
+        i {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: $primaryColor500;
+  color: $primaryBGColor;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Utilities
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.z-index--99 {
+  z-index: -99;
+}
+
+.font-weight-100 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+}
+
+.font-weight-300 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+}
+
+.font-weight-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+.pd-8 {
+  padding: 8px;
+}
+
+.pdl-8 {
+  padding-left: 8px;
+}
+
+.pdt-8 {
+  padding-top: 8px;
+}
+
+.pdb-8 {
+  padding-bottom: 8px;
+}
+
+.pd-16 {
+  padding: 16px;
+}
+
+.pdl-16 {
+  padding-left: 16px;
+}
+
+.pdt-16 {
+  padding-top: 16px;
+}
+
+.pdb-16 {
+  padding-bottom: 16px;
+}
+
+.pd-24 {
+  padding: 24px;
+}
+
+.pdl-24 {
+  padding-left: 24px;
+}
+
+.pdt-24 {
+  padding-top: 24px;
+}
+
+.pdb-24 {
+  padding-bottom: 24px;
+}
+
+.pd-32 {
+  padding: 32px;
+}
+
+.pdl-32 {
+  padding-left: 32px;
+}
+
+.pdt-32 {
+  padding-top: 32px;
+}
+
+.pdb-32 {
+  padding-bottom: 32px;
+}
+
+.pdl-64 {
+  padding-left: 64px;
+}
+
+.pdt-64 {
+  padding-top: 64px;
+}
+
+.pdb-64 {
+  padding-bottom: 64px;
+}
+
+.pdl-96 {
+  padding-left: 96px;
+}
+
+.pdt-96 {
+  padding-top: 96px;
+}
+
+.pdb-96 {
+  padding-bottom: 96px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 0.5rem;
+  font-weight: 100;
+}
+
+hr {
+  border: $primaryColor500 solid 1px;
+  margin-bottom: 20px;
+}
+
+span {
+  line-height: auto;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@keyframes valueAnim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.bg-filter {
+  background-color: rgba($color: black, $alpha: 0.8);
+  position: absolute;
+  width: 100%;
+  height: 248px;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  padding: 1rem;
+  color: white;
+  border-bottom: $primaryColor500 solid 3px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .logo-grid {
+    justify-content: space-between;
+
+    .logo-group {
+      margin: 48px 24px;
+    }
+  }
+  h1 {
+    font-size: 6rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .logo-grid {
+    justify-content: space-between;
+
+    .logo-group {
+      margin: 48px 24px;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 821px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .logo-grid {
+    justify-content: space-between;
+
+    .logo-group {
+      margin: 24px 6px;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 431px) {
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-phone {
+    display: block;
+  }
+
+  .logo-grid {
+    justify-content: space-around;
+
+    .logo-group {
+      margin: 24px 6px;
+    }
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-phone {
+    display: block;
+  }
+
+  .logo-grid {
+    justify-content: space-around;
+
+    .logo-group {
+      margin: 24px 6px;
+    }
+  }
+
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+}

@@ -514,7 +514,6 @@ svg {
   background-image: url("../img/bg_poster-D.jpg");
 
   &:hover {
-    color: $secondaryBGColor;
     background-image: url("../img/filter-2.jpg");
   }
 }
@@ -530,7 +529,7 @@ svg {
 .others-D {
   background-image: url("../img/bg_others-D.jpg");
   &:hover {
-    background-image: url("../img/filter-3.jpg");
+    background-image: url("../img/filter-4.jpg");
   }
 }
 
@@ -966,13 +965,17 @@ strong {
     flex-wrap: wrap;
   }
   .works-btn {
-    margin: 36px auto;
-    height: 320px;
+    margin: 24px auto;
+    height: 220px;
+
+    &::after {
+      bottom: 64px;
+    }
   }
 
   .works-words {
     position: absolute;
-    top: 120px;
+    top: 80px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -1153,13 +1156,17 @@ textarea {
     flex-wrap: wrap;
   }
   .works-btn {
-    margin: 36px auto;
+    margin: 24px auto;
     height: 220px;
+
+    &::after {
+      bottom: 64px;
+    }
   }
 
   .works-words {
     position: absolute;
-    top: 90px;
+    top: 80px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -1344,6 +1351,10 @@ textarea {
   .works-btn {
     margin: 12px auto;
     height: 220px;
+
+    &::after {
+      bottom: 64px;
+    }
   }
 
   .works-words {
@@ -1504,13 +1515,17 @@ textarea {
   }
 
   .works-btn {
-    margin: 60px auto;
-    height: 220px;
+    margin: 12px auto;
+    height: 96px;
+
+    &::after {
+      bottom: 22px;
+    }
   }
 
   .works-words {
     position: absolute;
-    top: 85px;
+    top: 30px;
     width: 100%;
     justify-content: center;
     align-items: center;
@@ -1656,13 +1671,17 @@ textarea {
   }
 
   .works-btn {
-    margin: 12px auto;
-    height: 320px;
+    margin: 16px auto;
+    height: 120px;
+
+    &::after {
+      bottom: 32px;
+    }
   }
 
   .works-words {
     position: absolute;
-    top: 140px;
+    top: 40px;
     width: 100%;
     justify-content: center;
     align-items: center;
