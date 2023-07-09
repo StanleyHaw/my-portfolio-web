@@ -578,12 +578,12 @@ svg {
 }
 
 .contant-me-img {
-  background-image: url("../img/color-collection.png");
+  background-image: url("../img/contact-me-img.jpg");
   background-size: cover;
   background-position: center center;
   position: relative;
-  padding: 40px 10px;
-  width: 50%;
+  padding: 0;
+  width: 60%;
   margin: 40px 0;
 }
 
@@ -752,6 +752,10 @@ svg {
 
 .pdb-96 {
   padding-bottom: 96px;
+}
+
+.mg-24 {
+  margin: 24px;
 }
 
 .reveal {
