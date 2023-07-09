@@ -572,10 +572,20 @@ svg {
   cursor: pointer;
 }
 .submit-btn:hover {
-  background-color: rgb(255, 225, 73);
+  background-color: #ffe149;
 }
 .submit-btn:active {
   background-color: #a98109;
+}
+
+.contant-me-img {
+  background-image: url("../img/color-collection.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 40px 10px;
+  width: 50%;
+  margin: 40px 0;
 }
 
 .d-flex {
@@ -1347,6 +1357,9 @@ textarea {
     padding: 10px 20px;
     width: 100%;
   }
+  .contant-me-img {
+    display: none;
+  }
   h1 {
     font-size: 2rem;
   }
@@ -1466,6 +1479,9 @@ textarea {
   .contact-form {
     padding: 10px 20px;
     width: 100%;
+  }
+  .contant-me-img {
+    display: none;
   }
   h1 {
     font-size: 2rem;

@@ -9,7 +9,7 @@ $primary2Color500: #67c6b8;
 $primary2Color400: #a4e3db;
 $primaryColor700: #a98109;
 $primaryColor500: #ffc10e;
-$primaryColor400: rgb(255, 225, 73);
+$primaryColor400: #ffe149;
 
 * {
   box-sizing: border-box;
@@ -624,6 +624,16 @@ svg {
   &:active {
     background-color: $primaryColor700;
   }
+}
+
+.contant-me-img {
+  background-image: url("../img/color-collection.png");
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  padding: 40px 10px;
+  width: 50%;
+  margin: 40px 0;
 }
 
 // Utilities
@@ -1511,6 +1521,10 @@ textarea {
     width: 100%;
   }
 
+  .contant-me-img {
+    display: none;
+  }
+
   h1 {
     font-size: 2rem;
   }
@@ -1657,6 +1671,10 @@ textarea {
   .contact-form {
     padding: 10px 20px;
     width: 100%;
+  }
+
+  .contant-me-img {
+    display: none;
   }
 
   h1 {
