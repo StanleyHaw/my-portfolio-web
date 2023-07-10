@@ -1,0 +1,1238 @@
+@import "../style/bootstrap/bootstrap-grid.min.css";
+
+$primaryBGColor: #fffcfb;
+$secondaryBGColor: #fdf8ef;
+$secondaryColor900: #1a1f31;
+$secondaryColor800: #1e2334;
+$primary2Color700: #1c9b89;
+$primary2Color500: #67c6b8;
+$primary2Color400: #a4e3db;
+$primaryColor700: #a98109;
+$primaryColor500: #ffc10e;
+$primaryColor400: #fad319;
+
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1rem;
+  line-height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: "Noto Sans TC", sans-serif;
+  vertical-align: baseline;
+}
+
+.title-bg {
+  background-image: url("../img/bg_others-D.jpg");
+  max-width: 1920px;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+
+.navbar-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.logo {
+  width: 136.5px;
+  height: 40px;
+  background-image: url("../img/logoPart_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    background-image: url("../img/logoFull_STANLEY.png");
+    filter: drop-shadow(0 0 5px rgba(white, 0.5));
+  }
+}
+
+.logo-phone {
+  width: 136.5px;
+  height: 40px;
+  margin: 10px;
+  background-image: url("../img/logoFull_STANLEY.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  border-bottom: $primaryBGColor 1px solid;
+  top: 0;
+  left: 0;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+
+  .navbar-list {
+    display: flex;
+    position: relative;
+  }
+
+  .list-items {
+    position: relative;
+    padding: 8px 24px;
+    display: inline-block;
+    margin: 20px 12px;
+    transition: all 0.1s ease-out;
+    color: $primaryBGColor;
+    cursor: pointer;
+
+    &:hover {
+      color: $primaryColor500;
+      font-weight: 400;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -6px;
+      width: 100%;
+      height: 2px;
+      background: $primaryColor500;
+      border-radius: 5px;
+      transform: scaleX(0);
+      transition: transform 0.1s ease-out;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+.navbar-btn-phone {
+  font-size: 20px;
+  color: $secondaryBGColor;
+  float: right;
+  line-height: 30px;
+  margin-right: 20px;
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+#navbar-check-phone {
+  display: none;
+}
+
+.navbar-list-phone {
+  position: fixed;
+  width: 50%;
+  height: 168px;
+  background-color: rgba($color: #000000, $alpha: 0.8);
+  top: 61px;
+  right: -50%;
+  text-align: center;
+  transition: all 0.3s ease;
+  li {
+    display: block;
+    padding: 16px;
+    border-bottom: $secondaryBGColor 1px solid;
+    a {
+      font-size: 16px;
+      color: $secondaryBGColor;
+      &:active {
+        color: $primaryColor500;
+      }
+    }
+  }
+}
+
+#navbar-check-phone:checked ~ ul {
+  right: 0;
+}
+
+.project-1 {
+  position: relative;
+}
+
+.project-1-content {
+  padding-bottom: 48px;
+
+  .project-1-logo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .project-logo-img {
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+
+    .logo-color-content {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+
+      .logo-color {
+        display: flex;
+        margin-bottom: 32px;
+
+        .color-block {
+          position: relative;
+          bottom: 0;
+
+          p {
+            position: absolute;
+            bottom: 0;
+            margin: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.color-ff6e6e {
+  background-color: #ff6e6e;
+  color: #fff;
+}
+
+.color-ff374e {
+  background-color: #ff374e;
+  color: #fff;
+}
+
+.color-a5f1ff {
+  background-color: #a5f1ff;
+  color: rgb(46, 46, 46);
+}
+
+.color-67b4e0 {
+  background-color: #67b4e0;
+  color: rgb(46, 46, 46);
+}
+
+.project-1-image {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-video-cont {
+  display: flex;
+  justify-content: center;
+}
+
+.project-2-ppt {
+  display: flex;
+
+  .project-2-issuu-link {
+    position: relative;
+    background-image: url("../img/ProjectWorks/NasmPartner/Nasm-partner-issuu.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 24px;
+    cursor: pointer;
+  }
+}
+
+.project-2-img {
+  position: relative;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid-container {
+  display: grid;
+  justify-items: center;
+
+  .picture-1 {
+    background-image: url("../img/MarketingGraphicDesign/projectNASM/NASM-01.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .picture-2 {
+    background-image: url("../img/MarketingGraphicDesign/projectNASM/NASM-02.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .picture-3 {
+    background-image: url("../img/MarketingGraphicDesign/projectNASM/NASM-03.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .picture-4 {
+    background-image: url("../img/MarketingGraphicDesign/projectNASM/NASM-04.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .picture-5 {
+    background-image: url("../img/MarketingGraphicDesign/projectNASM/NASM-05.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .picture-6 {
+    background-image: url("../img/MarketingGraphicDesign/projectNASM/NASM-06.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+}
+
+.grid-container-course {
+  display: grid;
+  justify-items: center;
+
+  .NASMCPT {
+    background-image: url("../img/ProjectWorks/NasmPartner/NASM-CPT.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .NASMCES {
+    background-image: url("../img/ProjectWorks/NasmPartner/NASM-CES.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .NASMPES {
+    background-image: url("../img/ProjectWorks/NasmPartner/NASM-PES.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+
+  .NASMSAQ {
+    background-image: url("../img/ProjectWorks/NasmPartner/NASM-SAQ.jpg");
+    background-size: cover;
+    overflow-x: hidden;
+    background-position: center center;
+  }
+}
+
+.footer {
+  position: relative;
+  background-color: $primaryColor500;
+  color: $primaryBGColor;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Utilities
+.d-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.nowrap {
+  flex-wrap: nowrap;
+}
+
+.fd-c {
+  flex-direction: column;
+}
+
+.fd-r {
+  flex-direction: row;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.z-index-99 {
+  z-index: 99;
+}
+
+.z-index--99 {
+  z-index: -99;
+}
+
+.font-weight-100 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+}
+
+.font-weight-300 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+}
+
+.font-weight-400 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 700;
+}
+
+.font-weight-900 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 900;
+}
+.pd-8 {
+  padding: 8px;
+}
+
+.pdl-8 {
+  padding-left: 8px;
+}
+
+.pdt-8 {
+  padding-top: 8px;
+}
+
+.pdb-8 {
+  padding-bottom: 8px;
+}
+
+.pd-16 {
+  padding: 16px;
+}
+
+.pdl-16 {
+  padding-left: 16px;
+}
+
+.pdt-16 {
+  padding-top: 16px;
+}
+
+.pdb-16 {
+  padding-bottom: 16px;
+}
+
+.pd-24 {
+  padding: 24px;
+}
+
+.pdl-24 {
+  padding-left: 24px;
+}
+
+.pdt-24 {
+  padding-top: 24px;
+}
+
+.pdb-24 {
+  padding-bottom: 24px;
+}
+
+.pd-32 {
+  padding: 32px;
+}
+
+.pdl-32 {
+  padding-left: 32px;
+}
+
+.pdt-32 {
+  padding-top: 32px;
+}
+
+.pdb-32 {
+  padding-bottom: 32px;
+}
+
+.pdl-64 {
+  padding-left: 64px;
+}
+
+.pdt-64 {
+  padding-top: 64px;
+}
+
+.pdb-64 {
+  padding-bottom: 64px;
+}
+
+.pdl-96 {
+  padding-left: 96px;
+}
+
+.pdt-96 {
+  padding-top: 96px;
+}
+
+.pdb-96 {
+  padding-bottom: 96px;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+a {
+  font-size: 1rem;
+  font-weight: 100;
+  text-decoration: none;
+}
+
+h5 {
+  font-size: 0.5rem;
+  font-weight: 100;
+}
+
+hr {
+  border: $primaryColor500 solid 1px;
+  margin-bottom: 20px;
+}
+
+span {
+  line-height: auto;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+@keyframes valueAnim {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.bg-filter {
+  background-color: rgba($color: black, $alpha: 0.8);
+  position: absolute;
+  width: 100%;
+  height: 248px;
+  top: 0;
+  left: 0;
+}
+
+.title {
+  padding: 1rem;
+  color: white;
+  border-bottom: #ff837f solid 3px;
+  z-index: 0;
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1441px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .project-number {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -50px;
+  }
+
+  .project-logo-img {
+    width: 300px;
+    height: 300px;
+    margin-left: 340px;
+  }
+
+  .project-1-title {
+    padding: 32px 0;
+    left: 50%;
+    transform: translateX(50%);
+    max-width: 65%;
+  }
+
+  .color-block {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-content {
+    width: 490px;
+  }
+
+  .project-1-image {
+    padding: 0 36px;
+
+    img {
+      height: 500px;
+      width: auto;
+    }
+  }
+
+  .project-video {
+    padding: 28px;
+    width: 1280px;
+    height: 608px;
+  }
+
+  .project-2-ppt {
+    justify-content: flex-end;
+  }
+
+  .project-2-title {
+    padding: 32px 0;
+    left: 50%;
+    transform: translateX(50%);
+    max-width: 65%;
+  }
+
+  .project-2-issuu-link {
+    width: 840px;
+    height: 472.5px;
+    right: 40px;
+  }
+
+  .project-2-img {
+    margin: 24px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .pic-sqr {
+    width: 380px;
+    height: 380px;
+  }
+
+  .grid-container-course {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .pic-rel {
+    width: 560px;
+    height: 295px;
+  }
+
+  .video-p-note {
+    padding: 32px;
+    padding-top: 0;
+  }
+
+  .project-video-cont {
+    margin-bottom: 24px;
+  }
+
+  .course-word {
+    padding: 24px 40px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1440px) and (min-width: 1281px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .project-number {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -50px;
+  }
+
+  .project-logo-img {
+    width: 300px;
+    height: 300px;
+    margin-left: 340px;
+  }
+
+  .project-1-title {
+    padding: 32px 0;
+    left: 50%;
+    transform: translateX(50%);
+    max-width: 65%;
+  }
+
+  .color-block {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-content {
+    width: 490px;
+  }
+
+  .project-1-image {
+    padding: 0 36px;
+
+    img {
+      height: 500px;
+      width: auto;
+    }
+  }
+
+  .project-video {
+    padding: 28px;
+    width: 1280px;
+    height: 608px;
+  }
+
+  .project-2-ppt {
+    justify-content: flex-end;
+  }
+
+  .project-2-title {
+    padding: 32px 0;
+    left: 50%;
+    transform: translateX(50%);
+    max-width: 65%;
+  }
+
+  .project-2-issuu-link {
+    width: 840px;
+    height: 472.5px;
+    right: 40px;
+  }
+
+  .project-2-img {
+    margin: 24px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .pic-sqr {
+    width: 380px;
+    height: 380px;
+  }
+
+  .grid-container-course {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .pic-rel {
+    width: 560px;
+    height: 295px;
+  }
+
+  .video-p-note {
+    padding: 32px;
+    padding-top: 0;
+  }
+
+  .project-video-cont {
+    margin-bottom: 24px;
+  }
+
+  .course-word {
+    padding: 24px 40px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 821px) {
+  .navbar-pc {
+    display: block;
+  }
+
+  .navbar-phone {
+    display: none;
+  }
+
+  .project-number {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    left: -50px;
+  }
+
+  .project-logo-img {
+    width: 300px;
+    height: 300px;
+    margin-left: 340px;
+  }
+
+  .project-1-title {
+    padding: 32px 0;
+    left: 50%;
+    transform: translateX(50%);
+    max-width: 65%;
+  }
+
+  .color-block {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-content {
+    width: 490px;
+  }
+
+  .project-1-image {
+    padding: 0;
+
+    img {
+      height: 450px;
+      width: auto;
+    }
+  }
+
+  .project-video {
+    padding: 0;
+    width: 960px;
+    height: 560px;
+  }
+
+  .project-2-ppt {
+    justify-content: flex-end;
+  }
+
+  .project-2-title {
+    padding: 32px 0;
+    left: 50%;
+    transform: translateX(50%);
+    max-width: 65%;
+  }
+
+  .project-2-issuu-link {
+    width: 720px;
+    height: 405px;
+    right: 36px;
+  }
+
+  .project-2-img {
+    margin: 24px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .pic-sqr {
+    width: 320px;
+    height: 320px;
+  }
+
+  .grid-container-course {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .pic-rel {
+    width: 500px;
+    height: 263.5px;
+  }
+
+  .video-p-note {
+    padding: 0;
+    padding-top: 16px;
+  }
+
+  .project-video-cont {
+    margin-bottom: 24px;
+  }
+
+  .course-word {
+    padding: 16px 24px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 820px) and (min-width: 431px) {
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-phone {
+    display: block;
+  }
+
+  .project-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-number {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .project-logo-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .project-1-title {
+    position: relative;
+    padding: 32px 0;
+    left: 0;
+  }
+
+  .color-block {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo-content {
+    width: 490px;
+  }
+
+  .project-1-image {
+    padding: 0;
+
+    img {
+      height: 300px;
+      width: auto;
+    }
+  }
+
+  .project-video {
+    width: 480px;
+    height: 270px;
+  }
+
+  .project-2-ppt {
+    justify-content: center;
+  }
+
+  .project-2-title {
+    position: relative;
+    padding: 32px 0;
+    left: 0;
+  }
+
+  .project-2-issuu-link {
+    width: 480px;
+    height: 270px;
+  }
+
+  .project-2-img {
+    margin: 24px;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .pic-sqr {
+    width: 180px;
+    height: 180px;
+  }
+
+  .grid-container-course {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  .pic-rel {
+    width: 280px;
+    height: 147.5px;
+  }
+
+  .video-p-note {
+    padding: 0;
+    padding-top: 16px;
+  }
+
+  .project-video-cont {
+    margin-bottom: 24px;
+  }
+
+  .course-word {
+    padding: 16px 36px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .navbar-pc {
+    display: none;
+  }
+
+  .navbar-phone {
+    display: block;
+  }
+
+  .project-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-1-logo {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .project-number {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .project-logo-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .project-1-title {
+    position: relative;
+    padding: 16px 0;
+    left: 0;
+  }
+
+  .color-block {
+    width: 80px;
+    height: 120px;
+  }
+
+  .logo-content {
+    width: auto;
+  }
+
+  .logo-color {
+    justify-content: center;
+  }
+
+  .project-1-image {
+    padding: 0;
+
+    img {
+      height: 150px;
+      width: auto;
+    }
+  }
+
+  .project-video {
+    width: 360px;
+    height: 200px;
+  }
+
+  .project-2-ppt {
+    justify-content: center;
+  }
+
+  .project-2-title {
+    position: relative;
+    padding: 32px 0;
+    left: 0;
+  }
+
+  .project-2-issuu-link {
+    width: 360px;
+    height: 200px;
+  }
+
+  .project-2-img {
+    margin: 0;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .pic-sqr {
+    width: 100px;
+    height: 100px;
+  }
+
+  .grid-container-course {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  .pic-rel {
+    width: 220px;
+    height: 116px;
+  }
+
+  .video-p-note {
+    padding: 0;
+    padding-top: 16px;
+  }
+
+  .project-video-cont {
+    margin-bottom: 24px;
+  }
+
+  .course-word {
+    padding: 12px 0;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+}

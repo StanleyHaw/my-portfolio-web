@@ -488,10 +488,10 @@ svg {
   background-image: url("../img/filter-3.jpg");
 }
 
-.others-D {
-  background-image: url("../img/bg_others-D.jpg");
+.project-D {
+  background-image: url("../img/bg_project-D.jpg");
 }
-.others-D:hover {
+.project-D:hover {
   background-image: url("../img/filter-4.jpg");
 }
 
