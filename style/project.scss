@@ -2,8 +2,8 @@
 
 $primaryBGColor: #fffcfb;
 $secondaryBGColor: #fdf8ef;
-$secondaryColor900: #1a1f31;
-$secondaryColor800: #1e2334;
+$greyColor900: #333333;
+$greyColor600: #666666;
 $primary2Color700: #1c9b89;
 $primary2Color500: #67c6b8;
 $primary2Color400: #a4e3db;
@@ -655,12 +655,12 @@ span {
   z-index: 0;
 }
 
-@media screen and (max-width: 1920px) and (min-width: 1441px) {
-  .navbar-pc {
+@media screen and (min-width: 1441px) {
+  .navbar-rwd-web {
     display: block;
   }
 
-  .navbar-phone {
+  .navbar-rwd-phone {
     display: none;
   }
 
@@ -769,11 +769,11 @@ span {
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1281px) {
-  .navbar-pc {
+  .navbar-rwd-web {
     display: block;
   }
 
-  .navbar-phone {
+  .navbar-rwd-phone {
     display: none;
   }
 
@@ -882,11 +882,11 @@ span {
 }
 
 @media screen and (max-width: 1280px) and (min-width: 821px) {
-  .navbar-pc {
+  .navbar-rwd-web {
     display: block;
   }
 
-  .navbar-phone {
+  .navbar-rwd-phone {
     display: none;
   }
 
@@ -995,11 +995,11 @@ span {
 }
 
 @media screen and (max-width: 820px) and (min-width: 431px) {
-  .navbar-pc {
+  .navbar-rwd-web {
     display: none;
   }
 
-  .navbar-phone {
+  .navbar-rwd-phone {
     display: block;
   }
 
@@ -1110,11 +1110,11 @@ span {
 }
 
 @media screen and (max-width: 430px) {
-  .navbar-pc {
+  .navbar-rwd-web {
     display: none;
   }
 
-  .navbar-phone {
+  .navbar-rwd-phone {
     display: block;
   }
 

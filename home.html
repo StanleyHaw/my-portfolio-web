@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stanley's Portfolio</title>
+    <link href="img/S-logo.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="./style/all.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/548e1038d8.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div class="background-home">
+        <div class="home-logo"></div>
+        <div class="home-hello">
+          <h3>您好！</h3>
+          <h1>我是 幸徽</h1>
+        </div>
+        <div class="avatar-wrapper">
+          <img
+            class="home-center-avatar shape-3"
+            src="./img/home_shape-3.png"
+          />
+          <img
+            class="home-center-avatar shape-2"
+            src="./img/home_shape-2.png"
+          />
+          <img
+            class="home-center-avatar shape-1"
+            src="./img/home_shape-1.png"
+          />
+          <img
+            class="home-center-avatar avatar-1"
+            src="./img/home_avatar-1.png"
+          />
+        </div>
+        <div class="home-my-job">
+          <h3>我是一名</h3>
+          <h1>平面設計師</h1>
+        </div>
+      </div>
+      <div class="bnt-cont">
+        <a href="./index.html#about-me" class="btn-menu">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="btn-text"
+            ><i class="fa-solid fa-user" color="#a98109"></i>&emsp;關於我</span
+          >
+        </a>
+        <a href="./index.html#works" class="btn-menu">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="btn-text"
+            ><i class="fa-solid fa-image" color="#a98109"></i>&emsp;作品集</span
+          >
+        </a>
+        <a href="./index.html#contact-me" class="btn-menu">
+          <span class="circle">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="btn-text"
+            ><i class="fa-solid fa-comments" color="#a98109"></i
+            >&emsp;聯絡我</span
+          >
+        </a>
+      </div>
+    </header>
+    <main></main>
+    <footer>
+      <div class="footer">
+        <p>©2023 Designed By Stanley Haw</p>
+      </div>
+    </footer>
+
+    <nav class="navbar-wrapper navbar-rwd-web z-index-99">
+      <div class="navbar">
+        <div class="container">
+          <div class="d-flex justify-content-space-between align-items-center">
+            <a href="#home"><div class="logo"></div></a>
+            <ul class="navbar-list font-weight-400">
+              <li><a href="#works" class="list-items works">作品集</a></li>
+              <li>
+                <a href="#about-me" class="list-items about-me">關於我</a>
+              </li>
+              <li>
+                <a href="#contact-me" class="list-items contact-me">聯絡我</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar-wrapper navbar-rwd-phone z-index-99">
+      <div class="navbar">
+        <div class="container">
+          <div class="d-flex justify-content-space-between align-items-center">
+            <a href="#home"><div class="logo"></div></a>
+            <ul class="navbar-list font-weight-400">
+              <li>
+                <a href="#works" class="list-items works"
+                  ><i class="fa-solid fa-user" color="#a98109"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#about-me" class="list-items about-me"
+                  ><i class="fa-solid fa-image" color="#a98109"></i
+                ></a>
+              </li>
+              <li>
+                <a href="#contact-me" class="list-items contact-me"
+                  ><i class="fa-solid fa-comments" color="#a98109"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+  <script src="./script.js"></script>
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("teZOQBC4JjIANFoUp");
+    })();
+  </script>
+</html>

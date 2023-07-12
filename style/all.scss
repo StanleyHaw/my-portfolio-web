@@ -2,8 +2,8 @@
 
 $primaryBGColor: #fffcfb;
 $secondaryBGColor: #fdf8ef;
-$secondaryColor900: #1a1f31;
-$secondaryColor800: #1e2334;
+$greyColor900: #333333;
+$greyColor600: #666666;
 $primary2Color700: #1c9b89;
 $primary2Color500: #67c6b8;
 $primary2Color400: #a4e3db;
@@ -94,132 +94,14 @@ td {
   vertical-align: baseline;
 }
 
-.navbar-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-}
-
-.logo {
-  width: 136.5px;
-  height: 40px;
-  background-image: url("../img/logoPart_STANLEY.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  transition: background 0.2s ease;
-  cursor: pointer;
-  &:hover {
-    background-image: url("../img/logoFull_STANLEY.png");
-    filter: drop-shadow(0 0 5px rgba(white, 0.5));
-  }
-}
-
-.logo-phone {
-  width: 136.5px;
-  height: 40px;
-  margin: 10px;
-  background-image: url("../img/logoFull_STANLEY.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  cursor: pointer;
-}
-
-.navbar {
-  position: fixed;
-  width: 100%;
-  border-bottom: $primaryBGColor 1px solid;
-  left: 0;
-  background-color: rgba($color: #000000, $alpha: 0.8);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease-in-out;
-
-  .navbar-list {
-    display: flex;
-    position: relative;
-  }
-
-  .list-items {
-    position: relative;
-    padding: 8px 24px;
-    display: inline-block;
-    margin: 20px 12px;
-    transition: all 0.1s ease-out;
-    color: $primaryBGColor;
-    cursor: pointer;
-
-    &:hover {
-      color: $primaryColor500;
-      font-weight: 400;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: -6px;
-      width: 100%;
-      height: 2px;
-      background: $primaryColor500;
-      border-radius: 5px;
-      transform: scaleX(0);
-      transition: transform 0.1s ease-out;
-    }
-
-    &:hover::after {
-      transform: scaleX(1);
-    }
-  }
-}
-
-.navbar-btn-phone {
-  font-size: 20px;
-  color: $secondaryBGColor;
-  float: right;
-  line-height: 30px;
-  margin-right: 20px;
-  margin-bottom: 4px;
-  cursor: pointer;
-}
-
-#navbar-check-phone {
-  display: none;
-}
-
-.navbar-list-phone {
-  position: fixed;
-  width: 50%;
-  height: -100px;
-  background-color: rgba($color: #000000, $alpha: 0.8);
-  top: 61px;
-  right: -50%;
-  text-align: center;
-  transition: all 0.3s ease;
-  li {
-    display: block;
-    padding: 16px;
-    border-bottom: $secondaryBGColor 1px solid;
-    a {
-      font-size: 16px;
-      color: $secondaryBGColor;
-      &:active {
-        color: $primaryColor500;
-      }
-    }
-  }
-}
-
-#navbar-check-phone:checked ~ ul {
-  right: 0;
-}
-
-.header-background {
+.background-home {
+  background-color: $secondaryBGColor;
   position: relative;
 }
 
-.logo-about-me {
+.home-logo {
+  position: absolute;
+  background-image: url("../img/logoPart_STANLEY.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -230,34 +112,57 @@ td {
   }
 }
 
-.intro-about-me {
-  color: $primaryBGColor;
+.home-hello {
+  text-align: right;
+  color: $primaryColor700;
 }
 
-.to-works {
-  padding: 64px 80px;
-  bottom: 0px;
-  right: 0px;
+.home-my-job {
+  color: $primaryColor700;
 }
 
-.word-to-works {
-  right: 200px;
-  top: 640px;
-  padding-right: 32px;
+.avatar-wrapper {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fa-circle-arrow-down {
-  color: #ffc10e;
-  font-size: 64px;
-  transform: rotate(-90deg);
-  transition: all 0.3s ease;
-  &:hover {
-    transform: rotate(0deg);
-    filter: drop-shadow(0 0 5px rgba($primaryColor400, 0.8));
+.home-center-avatar {
+  position: absolute;
+}
+
+.shape-3,
+.shape-2,
+.shape-1,
+.avatar-1 {
+  width: 45vw;
+  height: auto;
+}
+
+.shape-3 {
+  animation: spin 11s linear infinite;
+}
+
+.shape-2 {
+  animation: counterspin 8s linear infinite;
+}
+
+.shape-1 {
+  animation: spin 16s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
   }
+}
 
-  &:active {
-    transform: scale(0.9);
+@keyframes counterspin {
+  100% {
+    transform: rotate(-360deg);
   }
 }
 
@@ -272,185 +177,60 @@ td {
 .avatar-2 {
   background-image: url("../img/avatar-2.jpg");
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .abilities {
-  padding-top: 32px;
-  padding-bottom: 32px;
+  margin: auto;
   background-color: $secondaryBGColor;
 }
 
-.introdution,
-.education,
-.experience {
-  width: 100%;
-}
-
-.result {
-  width: 80%;
-}
-
-.toolsAndSkills {
-  width: 100%;
-}
-
 .skill-cont {
-  .skill {
-    position: flex;
-    width: 160px;
-    height: 160px;
-    margin: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+
+  .skill-bar {
+    background-color: $primaryBGColor;
+    display: block;
+    box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    overflow: hidden;
   }
 
-  .skill-circle-outer {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: inset 2px 2px 4px -1px rgba(0, 0, 0, 0.2),
-      inset -2px -2px 4px -1px rgba(255, 255, 255, 0.7),
-      -0.5px -0.5px 0px rgba(255, 255, 255, 1),
-      0.5px 0.5px 0px rgba(0, 0, 0, 0.01),
-      0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  .skill-value {
+    float: left;
+    background: linear-gradient(
+      60deg,
+      $primaryColor500 0%,
+      $primaryColor400 100%
+    );
   }
 
-  .skill-circle-inner {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    top: 10px;
-    left: 10px;
-    border-radius: 50%;
-    background-color: $secondaryBGColor;
-    box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
-      -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
+  .skill-ai {
+    width: 90%;
   }
 
-  .img-ai {
-    width: 118px;
-    height: 118px;
-    background-image: url("../img/PORTFOLIO_ai_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 12px 12px;
+  .skill-ps {
+    width: 85%;
   }
 
-  .img-html5 {
-    width: 118px;
-    height: 118px;
-    background-image: url("../img/PORTFOLIO_html5_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 12px 12px;
+  .skill-html5 {
+    width: 70%;
   }
 
-  .img-figma {
-    width: 118px;
-    height: 118px;
-    background-image: url("../img/PORTFOLIO_figma_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 12px 12px;
+  .skill-css3 {
+    width: 60%;
   }
 
-  .img-ps {
-    width: 118px;
-    height: 118px;
-    background-image: url("../img/PORTFOLIO_ps_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 12px 12px;
+  .skill-figma {
+    width: 65%;
   }
 
-  .img-css3 {
-    width: 118px;
-    height: 118px;
-    background-image: url("../img/PORTFOLIO_css3_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 12px 12px;
+  .skill-ppt {
+    width: 85%;
   }
-
-  .img-ppt {
-    width: 118px;
-    height: 118px;
-    background-image: url("../img/PORTFOLIO_ppt_icon.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: 12px 12px;
-  }
-
-  .figma_circle {
-    fill: none;
-    stroke: $primaryColor500;
-    stroke-width: 8px;
-    stroke-dasharray: 402 472;
-    stroke-dashoffset: 350;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    animation: valueAnim 2s ease forwards;
-  }
-
-  .ai_circle {
-    fill: none;
-    stroke: $primaryColor500;
-    stroke-width: 8px;
-    stroke-dasharray: 452 472;
-    stroke-dashoffset: 400;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    animation: valueAnim 2s ease forwards;
-  }
-
-  .ps_circle {
-    fill: none;
-    stroke: $primaryColor500;
-    stroke-width: 8px;
-    stroke-dasharray: 432 472;
-    stroke-dashoffset: 380;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    animation: valueAnim 2s ease forwards;
-  }
-
-  .ppt_circle {
-    fill: none;
-    stroke: $primaryColor500;
-    stroke-width: 8px;
-    stroke-dasharray: 412 472;
-    stroke-dashoffset: 360;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    animation: valueAnim 2s ease forwards;
-  }
-
-  .html5_circle {
-    fill: none;
-    stroke: $primaryColor500;
-    stroke-width: 8px;
-    stroke-dasharray: 332 472;
-    stroke-dashoffset: 280;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    animation: valueAnim 2s ease forwards;
-  }
-
-  .css3_circle {
-    fill: none;
-    stroke: $primaryColor500;
-    stroke-width: 8px;
-    stroke-dasharray: 272 472;
-    stroke-dashoffset: 220;
-    transform-origin: center;
-    transform: rotate(-90deg);
-    animation: valueAnim 2s ease forwards;
-  }
-}
-
-svg {
-  position: absolute;
-  top: -21.5px;
-  left: -21.5px;
 }
 
 .works-bg {
@@ -475,7 +255,7 @@ svg {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 10px;
-  color: $secondaryColor900;
+  color: $greyColor900;
   box-shadow: 3px 3px 8px -3px rgba(0, 0, 0, 0.1),
     -6px -6px 8px -1px rgba(249, 254, 255, 0.7);
   transition: all 0.3s ease;
@@ -533,12 +313,8 @@ svg {
   }
 }
 
-.contact-me-bg {
-  background-image: url("../img/contact-me-bg.jpg");
-  max-width: 1920px;
-  background-size: cover;
-  background-position: center center;
-  position: relative;
+.contact-me {
+  background-color: $secondaryBGColor;
 }
 
 .contact-form {
@@ -623,16 +399,6 @@ svg {
   &:active {
     background-color: $primaryColor700;
   }
-}
-
-.contant-me-img {
-  background-image: url("../img/contact-me-img.jpg");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  padding: 0;
-  width: 60%;
-  margin: 40px 0;
 }
 
 // Utilities
@@ -844,96 +610,120 @@ strong {
 }
 
 //media RWD
-@media screen and (max-width: 1920px) and (min-width: 1441px) {
-  .navbar-pc {
-    display: block;
-  }
-
-  .navbar-phone {
-    display: none;
-  }
-
-  .navbar {
-    top: -100px;
-  }
-
-  .header-background {
-    background-image: url("../img/background.jpg");
-    height: 1080px;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .avatar-1 {
-    position: absolute;
-    top: 0;
-    left: 35%;
-    transform: translateX(-50%);
-    height: 1080px;
-  }
-
-  .avatar-1-pad {
-    display: none;
-  }
-
-  .avatar-1-phone {
-    display: none;
-  }
-
-  .logo-about-me {
-    top: 32px;
-    left: 56px;
-    width: 300px;
-    height: 100px;
-    background-image: url("../img/logoPart_STANLEY.png");
-  }
-  .cover {
-    position: relative;
-    height: 1080px;
-  }
-
-  .cover-flex {
+@media screen and (min-width: 1441px) {
+  .background-home {
+    width: 100%;
+    height: 90vh;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 64px;
   }
 
-  .cover1 {
-    background-image: url("../img/cover1.png");
-    width: 23%;
-    background-size: cover;
+  .home-hello {
+    padding-right: 100px;
   }
 
-  .cover2 {
-    background-image: url("../img/cover2.png");
-    width: 23%;
-    background-size: cover;
+  .home-my-job {
+    padding-left: 100px;
   }
 
-  .cover3 {
-    background-image: url("../img/cover3.png");
-    width: 25%;
-    background-size: cover;
-  }
+  .bnt-cont {
+    background: $secondaryBGColor;
+    padding-bottom: 64px;
+    display: flex;
+    justify-content: space-around;
 
-  .cover4 {
-    background-image: url("../img/cover4.png");
-    width: 23%;
-    background-size: cover;
-  }
-
-  .intro-about-me {
-    padding: 64px 80px;
-    bottom: 340px;
-  }
-
-  .to-works {
-    padding: 24px 32px;
-    bottom: 0px;
-    right: 0px;
+    .btn-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1rem;
+      &.btn-menu {
+        width: 12rem;
+        height: auto;
+        .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 3rem;
+          height: 3rem;
+          background: $primaryColor500; //按鈕顏色
+          border-radius: 1rem;
+          .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .btn-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.55rem 0;
+          margin: 0 0 0 1.85rem;
+          color: $primaryColor700;
+          font-weight: 700;
+          text-align: center;
+          i {
+            padding-right: 1rem;
+          }
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              transform: rotate(90deg) translate(-0.25rem, -0.25rem);
+            }
+          }
+        }
+        .btn-text {
+          color: $secondaryBGColor;
+        }
+      }
+    }
   }
 
   .avatar-2 {
-    width: 640px;
-    height: 560px;
+    width: 50%;
+    height: 635px;
+  }
+
+  .about-me-1-text {
+    width: 45%;
+    padding-right: 220px;
   }
 
   .about-me-1 {
@@ -942,32 +732,60 @@ strong {
     background-color: white;
   }
 
-  .about-me-1-phone {
-    display: none;
-  }
-
   .about-me-2 {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 32px;
-    padding-bottom: 32px;
     background-color: $secondaryBGColor;
+    .about-me-2-cont {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      .about-me-wrapper {
+        width: 20vw;
+        margin: 48px;
+      }
+    }
   }
 
-  .about-me-2-column {
-    display: none;
+  .abilities {
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .toolsAndSkills {
+    margin: 48px;
+  }
+
+  .skill-cont {
+    margin: 0 56px;
+    flex-direction: column;
+
+    li {
+      padding: 10px;
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .skill-bar {
+      height: 10px;
+      width: 62.5vw;
+    }
+
+    .skill-value {
+      height: 10px;
+    }
   }
 
   .bg-filter {
     height: 248px;
   }
 
-  .skill-cont {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
   .works-btn {
     margin: 24px auto;
     height: 220px;
@@ -987,7 +805,6 @@ strong {
 
   .contact-form {
     padding: 40px 80px;
-    width: 50%;
   }
 
   h1 {
@@ -1022,8 +839,10 @@ strong {
   }
 
   hr {
-    border: $primaryColor500 solid 1px;
-    margin-bottom: 20px;
+    position: relative;
+    border: $primaryColor500 solid 2px;
+    margin: 20px 0 30px 0;
+    width: 30px;
   }
 
   span {
@@ -1036,95 +855,119 @@ textarea {
 }
 
 @media screen and (max-width: 1440px) and (min-width: 1281px) {
-  .navbar-pc {
-    display: block;
-  }
-
-  .navbar-phone {
-    display: none;
-  }
-
-  .navbar {
-    top: -100px;
-  }
-
-  .header-background {
-    background-image: url("../img/background.jpg");
-    height: 789px;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .avatar-1 {
-    position: absolute;
-    top: 0;
-    left: 35%;
-    transform: translateX(-50%);
-    height: 789px;
-  }
-
-  .avatar-1-pad {
-    display: none;
-  }
-
-  .avatar-1-phone {
-    display: none;
-  }
-
-  .logo-about-me {
-    top: 32px;
-    left: 56px;
-    width: 300px;
-    height: 100px;
-    background-image: url("../img/logoPart_STANLEY.png");
-  }
-  .cover-flex {
+  .background-home {
+    width: 100%;
+    height: 90vh;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 64px;
   }
 
-  .cover {
-    position: relative;
-    height: 789px;
+  .home-hello {
+    padding-right: 100px;
   }
 
-  .cover1 {
-    background-image: url("../img/cover1.png");
-    width: 23%;
-    background-size: cover;
+  .home-my-job {
+    padding-left: 100px;
   }
 
-  .cover2 {
-    background-image: url("../img/cover2.png");
-    width: 23%;
-    background-size: cover;
-  }
+  .bnt-cont {
+    background: $secondaryBGColor;
+    padding-bottom: 64px;
+    display: flex;
+    justify-content: space-around;
 
-  .cover3 {
-    background-image: url("../img/cover3.png");
-    width: 25%;
-    background-size: cover;
-  }
-
-  .cover4 {
-    background-image: url("../img/cover4.png");
-    width: 23%;
-    background-size: cover;
-  }
-
-  .intro-about-me {
-    padding: 64px 80px;
-    bottom: 180px;
-  }
-
-  .to-works {
-    padding: 24px 32px;
-    bottom: 0px;
-    right: 0px;
+    .btn-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1rem;
+      &.btn-menu {
+        width: 12rem;
+        height: auto;
+        .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 3rem;
+          height: 3rem;
+          background: $primaryColor500; //按鈕顏色
+          border-radius: 1rem;
+          .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .btn-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.55rem 0;
+          margin: 0 0 0 1.85rem;
+          color: $primaryColor700;
+          font-weight: 700;
+          text-align: center;
+          i {
+            padding-right: 1rem;
+          }
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              transform: rotate(90deg) translate(-0.25rem, -0.25rem);
+            }
+          }
+        }
+        .btn-text {
+          color: $secondaryBGColor;
+        }
+      }
+    }
   }
 
   .avatar-2 {
-    width: 480px;
-    height: 420px;
+    width: 50%;
+    height: 560px;
+  }
+
+  .about-me-1-text {
+    width: 45%;
+    padding-right: 128px;
   }
 
   .about-me-1 {
@@ -1133,32 +976,60 @@ textarea {
     background-color: white;
   }
 
-  .about-me-1-phone {
-    display: none;
-  }
-
   .about-me-2 {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 32px;
-    padding-bottom: 32px;
     background-color: $secondaryBGColor;
+    .about-me-2-cont {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      .about-me-wrapper {
+        width: 20vw;
+        margin: 24px;
+      }
+    }
   }
 
-  .about-me-2-column {
-    display: none;
+  .abilities {
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .toolsAndSkills {
+    margin: 24px;
+  }
+
+  .skill-cont {
+    margin: 0 56px;
+    flex-direction: column;
+
+    li {
+      padding: 10px;
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .skill-bar {
+      height: 10px;
+      width: 57.5vw;
+    }
+
+    .skill-value {
+      height: 10px;
+    }
   }
 
   .bg-filter {
     height: 248px;
   }
 
-  .skill-cont {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
   .works-btn {
     margin: 24px auto;
     height: 220px;
@@ -1178,7 +1049,6 @@ textarea {
 
   .contact-form {
     padding: 40px 80px;
-    width: 50%;
   }
 
   h1 {
@@ -1213,8 +1083,10 @@ textarea {
   }
 
   hr {
-    border: $primaryColor500 solid 1px;
-    margin-bottom: 20px;
+    position: relative;
+    border: $primaryColor500 solid 2px;
+    margin: 20px 0 30px 0;
+    width: 30px;
   }
 
   span {
@@ -1222,101 +1094,124 @@ textarea {
   }
 
   textarea {
-    height: 100px;
+    height: 240px;
   }
 }
 
-@media screen and (max-width: 1280px) and (min-width: 821px) {
-  .navbar-pc {
-    display: block;
-  }
-
-  .navbar-phone {
-    display: none;
-  }
-
-  .navbar {
-    top: -100px;
-  }
-
-  .header-background {
-    background-image: url("../img/background.jpg");
-    height: 720px;
-    background-size: cover;
-    background-position: center center;
-  }
-
-  .avatar-1 {
-    position: absolute;
-    top: 0;
-    left: 35%;
-    transform: translateX(-50%);
-    height: 720px;
-  }
-
-  .avatar-1-pad {
-    display: none;
-  }
-
-  .avatar-1-phone {
-    display: none;
-  }
-
-  .logo-about-me {
-    top: 32px;
-    left: 56px;
-    width: 300px;
-    height: 100px;
-    background-image: url("../img/logoPart_STANLEY.png");
-  }
-  .cover {
-    position: relative;
-    height: 720px;
-  }
-
-  .cover-flex {
+@media screen and (max-width: 1280px) and (min-width: 961px) {
+  .background-home {
+    width: 100%;
+    height: 90vh;
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 64px;
   }
 
-  .cover1 {
-    background-image: url("../img/cover1.png");
-    width: 23%;
-    background-size: cover;
+  .home-hello {
+    padding-right: 100px;
   }
 
-  .cover2 {
-    background-image: url("../img/cover2.png");
-    width: 23%;
-    background-size: cover;
+  .home-my-job {
+    padding-left: 100px;
   }
 
-  .cover3 {
-    background-image: url("../img/cover3.png");
-    width: 25%;
-    background-size: cover;
-  }
+  .bnt-cont {
+    background: $secondaryBGColor;
+    padding-bottom: 64px;
+    display: flex;
+    justify-content: space-around;
 
-  .cover4 {
-    background-image: url("../img/cover4.png");
-    width: 23%;
-    background-size: cover;
-  }
-
-  .intro-about-me {
-    padding: 64px 80px;
-    bottom: 150px;
-  }
-
-  .to-works {
-    padding: 24px 32px;
-    bottom: 0px;
-    right: 0px;
+    .btn-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1rem;
+      &.btn-menu {
+        width: 12rem;
+        height: auto;
+        .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 3rem;
+          height: 3rem;
+          background: $primaryColor500; //按鈕顏色
+          border-radius: 1rem;
+          .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .btn-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.55rem 0;
+          margin: 0 0 0 1.85rem;
+          color: $primaryColor700;
+          font-weight: 700;
+          text-align: center;
+          i {
+            padding-right: 1rem;
+          }
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              transform: rotate(90deg) translate(-0.25rem, -0.25rem);
+            }
+          }
+        }
+        .btn-text {
+          color: $secondaryBGColor;
+        }
+      }
+    }
   }
 
   .avatar-2 {
-    width: 480px;
-    height: 420px;
+    width: 50%;
+    height: 460px;
+  }
+
+  .about-me-1-text {
+    width: 45%;
+    padding-right: 96px;
   }
 
   .about-me-1 {
@@ -1325,31 +1220,61 @@ textarea {
     background-color: white;
   }
 
-  .about-me-1-phone {
-    display: none;
-  }
-
   .about-me-2 {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: center;
     padding-top: 32px;
     padding-bottom: 32px;
     background-color: $secondaryBGColor;
+    .about-me-2-cont {
+      display: flex;
+      justify-content: space-between;
+      margin: 24px;
+      .about-me-wrapper {
+        min-width: 25vw;
+        margin: 0 12px;
+      }
+    }
   }
 
-  .about-me-2-column {
-    display: none;
+  .abilities {
+    padding-top: 12px;
+    padding-bottom: 64px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .toolsAndSkills {
+    margin: 12px;
+  }
+
+  .skill-cont {
+    margin: 0 24px;
+    flex-direction: column;
+
+    li {
+      padding: 10px;
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .skill-bar {
+      height: 10px;
+      width: 80vw;
+    }
+
+    .skill-value {
+      height: 10px;
+    }
   }
 
   .bg-filter {
     height: 248px;
-  }
-
-  .skill-cont {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
   }
 
   .works-btn {
@@ -1371,7 +1296,6 @@ textarea {
 
   .contact-form {
     padding: 40px 80px;
-    width: 50%;
   }
 
   h1 {
@@ -1406,8 +1330,256 @@ textarea {
   }
 
   hr {
-    border: $primaryColor500 solid 1px;
-    margin-bottom: 20px;
+    position: relative;
+    border: $primaryColor500 solid 2px;
+    margin: 20px 0 30px 0;
+    width: 30px;
+  }
+
+  span {
+    line-height: 1.8rem;
+  }
+
+  textarea {
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 960px) and (min-width: 841px) {
+  .background-home {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 64px;
+  }
+
+  .home-hello {
+    padding-right: 100px;
+  }
+
+  .home-my-job {
+    padding-left: 100px;
+  }
+
+  .bnt-cont {
+    background: $secondaryBGColor;
+    padding-bottom: 64px;
+    display: flex;
+    justify-content: space-around;
+
+    .btn-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1rem;
+      &.btn-menu {
+        width: 12rem;
+        height: auto;
+        .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 3rem;
+          height: 3rem;
+          background: $primaryColor500; //按鈕顏色
+          border-radius: 1rem;
+          .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: 0.625rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .btn-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.6rem 0;
+          margin: 0 0 0 1.85rem;
+          color: $primaryColor700;
+          font-weight: 700;
+          text-align: center;
+          i {
+            padding-right: 1rem;
+          }
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              transform: rotate(90deg) translate(-0.25rem, -0.25rem);
+            }
+          }
+        }
+        .btn-text {
+          color: $secondaryBGColor;
+        }
+      }
+    }
+  }
+
+  .avatar-2 {
+    width: 50%;
+    height: 460px;
+  }
+
+  .about-me-1-text {
+    width: 45%;
+    padding-right: 96px;
+  }
+
+  .about-me-1 {
+    padding-top: 64px;
+    padding-bottom: 64px;
+    background-color: white;
+  }
+
+  .about-me-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background-color: $secondaryBGColor;
+    .about-me-2-cont {
+      display: flex;
+      justify-content: space-between;
+      margin: 12px;
+      .about-me-wrapper {
+        min-width: 25vw;
+        margin: 0 12px;
+      }
+    }
+  }
+
+  .abilities {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .toolsAndSkills {
+    margin: 12px;
+  }
+
+  .skill-cont {
+    margin: 0 12px;
+    flex-direction: column;
+
+    li {
+      padding: 10px;
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .skill-bar {
+      height: 10px;
+      width: 85vw;
+    }
+
+    .skill-value {
+      height: 10px;
+    }
+  }
+
+  .bg-filter {
+    height: 248px;
+  }
+
+  .works-btn {
+    margin: 12px auto;
+    height: 220px;
+
+    &::after {
+      bottom: 64px;
+    }
+  }
+
+  .works-words {
+    position: absolute;
+    top: 85px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contact-form {
+    padding: 40px 80px;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  a {
+    font-size: 1rem;
+    font-weight: 100;
+    text-decoration: none;
+  }
+
+  h5 {
+    font-size: 0.5rem;
+    font-weight: 100;
+  }
+
+  hr {
+    position: relative;
+    border: $primaryColor500 solid 2px;
+    margin: 20px 0 30px 0;
+    width: 30px;
   }
 
   span {
@@ -1419,70 +1591,127 @@ textarea {
   }
 }
 
-@media screen and (max-width: 820px) and (min-width: 431px) {
-  .navbar-pc {
-    display: none;
+@media screen and (max-width: 840px) and (min-width: 431px) {
+  .background-home {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    h1 {
+      font-weight: 700;
+    }
+    h3 {
+      font-weight: 500;
+    }
   }
 
-  .navbar-phone {
-    display: block;
+  .home-hello {
+    padding-right: 80px;
   }
 
-  .navbar {
-    top: 0;
+  .home-my-job {
+    padding-left: 80px;
   }
 
-  .header-background {
-    background-image: url("../img/background.jpg");
-    height: 1180px;
-    background-size: cover;
-    background-position: center center;
-  }
+  .bnt-cont {
+    background: $secondaryBGColor;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-around;
 
-  .avatar-1 {
-    display: none;
-  }
-
-  .avatar-1-pad {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 1180px;
-  }
-
-  .avatar-1-phone {
-    display: none;
-  }
-
-  .logo-about-me {
-    display: none;
-  }
-  .cover-flex {
-    display: none;
-  }
-
-  .intro-about-me {
-    padding: 12px 24px;
-    top: 520px;
-    color: $primaryBGColor;
-  }
-
-  .to-works {
-    padding: 24px 32px;
-    top: -280px;
-    right: 0px;
-  }
-
-  .word-to-works {
-    right: 200px;
-    top: 640px;
-    padding-right: 32px;
+    .btn-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 0;
+      font-size: 1rem;
+      &.btn-menu {
+        width: 8rem;
+        height: auto;
+        .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 2rem;
+          height: 2rem;
+          background: $primaryColor500; //按鈕顏色
+          border-radius: 0.67rem;
+          .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: 0.175rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.625rem;
+                height: 0.625rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .btn-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          padding: 0.5rem 0;
+          margin: 0 0 0 1.85rem;
+          color: $primaryColor700;
+          font-weight: 700;
+          font-size: 0.5rem;
+          text-align: center;
+          i {
+            padding-right: 0.75rem;
+          }
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              transform: rotate(90deg) translate(-0.25rem, -0.25rem);
+            }
+          }
+        }
+        .btn-text {
+          color: $secondaryBGColor;
+        }
+      }
+    }
   }
 
   .avatar-2 {
-    width: 320px;
+    width: 50%;
     height: 280px;
+  }
+
+  .about-me-1-text {
+    width: 45%;
+    padding-right: 48px;
   }
 
   .about-me-1 {
@@ -1491,31 +1720,65 @@ textarea {
     background-color: white;
   }
 
-  .about-me-1-phone {
-    display: none;
-  }
-
   .about-me-2 {
-    display: none;
-  }
-
-  .about-me-2-column {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     padding-top: 32px;
-    padding-bottom: 32px;
+    padding-bottom: 0;
     background-color: $secondaryBGColor;
+    .about-me-2-cont {
+      display: block;
+      width: 100%;
+      margin: 16px;
+      .about-me-wrapper {
+        margin: 12px;
+      }
+    }
+  }
+
+  .abilities {
+    padding-top: 0;
+    padding-bottom: 24px;
+    margin-bottom: 48px;
+    display: block;
+  }
+
+  .toolsAndSkills {
+    margin: 0 28px;
+  }
+
+  .skill-cont {
+    flex-direction: column;
+    align-items: flex-start;
+
+    li {
+      padding: 0 10px 10px 10px;
+
+      .skill-text-wrapper {
+        max-width: 60vw;
+        font-size: 0.5rem;
+        font-weight: 300;
+      }
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .skill-bar {
+      height: 10px;
+      width: 80vw;
+    }
+
+    .skill-value {
+      height: 10px;
+    }
   }
 
   .bg-filter {
     height: 208px;
-  }
-
-  .skill-cont {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .works-btn {
@@ -1537,7 +1800,6 @@ textarea {
 
   .contact-form {
     padding: 10px 20px;
-    width: 100%;
   }
 
   .contant-me-img {
@@ -1545,15 +1807,15 @@ textarea {
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   h3 {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
   }
 
   p {
@@ -1564,113 +1826,197 @@ textarea {
     font-size: 0.25rem;
   }
 
+  hr {
+    position: relative;
+    border: $primaryColor500 solid 1px;
+    margin: 12px 0 30px 0;
+  }
+
   textarea {
     height: 280px;
   }
 }
 
 @media screen and (max-width: 430px) {
-  .navbar-pc {
-    display: none;
+  .background-home {
+    width: 100%;
+    height: 35vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 64px 32px 0 32px;
+    h1 {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    h3 {
+      font-weight: 500;
+    }
   }
 
-  .navbar-phone {
-    display: block;
+  .home-hello {
+    padding-right: 50px;
   }
 
-  .navbar {
-    top: 0;
+  .home-my-job {
+    padding-left: 50px;
   }
 
-  .header-background {
-    background-image: url("../img/background-phone.png");
-    height: 932px;
-    background-size: cover;
-    background-position: center center;
-  }
+  .bnt-cont {
+    background: $secondaryBGColor;
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-around;
 
-  .avatar-1 {
-    display: none;
-  }
-
-  .avatar-1-pad {
-    display: none;
-  }
-
-  .avatar-1-phone {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 932px;
-  }
-
-  .logo-about-me {
-    display: none;
-  }
-  .cover-flex {
-    display: none;
-  }
-
-  .intro-about-me {
-    padding: 24px 24px;
-    top: 670px;
-    left: 64px;
-    color: $primaryBGColor;
-    transform: scale(2);
-  }
-
-  .to-works {
-    display: none;
-  }
-
-  .word-to-works {
-    display: none;
-  }
-
-  .btn-works {
-    display: none;
+    .btn-menu {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      outline: none;
+      border: 0;
+      vertical-align: middle;
+      text-decoration: none;
+      background: transparent;
+      padding: 1.5px;
+      font-size: 0.25rem;
+      &.btn-menu {
+        width: 5rem;
+        height: auto;
+        .circle {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: relative;
+          display: block;
+          margin: 0;
+          width: 1.5rem;
+          height: 1.5rem;
+          background: $primaryColor500; //按鈕顏色
+          border-radius: 0.5rem;
+          .icon {
+            transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            &.arrow {
+              transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+              left: -0.15rem;
+              width: 1.125rem;
+              height: 0.125rem;
+              background: none;
+              &::before {
+                position: absolute;
+                content: "";
+                top: -0.25rem;
+                right: 0.0625rem;
+                width: 0.5rem;
+                height: 0.5rem;
+                border-top: 0.125rem solid #fff;
+                border-right: 0.125rem solid #fff;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+        .btn-text {
+          transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          padding: 0.28rem 0;
+          margin: 0 0 0 1.85rem;
+          color: $primaryColor700;
+          font-weight: 300;
+          font-size: 0.25rem;
+          text-align: center;
+          i {
+            display: none;
+          }
+        }
+      }
+      &:hover {
+        .circle {
+          width: 100%;
+          .icon {
+            &.arrow {
+              transform: rotate(90deg) translate(-0.25rem, -0.25rem);
+            }
+          }
+        }
+        .btn-text {
+          color: $secondaryBGColor;
+        }
+      }
+    }
   }
 
   .avatar-2 {
-    width: 320px;
+    width: 100%;
     height: 280px;
   }
 
-  .about-me-1 {
-    display: none;
-  }
-
-  .about-me-1-phone {
-    padding: 32px;
-    background-color: white;
+  .about-me-1-text {
+    width: 100%;
+    padding: 8px 16px 24px 16px;
   }
 
   .about-me-2 {
-    display: none;
-  }
-
-  .about-me-2-column {
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-around;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    justify-content: flex-start;
+    padding-top: 16px;
+    padding-bottom: 16px;
     background-color: $secondaryBGColor;
+    .about-me-2-cont {
+      display: block;
+      width: 100%;
+      margin: 0 24px;
+      .about-me-wrapper {
+        margin: 12px 0;
+        li {
+          font-size: 0.5rem;
+        }
+      }
+    }
   }
 
-  .bg-filter {
-    height: 208px;
+  .abilities {
+    padding-top: 0px;
+    padding-bottom: 40px;
+    display: block;
+  }
+
+  .toolsAndSkills {
+    margin: 0 24px;
   }
 
   .skill-cont {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    .skill {
-      width: 140px;
-      height: 140px;
-      margin: 10px;
+    margin: 0px;
+    flex-direction: column;
+
+    li {
+      padding: 0 10px;
+
+      .skill-text-wrapper {
+        max-width: 55vw;
+        font-size: 0.5rem;
+        font-weight: 300;
+      }
+    }
+
+    .skill-img {
+      width: 80px;
+      height: 80px;
+    }
+
+    .skill-bar {
+      height: 10px;
+      margin: 0 0 16px 0;
+      width: 80vw;
+    }
+
+    .skill-value {
+      height: 10px;
     }
   }
 
@@ -1693,7 +2039,6 @@ textarea {
 
   .contact-form {
     padding: 10px 20px;
-    width: 100%;
   }
 
   .contant-me-img {
@@ -1717,7 +2062,13 @@ textarea {
   }
 
   h5 {
-    font-size: 0.25rem;
+    font-size: 0.5rem;
+  }
+
+  hr {
+    position: relative;
+    border: $primaryColor500 solid 1px;
+    margin: 12px 0 30px 0;
   }
 
   textarea {
