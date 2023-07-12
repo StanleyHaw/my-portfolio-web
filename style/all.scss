@@ -9,7 +9,7 @@ $primary2Color500: #67c6b8;
 $primary2Color400: #a4e3db;
 $primaryColor700: #a98109;
 $primaryColor500: #ffc10e;
-$primaryColor400: #ffe149;
+$primaryColor400: #ffcd5f;
 
 * {
   box-sizing: border-box;
@@ -390,15 +390,19 @@ td {
   margin: 10px;
   padding: 20px 60px;
   background-color: $primaryColor500;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: $primaryColor400;
+    box-shadow: 1px 6px 12px 8px rgba(0, 0, 0, 0.1);
   }
 
   &:active {
     background-color: $primaryColor700;
+    box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
   }
 }
 

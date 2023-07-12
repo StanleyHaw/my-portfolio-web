@@ -98,7 +98,7 @@ td {
 }
 .home-logo:hover {
   background-image: url("../img/logoFull_STANLEY.png");
-  filter: drop-shadow(0 0 5px rgba(255, 225, 73, 0.5));
+  filter: drop-shadow(0 0 5px rgba(255, 205, 95, 0.5));
 }
 
 .home-hello {
@@ -201,7 +201,7 @@ td {
 }
 .skill-cont .skill-value {
   float: left;
-  background: linear-gradient(60deg, #ffc10e 0%, #ffe149 100%);
+  background: linear-gradient(60deg, #ffc10e 0%, #ffcd5f 100%);
 }
 .skill-cont .skill-ai {
   width: 90%;
@@ -366,14 +366,18 @@ td {
   margin: 10px;
   padding: 20px 60px;
   background-color: #ffc10e;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 .submit-btn:hover {
-  background-color: #ffe149;
+  background-color: #ffcd5f;
+  box-shadow: 1px 6px 12px 8px rgba(0, 0, 0, 0.1);
 }
 .submit-btn:active {
   background-color: #a98109;
+  box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 .d-flex {
