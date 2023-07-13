@@ -1740,7 +1740,7 @@ textarea {
     margin: 0 0 0 1.85rem;
     color: #a98109;
     font-weight: 300;
-    font-size: 0.25rem;
+    font-size: 12px;
     text-align: center;
   }
   .bnt-cont .btn-menu.btn-menu .btn-text i {
