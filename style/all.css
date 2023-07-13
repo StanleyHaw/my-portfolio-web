@@ -1528,7 +1528,7 @@ textarea {
     margin: 0 0 0 1.85rem;
     color: #a98109;
     font-weight: 700;
-    font-size: 0.5rem;
+    font-size: 8px;
     text-align: center;
   }
   .bnt-cont .btn-menu.btn-menu .btn-text i {
@@ -1780,7 +1780,7 @@ textarea {
     margin: 12px 0;
   }
   .about-me-2 .about-me-2-cont .about-me-wrapper li {
-    font-size: 0.5rem;
+    font-size: 8px;
   }
   .abilities {
     padding-top: 0px;
@@ -1799,7 +1799,7 @@ textarea {
   }
   .skill-cont li .skill-text-wrapper {
     max-width: 55vw;
-    font-size: 0.5rem;
+    font-size: 8px;
     font-weight: 300;
   }
   .skill-cont .skill-img {
