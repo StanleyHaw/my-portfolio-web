@@ -284,6 +284,13 @@ td {
   }
 }
 
+.uiux-D {
+  background-image: url("../img/bg_uiux-D.jpg");
+  &:hover {
+    background-image: url("../img/filter-5.jpg");
+  }
+}
+
 .graphic-D {
   background-image: url("../img/bg_graphic-D.jpg");
   &:hover {
@@ -785,6 +792,10 @@ strong {
     .skill-value {
       height: 10px;
     }
+  }
+
+  .works-1 {
+    margin: 64px 0;
   }
 
   .bg-filter {

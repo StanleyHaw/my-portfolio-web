@@ -7,6 +7,7 @@
     <title>Stanley's Portfolio | 專案作品</title>
     <link href="img/S-logo.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="./style/project.css" />
+    <link rel="stylesheet" href="./style/navbar.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-v4-grid-only@1.0.0/dist/bootstrap-grid.min.css"
       rel="stylesheet"
@@ -178,58 +179,51 @@
         </div>
       </section>
     </main>
-    <nav class="navbar-wrapper navbar-rwd-web">
-      <div class="navbar">
-        <div class="container">
-          <div class="d-flex justify-content-space-between align-items-center">
-            <a href="./index.html"><div class="logo"></div></a>
-            <ul class="navbar-list font-weight-400">
-              <li>
-                <a href="./index.html#works" class="list-items works">作品集</a>
-              </li>
-              <li>
-                <a href="./index.html#about-me" class="list-items about-me"
-                  >關於我</a
-                >
-              </li>
-              <li>
-                <a href="./index.html#contact-me" class="list-items contact-me"
-                  >聯絡我</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </nav>
-    <nav class="navbar-rwd-phone">
+    <nav class="navbar-wrapper navbar-rwd-web z-index-99">
       <div class="navbar">
         <div class="d-flex justify-content-space-between align-items-center">
-          <a href="./index.html"><div class="logo-phone"></div></a>
-          <input type="checkbox" id="navbar-check-phone" />
-          <label for="navbar-check-phone">
-            <i class="fas fa-bars navbar-btn-phone"></i
-          ></label>
-
-          <ul class="navbar-list-phone font-weight-400">
+          <a href="#home"><div class="logo"></div></a>
+          <ul class="navbar-list font-weight-400">
             <li>
-              <a href="./index.html#works" class="list-items-phone works"
-                >作品集</a
-              >
-            </li>
-            <li>
-              <a href="./index.html#about-me" class="list-items-phone about-me"
+              <a href="./index.html#about-me" class="list-items about-me"
                 >關於我</a
               >
             </li>
             <li>
-              <a
-                href="./index.html#contact-me"
-                class="list-items-phone contact-me"
+              <a href="./index.html#works" class="list-items works">作品集</a>
+            </li>
+            <li>
+              <a href="./index.html#contact-me" class="list-items contact-me"
                 >聯絡我</a
               >
             </li>
           </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar-wrapper navbar-rwd-phone z-index-99">
+      <div class="navbar">
+        <div class="container">
+          <div class="d-flex justify-content-space-between align-items-center">
+            <a href="#home"><div class="logo"></div></a>
+            <ul class="navbar-list font-weight-400">
+              <li>
+                <a href="./index.html#about-me" class="list-items works"
+                  ><i class="fa-solid fa-user" color="#a98109"></i
+                ></a>
+              </li>
+              <li>
+                <a href="./index.html#works" class="list-items about-me"
+                  ><i class="fa-solid fa-image" color="#a98109"></i
+                ></a>
+              </li>
+              <li>
+                <a href="./index.html#contact-me" class="list-items contact-me"
+                  ><i class="fa-solid fa-comments" color="#a98109"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
