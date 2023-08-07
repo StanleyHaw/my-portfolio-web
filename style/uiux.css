@@ -547,130 +547,26 @@ h2 {
   overflow: hidden;
 }
 
-.wireframe-screen-1 {
-  background-image: url("../img/wireframe1.png");
-  background-size: cover;
-  background-position: center center;
+.wireframe-cont {
   position: relative;
-  transition: all 0.3s ease;
+}
+.wireframe-cont img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-in-out;
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
-.wireframe-screen-1:hover {
-  background-image: url("../img/prototype1.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
+.wireframe-cont img:last-child {
+  opacity: 0;
+}
+.wireframe-cont:hover img:first-child {
+  opacity: 0;
+}
+.wireframe-cont:hover img:last-child {
+  opacity: 1;
   transform: scale(1.05);
-}
-
-.wireframe-screen-2 {
-  background-image: url("../img/wireframe2.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-2:hover {
-  background-image: url("../img/prototype2.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-3 {
-  background-image: url("../img/wireframe3.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-3:hover {
-  background-image: url("../img/prototype3.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-4 {
-  background-image: url("../img/wireframe4.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-4:hover {
-  background-image: url("../img/prototype4.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-5 {
-  background-image: url("../img/wireframe5.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-5:hover {
-  background-image: url("../img/prototype5.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-6 {
-  background-image: url("../img/wireframe6.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-6:hover {
-  background-image: url("../img/prototype6.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-7 {
-  background-image: url("../img/wireframe7.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-7:hover {
-  background-image: url("../img/prototype7.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-8 {
-  background-image: url("../img/wireframe8.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-8:hover {
-  background-image: url("../img/prototype8.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
-}
-
-.wireframe-screen-9 {
-  background-image: url("../img/wireframe9.png");
-  background-size: cover;
-  background-position: center center;
-  position: relative;
-  transition: all 0.3s ease;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
-.wireframe-screen-9:hover {
-  background-image: url("../img/prototype9.png");
-  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.2));
-  transform: scale(1.05);
+  filter: drop-shadow(0 0 50px rgba(0, 0, 0, 0.15));
 }
 
 .image-uiux-picture {
@@ -2702,15 +2598,15 @@ h2 {
     padding-bottom: 64px;
   }
   .wireframe-cont {
-    width: 80px;
-    height: 173.5px;
+    width: 96px;
+    height: 208px;
     margin-bottom: 12px;
   }
   .wireframe-flex {
     transform: rotate(0deg);
     flex-wrap: wrap;
     justify-content: space-between;
-    top: 24px;
+    top: 36px;
   }
   .iframe {
     width: 100%;
