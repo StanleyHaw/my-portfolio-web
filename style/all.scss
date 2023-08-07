@@ -97,7 +97,6 @@ td {
 .background-home {
   background-color: $secondaryBGColor;
   position: relative;
-  overflow-x: hidden;
 }
 
 .home-logo {
@@ -1862,6 +1861,7 @@ textarea {
     padding: 64px 32px 0 32px;
     flex-direction: column;
     justify-content: space-around;
+    overflow-x: hidden;
     h1 {
       font-size: 3rem;
       font-weight: 700;

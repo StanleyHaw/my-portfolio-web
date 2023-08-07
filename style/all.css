@@ -86,7 +86,6 @@ td {
 .background-home {
   background-color: #fdf8ef;
   position: relative;
-  overflow-x: hidden;
 }
 
 .home-logo {
@@ -1669,6 +1668,7 @@ textarea {
     padding: 64px 32px 0 32px;
     flex-direction: column;
     justify-content: space-around;
+    overflow-x: hidden;
   }
   .background-home h1 {
     font-size: 3rem;
