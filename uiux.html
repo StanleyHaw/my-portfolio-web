@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stanley's Portfolio</title>
+    <title>必須公車｜BUSY BUS</title>
     <link href="img/S-logo.ico" rel="shortcut icon" />
     <link rel="stylesheet" href="./style/uiux.css" />
     <link rel="stylesheet" href="./style/navbar.css" />
@@ -31,16 +31,6 @@
   </head>
   <body>
     <main>
-      <div class="title-bg pdt-96 pdb-24">
-        <div class="bg-filter"></div>
-        <div class="container d-flex justify-content-space-around">
-          <h2 class="title pdt-24 z-index-99" align="center">
-            UIUX專案作品
-            <br />
-            <p>UIUX side project</p>
-          </h2>
-        </div>
-      </div>
       <div class="position-relative">
         <div class="busy-bus-header-bg"></div>
         <div class="busy-bus-header-cont">
@@ -51,14 +41,15 @@
               <p>BUSY BUS</p>
             </div>
           </div>
-          <img src="./img/uiux/busy-bus-header-image-1.png" />
+          <img
+            class="header-phone-img"
+            src="./img/uiux/busy-bus-header-image-1.png"
+          />
         </div>
       </div>
       <section class="about-busy-bus">
         <div class="title-uiux-light">ABOUT BUSY BUS</div>
-        <div
-          class="position-relative d-flex justify-content-space-between align-items-center fd-r"
-        >
+        <div class="about-busy-bus-cont">
           <div class="about-busy-bus-image"></div>
           <div class="about-busy-bus-text">
             <p class="pdb-32">
@@ -71,34 +62,531 @@
           </div>
         </div>
       </section>
-      <section class="goals position-relative">
-        <div class="goals-bg"></div>
+      <section class="goals">
         <div class="goals-cont">
           <div class="title-uiux-dark">GOALS</div>
           <div class="goals-flex">
-            <div class="goals-flexbox">
+            <div class="goals-card">
               <h2>優化使用體驗</h2>
-              <hr />
+
               <p>
                 簡化使用流程，整合主要的功能介面，讓使用者更直覺地操作我們的產品。
               </p>
             </div>
-            <div class="goals-flexbox">
+            <div class="goals-card">
               <h2>降低時間成本</h2>
-              <hr />
               <p>
                 即時接收當前資訊，減少不必要的時間浪費，並更精準地瞭解抵達站牌的資訊。
               </p>
             </div>
-            <div class="goals-flexbox">
+            <div class="goals-card">
               <h2>達成出行便利性</h2>
-              <hr />
+
               <p>即使來到陌生的地方旅行，也能夠掌握目前公車交通的資訊。</p>
             </div>
           </div>
         </div>
       </section>
+      <section class="persona">
+        <div class="title-uiux-light">PERSONA</div>
+        <div class="persona-wrapper">
+          <div class="persona-left-side">
+            <div class="persona-dialog-box">
+              <div class="dialog-circle"></div>
+              <h2>佳惠</h2>
+              <table class="persona-dialog-info">
+                <tr>
+                  <td>年齡</td>
+                  <td><span>28歲</span></td>
+                </tr>
+                <tr>
+                  <td>職業</td>
+                  <td><span>行政人員</span></td>
+                </tr>
+                <tr>
+                  <td>交通</td>
+                  <td><span>公車</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="persona-dialog-box-trig"></div>
+            <img src="./img/BUSYBUS-persona-avatar_jiahui.png" />
+          </div>
+          <div class="persona-right-side">
+            <div class="color-upc1-border right-side-info-box">
+              <p>
+                佳惠是一名內湖科技園區內的上班族，因為住家在汐止的關係，附近沒有可以捷運、火車可以直達，僅能依靠公車來完成直達交通，距離上班的地點在公車上的通勤時間約莫花費20
+                - 30分鐘。
+              </p>
+              <p>
+                因為她本身是個夜貓族，通常很晚睡，所以在搭公車的時候經常會在公車上小睡片刻，但是又害怕錯過下車站牌，所以也不太能好好在公車上休息。
+              </p>
+              <div class="color-upc1-font right-side-info-box-title">
+                關於佳惠
+              </div>
+            </div>
+            <div class="color-ufc-border right-side-info-box">
+              <p>
+                <i class="fa-solid fa-circle" style="color: #ed6a5e"></i
+                >&ensp;經常在公車站等車時，大多數站台設備簡陋，容易受到日曬和雨淋的影響。
+              </p>
+              <p>
+                <i class="fa-solid fa-circle" style="color: #ed6a5e"></i
+                >&ensp;在搭公車上下班時，會因為滑手機滑得太專心，或是不小心睡著了，而錯過抵達目的地最近的站牌。
+              </p>
+              <div class="color-ufc-font right-side-info-box-title">痛點</div>
+            </div>
+            <div class="color-udc-border right-side-info-box">
+              <p>
+                <i class="fa-solid fa-circle" style="color: #3c8bb8"></i
+                >&ensp;她希望能夠擁有一個可以知道從住家到公司的公車班次、且距離最近的站牌在哪裡、預計什麼時候會到站、也能把該站牌存起來的公車交通APP。
+              </p>
+              <p>
+                <i class="fa-solid fa-circle" style="color: #3c8bb8"></i
+                >&ensp;她也希望可以在公車上睡一會兒，或是在公車站內專心使用手機，這樣就不會錯過下車的時機。
+              </p>
+              <div class="color-udc-font right-side-info-box-title">目標</div>
+            </div>
+          </div>
+        </div>
+        <div class="persona-wrapper fd-rrc">
+          <div class="persona-left-side">
+            <div class="persona-dialog-box-cg">
+              <div class="dialog-circle-cg"></div>
+              <h2>彥廷</h2>
+              <table class="persona-dialog-info">
+                <tr>
+                  <td>年齡</td>
+                  <td><span>25歲</span></td>
+                </tr>
+                <tr>
+                  <td>職業</td>
+                  <td><span>業務</span></td>
+                </tr>
+                <tr>
+                  <td>交通</td>
+                  <td><span>公車、機車</span></td>
+                </tr>
+              </table>
+            </div>
+            <div class="persona-dialog-box-trig-cg"></div>
+            <img src="./img/BUSYBUS-persona-avatar_yanting.png" />
+          </div>
+          <div class="persona-right-side">
+            <div class="color-ugc-border right-side-info-box">
+              <p>
+                彥廷目前是一位業務，在台中通勤通常都以機車為主。為了拓展自己的業績，目前積極地想到外縣市來創造更多的業績營收。
+              </p>
+              <p>
+                雖然自己擁有一台機車，但因為很常要到外縣市出差，尤其像是台北、高雄等地區，變得需要仰賴當地的運具。即便有便利的火車與捷運運輸系統，但經常會前往一些一般捷運或火車不能直達的地點，還需轉乘公車。
+              </p>
+              <div class="color-ugc-font right-side-info-box-title">
+                關於彥廷
+              </div>
+            </div>
+            <div class="color-ufc-border right-side-info-box">
+              <p>
+                <i class="fa-solid fa-circle" style="color: #ed6a5e"></i
+                >&ensp;由於他對當地的公車路線和站點不熟悉，可能會花費很多時間在尋找適合的公車路線上，導致行程不便和耽誤工作進度。
+              </p>
+              <p>
+                <i class="fa-solid fa-circle" style="color: #ed6a5e"></i
+                >&ensp;在不熟悉的地方搭乘公車，可能因為不熟悉路線和站點而擔心錯過上下車站點。尤其是在忙碌的工作環境下，容易分心忽略公車提醒或錯過站點，這將導致他浪費時間和增加旅途中的壓力。
+              </p>
+              <div class="color-ufc-font right-side-info-box-title">痛點</div>
+            </div>
+            <div class="color-udc-border right-side-info-box">
+              <p>
+                <i class="fa-solid fa-circle" style="color: #3c8bb8"></i
+                >&ensp;他希望能夠立即獲得當地搭乘公車的即時到站時間，並在指定區間內知道公車預計何時會到達站牌。
+              </p>
+              <p>
+                <i class="fa-solid fa-circle" style="color: #3c8bb8"></i
+                >&ensp;他希望在到達目的地之前，APP能夠提前提醒他距離下車還有幾站，這樣他就有時間做好下車的準備（尤其是在上下班巔峰人潮時期）。
+              </p>
+              <div class="color-udc-font right-side-info-box-title">目標</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="user-insight">
+        <div class="user-insight-cont">
+          <div class="title-uiux-dark">USER INSIGHT</div>
+          <div class="circle-size1 color-spec-primary"></div>
+          <div class="circle-size2 color-spec-primary"></div>
+          <div class="circle-size3 color-spec-primary"></div>
+          <div class="circle-size4 color-spec-primary"></div>
+          <img
+            src="./img/BUSYBUS-avatar_user-insight.png"
+            class="user-insight-avatar"
+          />
+          <div class="insight-content">
+            <div class="insight-part">
+              <div class="insight-dialog mgl-24">
+                <p>
+                  收藏一些我常搭的公車與站牌，這樣我就<strong>可以不用透過搜尋直接看到我想要知道的公車資訊</strong>！
+                </p>
+              </div>
+              <div class="insight-dialog mgr-64">
+                <p>
+                  想要<strong>搜尋附近的公車站牌有哪些</strong>，這樣我就能知道我該搭哪一班公車！
+                </p>
+              </div>
+              <div class="insight-dialog mgl-32">
+                <p>
+                  如果<strong>知道公車的位置在哪</strong>會比較方便前往，可以的話有抵達站牌的路線圖更好！
+                </p>
+              </div>
+            </div>
+            <div class="insight-part">
+              <div class="insight-dialog mgr-64">
+                <p>
+                  因為<strong>我的所在地與要去的地方沒有捷運站</strong>，只能透過公車完成交通！
+                </p>
+              </div>
+              <div class="insight-dialog mgl-24">
+                <p>
+                  不知道我要搭看公車什麼時候會到，而且目前<strong>最接近站牌的公車距離我現在的位置趕不趕得上</strong>！
+                </p>
+              </div>
+              <div class="insight-dialog mgr-48">
+                <p>
+                  我想要在搭公車的時候<strong>設定提醒，這樣就不會錯過上下車的時機</strong>，可以不用一直盯著螢幕看是不是快要到了！
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="functional-map">
+        <div class="title-uiux-light">FUNCTIONAL MAP</div>
+        <img src="./img/BUSYBUS_functional-map.png" />
+      </section>
+      <section class="flow-chart">
+        <div class="title-uiux-light">FLOW CHART</div>
+        <div class="flow-chart-box">
+          <h2>尋找附近站牌</h2>
+          <img src="./img/BUSYBUS_flow-chart-1.png" />
+        </div>
+        <div class="flow-chart-box bg-opacity-0">
+          <h2>移除/編輯站牌</h2>
+          <img src="./img/BUSYBUS_flow-chart-2.png" />
+        </div>
+        <div class="flow-chart-box">
+          <h2>新增常用站牌</h2>
+          <img src="./img/BUSYBUS_flow-chart-3.png" />
+        </div>
+      </section>
+      <section class="design-system">
+        <div class="title-uiux-light">DESIGN SYSTEM</div>
+        <div>
+          <h2 class="design-system-title">COLOR</h2>
+          <div class="color">
+            <div class="primary-color-flex">
+              <h3>PRIMARY COLOR</h3>
+              <div class="primary-color">
+                <div class="d-flex fd-r mgb-24">
+                  <div class="color-box-mgr-push">
+                    <div class="color-box color-primary1"></div>
+                    <p>#6D5BD3</p>
+                  </div>
+                  <div class="color-box-mgr-push">
+                    <div class="color-box color-black"></div>
+                    <p>#262626</p>
+                  </div>
+                  <div>
+                    <div
+                      class="color-box color-white"
+                      style="border: 4px #c6c6c6 solid"
+                    ></div>
+                    <p>#FBFBFB</p>
+                  </div>
+                </div>
+                <div class="d-flex fd-r mgb-24">
+                  <div class="color-box-mgr-push">
+                    <div class="color-box color-primary2"></div>
+                    <p>#8A6DE3</p>
+                  </div>
+                  <div class="color-box-mgr-push">
+                    <div class="color-box color-primary0"></div>
+                    <p>#4230A9</p>
+                  </div>
+                  <div>
+                    <div class="color-box"></div>
+                  </div>
+                </div>
+                <div class="d-flex fd-r mgb-24">
+                  <div class="color-box-mgr-push">
+                    <div class="color-box color-primary3"></div>
+                    <p>#C3B8E4</p>
+                  </div>
+                  <div class="color-box-mgr-push">
+                    <div class="color-box-long color-gradient"></div>
+                    <p>#8A6DE3,#C3B8E4</p>
+                  </div>
+                </div>
+                <div class="d-flex fd-r mgb-24">
+                  <div class="color-box-mgr-push">
+                    <div class="color-box color-primary4"></div>
+                    <p>#E4DFF4</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="neatral-system-color-flex">
+              <div class="neutral-color-flex">
+                <h3>NEUTRAL COLOR</h3>
+                <div class="neutral-color">
+                  <div class="d-flex fd-r mgb-24">
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-neutral800"></div>
+                      <p>#363636</p>
+                    </div>
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-neutral700"></div>
+                      <p>#565656</p>
+                    </div>
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-neutral500"></div>
+                      <p>#969696</p>
+                    </div>
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-neutral400"></div>
+                      <p>#C6C6C6</p>
+                    </div>
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-neutral200"></div>
+                      <p>#E6E6E6</p>
+                    </div>
+                    <div>
+                      <div class="color-box color-neutral100"></div>
+                      <p>#F6F6F6</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="system-color-flex">
+                <h3>SYSTEM COLOR</h3>
+                <div class="system-color">
+                  <div class="d-flex fd-r mgb-24">
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-failed"></div>
+                      <p>#ED6A5E</p>
+                    </div>
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-warning"></div>
+                      <p>#F5C249</p>
+                    </div>
+                    <div class="color-box-mgr-push">
+                      <div class="color-box color-success"></div>
+                      <p>#3CB843</p>
+                    </div>
+                    <div>
+                      <div class="color-box color-default"></div>
+                      <p>#3C8BB8</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 class="design-system-title">TYPOGRAPHY</h2>
+          <div class="d-flex justify-content-space-between align-items-center">
+            <div>
+              <div class="typo-type" style="font-weight: 700">Aa</div>
+              <p style="font-weight: 700">bold/700</p>
+            </div>
+            <div>
+              <div class="typo-type" style="font-weight: 500">Aa</div>
+              <p style="font-weight: 500">medium/500</p>
+            </div>
+            <div>
+              <div class="typo-type" style="font-weight: 300">Aa</div>
+              <p style="font-weight: 300">light/300</p>
+            </div>
+            <div class="typo-table">
+              <table>
+                <tr>
+                  <td class="typo-font-size">32px</td>
+                  <td style="font-size: 32px; font-weight: 700">三重國小</td>
+                </tr>
+                <tr>
+                  <td class="typo-font-size">24px</td>
+                  <td style="font-size: 24px; font-weight: 700">三重國小</td>
+                </tr>
+                <tr>
+                  <td class="typo-font-size">20px</td>
+                  <td style="font-size: 20px; font-weight: 500">三重國小</td>
+                </tr>
+                <tr>
+                  <td class="typo-font-size">16px</td>
+                  <td style="font-size: 16px; font-weight: 500">三重國小</td>
+                </tr>
+                <tr>
+                  <td class="typo-font-size">12px</td>
+                  <td style="font-size: 14px; font-weight: 300">三重國小</td>
+                </tr>
+                <tr>
+                  <td class="typo-font-size">8px</td>
+                  <td style="font-size: 8px; font-weight: 300">三重國小</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="component-bg">
+        <div class="design-system-component">
+          <h2 class="design-system-title">COMPONENT</h2>
+          <div class="component-wrapper">
+            <div class="component-part-1-2-group">
+              <div class="component-part-1">
+                <div class="component-content">
+                  <h3>下拉式選單</h3>
+                  <p>Dropdown menu</p>
+                  <img src="./img/dropdownMenu.png" alt="" />
+                </div>
+                <div class="component-content">
+                  <h3>按鈕樣式</h3>
+                  <p>Buttons</p>
+                  <img src="./img/buttons.png" alt="" />
+                </div>
+              </div>
+              <div class="component-part-2">
+                <div class="component-content">
+                  <h3>公車列表系統</h3>
+                  <p>Option list</p>
+                  <img src="./img/optionList.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="component-part-3">
+              <div class="component-content">
+                <h3>輸入欄</h3>
+                <p>Input text bar</p>
+                <img src="./img/inputTextBar.png" alt="" />
+              </div>
+              <div class="component-content">
+                <h3>圖標</h3>
+                <p>Icons</p>
+                <img src="./img/icons.png" alt="" />
+              </div>
+              <div class="component-content">
+                <h3>導覽列</h3>
+                <p>Navigation bar</p>
+                <img src="./img/navigitionBar.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="wireframe-bg">
+        <div class="wireframe">
+          <div class="title-uiux-dark">WIREFRAME</div>
+          <div class="wireframe-rwd-web">
+            <div class="wireframe-flex w-flex-1">
+              <div class="wireframe-screen-1 wireframe-cont"></div>
+              <div class="wireframe-screen-2 wireframe-cont"></div>
+              <div class="wireframe-screen-3 wireframe-cont"></div>
+            </div>
+            <div class="wireframe-flex w-flex-2">
+              <div class="wireframe-screen-4 wireframe-cont"></div>
+              <div class="wireframe-screen-5 wireframe-cont"></div>
+              <div class="wireframe-screen-6 wireframe-cont"></div>
+              <div class="wireframe-screen-7 wireframe-cont"></div>
+            </div>
+            <div class="wireframe-flex w-flex-3">
+              <div class="wireframe-screen-8 wireframe-cont"></div>
+              <div class="wireframe-screen-9 wireframe-cont"></div>
+            </div>
+          </div>
+          <div class="wireframe-rwd-phone">
+            <div class="wireframe-flex">
+              <div class="wireframe-screen-1 wireframe-cont"></div>
+              <div class="wireframe-screen-2 wireframe-cont"></div>
+              <div class="wireframe-screen-3 wireframe-cont"></div>
+              <div class="wireframe-screen-4 wireframe-cont"></div>
+              <div class="wireframe-screen-5 wireframe-cont"></div>
+              <div class="wireframe-screen-6 wireframe-cont"></div>
+              <div class="wireframe-screen-7 wireframe-cont"></div>
+              <div class="wireframe-screen-8 wireframe-cont"></div>
+              <div class="wireframe-screen-9 wireframe-cont"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <img
+          src="./img/uiux/busybusbanner_ui-screen.jpg"
+          class="image-uiux-picture mgt-48"
+        />
+        <img
+          src="./img/uiux/busybusbanner_prototype.jpg"
+          class="image-uiux-picture"
+        />
+        <iframe
+          style="border: 1px solid rgba(0, 0, 0, 0.1)"
+          class="iframe"
+          src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FTEc0Xdm7RGBrsdJvCKCNAk%2Ftraffic-app%3Fpage-id%3D79%253A2024%26type%3Ddesign%26node-id%3D1291-21235%26viewport%3D283%252C272%252C0.06%26t%3DbilEjp2irNfKVnUA-1%26scaling%3Dscale-down%26starting-point-node-id%3D79%253A2026%26show-proto-sidebar%3D1%26mode%3Ddesign"
+          allowfullscreen
+        ></iframe>
+      </section>
     </main>
+    <nav class="navbar-wrapper navbar-rwd-web z-index-99">
+      <div class="navbar">
+        <div class="d-flex justify-content-space-between align-items-center">
+          <a href="#home"><div class="logo"></div></a>
+          <ul class="navbar-list font-weight-400">
+            <li>
+              <a href="./index.html#about-me" class="list-items about-me"
+                >關於我</a
+              >
+            </li>
+            <li>
+              <a href="./index.html#works" class="list-items works">作品集</a>
+            </li>
+            <li>
+              <a href="./index.html#contact-me" class="list-items contact-me"
+                >聯絡我</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <nav class="navbar-wrapper navbar-rwd-phone z-index-99">
+      <div class="navbar">
+        <div class="container">
+          <div class="d-flex justify-content-space-between align-items-center">
+            <a href="#home"><div class="logo"></div></a>
+            <ul class="navbar-list font-weight-400">
+              <li>
+                <a href="./index.html#about-me" class="list-items works"
+                  ><i class="fa-solid fa-user" color="#a98109"></i
+                ></a>
+              </li>
+              <li>
+                <a href="./index.html#works" class="list-items about-me"
+                  ><i class="fa-solid fa-image" color="#a98109"></i
+                ></a>
+              </li>
+              <li>
+                <a href="./index.html#contact-me" class="list-items contact-me"
+                  ><i class="fa-solid fa-comments" color="#a98109"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <footer>
+      <div class="footer">
+        <p>©2023 Designed By Stanley Haw</p>
+      </div>
+    </footer>
   </body>
   <script src="./script.js"></script>
 </html>
