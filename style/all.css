@@ -207,13 +207,13 @@ td {
   width: 85%;
 }
 .skill-cont .skill-html5 {
-  width: 70%;
+  width: 80%;
 }
 .skill-cont .skill-css3 {
-  width: 60%;
+  width: 80%;
 }
 .skill-cont .skill-figma {
-  width: 65%;
+  width: 80%;
 }
 .skill-cont .skill-ppt {
   width: 85%;
@@ -1823,8 +1823,11 @@ textarea {
   .about-me-2 .about-me-2-cont .about-me-wrapper {
     margin: 12px 0;
   }
+  .about-me-2 .about-me-2-cont .about-me-wrapper p {
+    font-size: 14px;
+  }
   .about-me-2 .about-me-2-cont .about-me-wrapper li {
-    font-size: 8px;
+    font-size: 12px;
   }
   .abilities {
     padding-top: 0px;
@@ -1843,7 +1846,7 @@ textarea {
   }
   .skill-cont li .skill-text-wrapper {
     max-width: 55vw;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
   }
