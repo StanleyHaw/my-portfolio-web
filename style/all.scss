@@ -624,17 +624,21 @@ strong {
     width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 64px;
   }
 
   .home-hello {
-    padding-right: 100px;
+    width: 30%;
   }
 
   .home-my-job {
-    padding-left: 100px;
+    width: 30%;
+    h1 {
+      -webkit-text-stroke: 1px $primaryColor700;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .bnt-cont {
@@ -873,17 +877,21 @@ textarea {
     width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 64px;
   }
 
   .home-hello {
-    padding-right: 100px;
+    width: 30%;
   }
 
   .home-my-job {
-    padding-left: 100px;
+    width: 30%;
+    h1 {
+      -webkit-text-stroke: 1px $primaryColor700;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .bnt-cont {
@@ -1066,7 +1074,7 @@ textarea {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
   }
 
@@ -1117,17 +1125,21 @@ textarea {
     width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 64px;
   }
 
   .home-hello {
-    padding-right: 100px;
+    width: 30%;
   }
 
   .home-my-job {
-    padding-left: 100px;
+    width: 30%;
+    h1 {
+      -webkit-text-stroke: 1px $primaryColor700;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .bnt-cont {
@@ -1313,12 +1325,12 @@ textarea {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: 700;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
   }
 
@@ -1364,17 +1376,21 @@ textarea {
     width: 100%;
     height: 90vh;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 0 64px;
   }
 
   .home-hello {
-    padding-right: 100px;
+    width: 30%;
   }
 
   .home-my-job {
-    padding-left: 100px;
+    width: 30%;
+    h1 {
+      -webkit-text-stroke: 1px $primaryColor700;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .bnt-cont {
@@ -1559,12 +1575,12 @@ textarea {
   }
 
   h1 {
-    font-size: 4rem;
+    font-size: 2.75rem;
     font-weight: 700;
   }
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 500;
   }
 
@@ -1622,11 +1638,15 @@ textarea {
   }
 
   .home-hello {
-    padding-right: 80px;
+    width: 30%;
   }
 
   .home-my-job {
-    padding-left: 80px;
+    width: 30%;
+    h1 {
+      -webkit-text-stroke: 1px $primaryColor700;
+      -webkit-text-fill-color: transparent;
+    }
   }
 
   .bnt-cont {
@@ -1821,7 +1841,7 @@ textarea {
   }
 
   h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   h2 {
@@ -1874,19 +1894,23 @@ textarea {
     }
   }
 
+  .home-hello {
+    margin-bottom: 20px;
+  }
+
+  .home-my-job {
+    margin-top: 20px;
+    h1 {
+      -webkit-text-stroke: 1px $primaryColor700;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
   .shape-3,
   .shape-2,
   .shape-1,
   .avatar-1 {
     width: 90vw;
-  }
-
-  .home-hello {
-    padding-right: 0;
-  }
-
-  .home-my-job {
-    padding-left: 0;
   }
 
   .bnt-cont {
