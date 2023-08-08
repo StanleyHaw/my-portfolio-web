@@ -1800,7 +1800,7 @@ textarea {
     height: 96px;
 
     &::after {
-      bottom: 22px;
+      bottom: 12px;
     }
   }
 
@@ -1985,6 +1985,7 @@ textarea {
   .about-me-1-text {
     width: 100%;
     padding: 8px 16px 24px 16px;
+    font-size: 12px;
   }
 
   .about-me-2 {
@@ -2026,8 +2027,9 @@ textarea {
 
       .skill-text-wrapper {
         max-width: 55vw;
-        font-size: 8px;
+        font-size: 14px;
         font-weight: 300;
+        letter-spacing: 1px;
       }
     }
 
@@ -2087,7 +2089,8 @@ textarea {
   }
 
   h3 {
-    font-size: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 500;
   }
 
   p {
