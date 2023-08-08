@@ -706,6 +706,11 @@ strong {
     width: 45%;
     padding-right: 220px;
   }
+  .about-me-1-text p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 24px;
+  }
   .about-me-1 {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -924,6 +929,11 @@ textarea {
     width: 45%;
     padding-right: 128px;
   }
+  .about-me-1-text p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 24px;
+  }
   .about-me-1 {
     padding-top: 64px;
     padding-bottom: 64px;
@@ -1137,6 +1147,11 @@ textarea {
   .about-me-1-text {
     width: 45%;
     padding-right: 96px;
+  }
+  .about-me-1-text p {
+    font-size: 16px;
+    letter-spacing: 2px;
+    line-height: 24px;
   }
   .about-me-1 {
     padding-top: 64px;
@@ -1354,6 +1369,11 @@ textarea {
   .about-me-1-text {
     width: 45%;
     padding-right: 96px;
+  }
+  .about-me-1-text p {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    line-height: 20px;
   }
   .about-me-1 {
     padding-top: 64px;
@@ -1577,6 +1597,11 @@ textarea {
   .about-me-1-text {
     width: 45%;
     padding-right: 48px;
+  }
+  .about-me-1-text p {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    line-height: 20px;
   }
   .about-me-1 {
     padding-top: 64px;
@@ -1804,8 +1829,12 @@ textarea {
   }
   .about-me-1-text {
     width: 100%;
-    padding: 8px 16px 24px 16px;
+    padding: 24px 16px 32px 16px;
+  }
+  .about-me-1-text p {
     font-size: 12px;
+    letter-spacing: 1.5px;
+    line-height: 18px;
   }
   .about-me-2 {
     display: flex;
