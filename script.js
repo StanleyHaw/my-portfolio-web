@@ -13,11 +13,11 @@ function reveal() {
   const reveals = document.querySelectorAll(".reveal");
 
   for (let i = 0; i < reveals.length; i++) {
-    const windowheight = window.innerHeight;
-    const revealtop = reveals[i].getBoundingClientRect().top;
-    const revealpoint = 150;
+    const windowHeight = window.innerHeight;
+    const revealTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 150;
 
-    if (revealtop < windowheight - revealpoint) {
+    if (revealTop < windowHeight - revealPoint) {
       reveals[i].classList.add("active");
     } else {
       reveals[i].classList.remove("active");
